@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BuRockets</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        * {
+              box-sizing: border-box;
+          }
+
+          h1, h2, h3, h4, h5,
+        .h1, .h2, .h3, .h4, .h5 {
+            margin-top: 40px;
+          color: #054597ff;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+          font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+          
+
+          html, body {
+              overflow-x: hidden; /* Скрыть горизонтальную прокрутку */
+          }
+
+          img {
+             
+              height: auto; /* Сохраняем пропорции изображений */
+          }
+
+          .container {
+              padding-left: 15px; /* Убедитесь, что отступы не создают переполнение */
+              padding-right: 15px;
+          }
+
+          .btn-primary span {
+              color: white; /* Устанавливаем белый цвет текста */
+          }
+
+          .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+          }
+          .social-icon {
+              font-size: 40px;
+              margin: 0 20px;
+              transition: transform 0.3s, color 0.3s;
+          }
+          .social-icon:hover {
+              transform: scale(1.2);
+              color: #007bff; /* Цвет при наведении */
+          }
+          .social-icon:hover img {
+            transform: scale(1.2);
+        }
+
+          /* Примените медиа-запросы для мобильных устройств */
+          @media (max-width: 768px) {
+              body {
+                  font-size: 14px;
+              }
+          }
+    </style>
+</head>
+<body data-spy="scroll" data-target=".site-navbar-target py" data-offset="300">
+
+<div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+                <span class="icon-close2 js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+</div>
+   
+    
+    <header class="site-navbar py-1 js-sticky-header site-navbar-target" role="banner">
+      
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <div class="site-logo mr-auto w-25"><a href="index.html">
+            <img src="images/logo_new.png" alt="MDN logo" width="20%"/>
+          </a></div>
+
+          <div class="mx-auto text-center">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mx-auto d-none d-lg-block  m-0 p-0">
+                <li><a href="#home-section" class="nav-link">Главная</a></li>
+                <li><a href="#courses-section" class="nav-link">Курсы</a></li>
+                <li><a href="#programs-section" class="nav-link">Проекты</a></li>
+                <li><a href="#teachers-section" class="nav-link">Преподаватели</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="ml-auto w-25">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block m-0 p-0">
+              <li data-aos="fade-up" data-aos-delay="300"><a href="#contact-section" class="btn btn-primary py-3 px-4 btn-pill"><span>Контакты</span></a></li>
+              </ul>
+            </nav>
+            <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
+          </div>
+        </div>
+      </div>
+      
+    </header>
+
+    <div class="intro-section" id="home-section">
+      
+      <div class="slide-1" style="background-image: url('images/fon.jpg');" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <div class="row align-items-center">
+                <div class="col-lg-6 mb-4">
+                  <h1  data-aos="fade-up" data-aos-delay="100" >BuRockets</h1>
+                  <h1  data-aos="fade-up" data-aos-delay="100">Запускай ракеты с нами</h1>
+                  <p class="mb-4"  data-aos="fade-up" data-aos-delay="200">BuRockets - это образовательная платформа</p> 
+                  <p class="mb-4"  data-aos="fade-up" data-aos-delay="200">Мы делаем из школьников инженеров</p>
+                  <p data-aos="fade-up" data-aos-delay="300"><a href="#courses-section" class="btn btn-primary py-3 px-5 btn-pill">НАШИ КУРСЫ</a></p>
+
+                </div>
+
+
+                <div class="col-lg-4 ml-auto" data-aos="fade-up" data-aos-delay="500">
+                  
+                    <div class="site-logo mr-auto w-25"><a href="index.html">
+                      <img src="images/logo_new.png" alt="MDN logo" width="350%"/>
+                    </a></div>
+                  
+                </div>
+
+
+                <!--
+                <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="500">
+                  <form id="signupForm" class="form-box" onsubmit="return validateForm(event)">
+                      <h3 class="h4 text-black mb-4">Sign Up</h3>
+                      <div class="form-group">
+                          <input type="text" class="form-control" name="email" id="email" placeholder="Email Address" required>
+                      </div>
+                      <div class="form-group">
+                          <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
+                      </div>
+                      <div class="form-group">
+                          <input type="submit" class="btn btn-primary btn-pill" value="Sign up">
+                      </div>
+                      <div id="error-message" style="color: red; display: none;"></div>
+                  </form>
+              </div>
+              
+              <script>
+                  function validateForm(event) {
+                      event.preventDefault(); // Предотвращаем отправку формы
+              
+                      // Получаем значения email и пароля
+                      const email = document.getElementById('email').value;
+                      const password = document.getElementById('password').value;
+              
+                      // Правильные email и пароли
+                      const validEmails = ['user1', 'user2'];
+                      const validPasswords = ['parol1', 'parol2'];
+              
+                      // Проверяем введенные данные
+                      if (validEmails.includes(email) && validPasswords.includes(password)) {
+                          window.location.href = 'course-single.html'; // Переход на страницу help.html
+                      } else {
+                          // Выводим сообщение об ошибке
+                          const errorMessage = document.getElementById('error-message');
+                          errorMessage.textContent = 'Неправильный email или пароль. Пожалуйста, попробуйте снова.';
+                          errorMessage.style.display = 'block';
+                      }
+                  }
+              </script>
+              
+              -->
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--test-->
+    <div class="site-section courses-title" id="courses-section">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="">
+            <h2 class="section-title">Курсы</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="site-section courses-entry-wrap"  data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
+        <div class="row">
+
+          <div class="owl-carousel col-12 nonloop-block-14">
+
+            <!--end Конструируй в Solid Works-->
+            <div class="course bg-white h-100 align-self-stretch">
+              <figure class="m-0">
+                  <a href="#" onclick="check_solidworks_Credentials(event)">
+                      <img src="images/solidworks_rocket.jpg" alt="Image" class="img-fluid">
+                  </a>
+              </figure>
+              <div class="course-inner-text py-4 px-4">
+                  <span class="course-price">2500₽</span>
+                  <div class="meta"><span class="icon-clock-o"></span>4 Lessons / 12 weeks</div>
+                  <h3><a href="#" onclick="checkCredentials(event)">Конструируй в Solid Works</a></h3>
+                  <p>Создай надежный корпус ракеты.</p>
+              </div>
+              <!--
+              <div class="d-flex border-top stats">
+                  <div class="py-3 px-4"><span class="icon-users"></span> 9.21 </div>
+                  <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 3 </div>
+              </div>
+              -->
+              
+          </div>
+          
+
+
+            <!--end Конструируй в Solid Works-->
+
+            <!--Программируй ARDUINO-->
+            <div class="course bg-white h-100 align-self-stretch">
+              <figure class="m-0">
+                  <a href="#" onclick="check_arduino_Credentials(event)">
+                      <img src="images/arduino.jpg" alt="Image" class="img-fluid">
+                  </a>
+              </figure>
+              <div class="course-inner-text py-4 px-4">
+                  <span class="course-price">2500₽</span>
+                  <div class="meta"><span class="icon-clock-o"></span>4 Lessons / 12 weeks</div>
+                  <h3><a href="#" onclick="check_arduino_Credentials(event)">Программируй Arduino</a></h3>
+                  <p>Вдохни жизнь и разум своей ракете.</p>
+              </div>
+              <!--
+              <div class="d-flex border-top stats">
+                  <div class="py-3 px-4"><span class="icon-users"></span> 9.21 </div>
+                  <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 3 </div>
+              </div>
+              -->
+          </div>
+
+            <!--end Программируй ARDUINO-->
+
+            <!--Программируй STM32-->
+            <div class="course bg-white h-100 align-self-stretch">
+              <figure class="m-0">
+                  <a href="#" onclick="check_stm32_Credentials(event)">
+                      <img src="images/STM32.jpg" alt="Image" class="img-fluid">
+                  </a>
+              </figure>
+              <div class="course-inner-text py-4 px-4">
+                  <span class="course-price">2500₽</span>
+                  <div class="meta"><span class="icon-clock-o"></span>4 Lessons / 12 weeks</div>
+                  <h3><a href="#" onclick="check_stm32_Credentials(event)">Программируй STM32</a></h3>
+                  <p>Вдохни жизнь и разум своей ракете.</p>
+              </div>
+              
+              <!--
+              <div class="d-flex border-top stats">
+                  <div class="py-3 px-4"><span class="icon-users"></span> 9.21 </div>
+                  <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 3 </div>
+              </div>
+              -->
+          </div>
+          
+
+          <!--end Программируй STM32-->
+
+          <!--Пайка-->
+
+          <div class="course bg-white h-100 align-self-stretch">
+            <figure class="m-0">
+                <a href="#" onclick="check_soldering_Credentials(event)">
+                    <img src="images/soldering.jpg" alt="Image" class="img-fluid">
+                </a>
+            </figure>
+            <div class="course-inner-text py-4 px-4">
+                <span class="course-price">2500₽</span>
+                <div class="meta"><span class="icon-clock-o"></span>4 Lessons / 12 weeks</div>
+                <h3><a href="#" onclick="check_soldering_Credentials(event)">Пайка</a></h3>
+                <p>Собери свою ракету сам.</p>
+            </div>
+            <!--
+              <div class="d-flex border-top stats">
+                  <div class="py-3 px-4"><span class="icon-users"></span> 9.21 </div>
+                  <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 3 </div>
+              </div>
+              -->
+        </div>
+        
+        
+          <!--end Пайка-->
+
+
+        </div>
+        </div>
+        </div>
+      </div>
+      
+        <div class="row justify-content-center">
+          <div class="col-12 text-center">
+            <button class="customPrevBtn btn btn-primary m-1">Назад</button>
+            <button class="customNextBtn btn btn-primary m-1">Вперед</button>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+
+    <script>
+      function check_solidworks_Credentials(event) {
+            event.preventDefault(); // Предотвращаем переход по ссылке
+    
+            // Запрашиваем email и пароль у пользователя
+            const email = prompt("Введите ваш email:");
+            const password = prompt("Введите ваш пароль:");
+    
+            // Правильные данные
+            const validEmails = ["user1", "user2"];
+            const validPasswords = ["parol1", "parol2"];
+    
+            // Проверка данных
+            if (validEmails.includes(email) && validPasswords.includes(password)) {
+                // Если данные верные, переходим на страницу
+                window.location.href = "SolidWorks/SolidWorks_course.html";
+            } else {
+                // Если данные неверные, выводим сообщение об ошибке
+                alert("Неправильный email или пароль. Пожалуйста, попробуйте снова.");
+            }
+        }
+
+        function check_stm32_Credentials(event) {
+            event.preventDefault(); // Предотвращаем переход по ссылке
+    
+            // Запрашиваем email и пароль у пользователя
+            const email = prompt("Введите ваш email:");
+            const password = prompt("Введите ваш пароль:");
+    
+            // Правильные данные
+            const validEmails = ["user1", "user2"];
+            const validPasswords = ["parol1", "parol2"];
+    
+            // Проверка данных
+            if (validEmails.includes(email) && validPasswords.includes(password)) {
+                // Если данные верные, переходим на страницу
+                window.location.href = "STM32/STM32_course.html";
+            } else {
+                // Если данные неверные, выводим сообщение об ошибке
+                alert("Неправильный email или пароль. Пожалуйста, попробуйте снова.");
+            }
+        }
+
+        function check_arduino_Credentials(event) {
+            event.preventDefault(); // Предотвращаем переход по ссылке
+    
+            // Запрашиваем email и пароль у пользователя
+            const email = prompt("Введите ваш email:");
+            const password = prompt("Введите ваш пароль:");
+    
+            // Правильные данные
+            const validEmails = ["user3", "user2"];
+            const validPasswords = ["parol3", "parol2"];
+    
+            // Проверка данных
+            if (validEmails.includes(email) && validPasswords.includes(password)) {
+                // Если данные верные, переходим на страницу
+                window.location.href = "Arduino/Arduino_course.html";
+            } else {
+                // Если данные неверные, выводим сообщение об ошибке
+                alert("Неправильный email или пароль. Пожалуйста, попробуйте снова.");
+            }
+        }
+
+
+      
+
+
+      function check_soldering_Credentials(event) {
+          event.preventDefault(); // Предотвращаем переход по ссылке
+  
+          // Запрашиваем email и пароль у пользователя
+          const email = prompt("Введите ваш email:");
+          const password = prompt("Введите ваш пароль:");
+  
+          // Правильные данные
+          const validEmails = ["user1", "user2"];
+          const validPasswords = ["parol1", "parol2"];
+  
+          // Проверка данных
+          if (validEmails.includes(email) && validPasswords.includes(password)) {
+              // Если данные верные, переходим на страницу
+              window.location.href = "soldering/soldering_course.html";
+          } else {
+              // Если данные неверные, выводим сообщение об ошибке
+              alert("Неправильный email или пароль. Пожалуйста, попробуйте снова.");
+          }
+      }
+  </script>
+
+    <!--test-->
+    <div class="site-section" id="programs-section">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-lg-7 text-center"  data-aos="fade-up" data-aos-delay="">
+            <h2 class="section-title">Наши проекты</h2>
+            <p>Мы разрабатываем различные ракеты, начиная с водных ракет с одноступенчатым двигателем, заканчивая твердотопливными ракетами с встроенными системами управления полетом.</p>
+          </div>
+        </div>
+        <div class="row mb-5 align-items-center">
+          <div class="course bg-white h-100 align-self-stretch">
+            <figure class="m-0">
+                <a href="#">
+                    <img src="images/solid_rocket.jpg" alt="Image" class="img-fluid">
+                </a>
+            </figure>
+            
+            <!--
+            <div class="d-flex border-top stats">
+                <div class="py-3 px-4"><span class="icon-users"></span> 9.21 </div>
+                <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 3 </div>
+            </div>
+            -->
+          </div>
+          <div class="col-lg-4 ml-auto" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="text-black mb-4">Твердотопливная ракета</h2>
+            <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem maxime nam porro possimus fugiat quo molestiae illo.</p>
+
+            <div class="d-flex align-items-center custom-icon-wrap mb-3">
+              <span class="custom-icon-inner mr-3"><span class="icon icon-graduation-cap"></span></span>
+              <div><h3 class="m-0">22,931 Yearly Graduates</h3></div>
+            </div>
+
+            <div class="d-flex align-items-center custom-icon-wrap">
+              <span class="custom-icon-inner mr-3"><span class="icon icon-university"></span></span>
+              <div><h3 class="m-0">150 Universities Worldwide</h3></div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row mb-5 align-items-center">
+          <div class="col-lg-6 mb-5 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
+            <div class="course bg-white h-100 align-self-stretch">
+              <figure class="m-0">
+                  <a href="#">
+                      <img src="images/soplo.jpg" alt="Image" class="img-fluid">
+                  </a>
+              </figure>
+              
+              <!--
+              <div class="d-flex border-top stats">
+                  <div class="py-3 px-4"><span class="icon-users"></span> 9.21 </div>
+                  <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 3 </div>
+              </div>
+              -->
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="text-black mb-4">Сопло Лаваля для ракетного двигателя</h2>
+            <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem maxime nam porro possimus fugiat quo molestiae illo.</p>
+
+            <div class="d-flex align-items-center custom-icon-wrap mb-3">
+              <span class="custom-icon-inner mr-3"><span class="icon icon-graduation-cap"></span></span>
+              <div><h3 class="m-0">22,931 Yearly Graduates</h3></div>
+            </div>
+
+            <div class="d-flex align-items-center custom-icon-wrap">
+              <span class="custom-icon-inner mr-3"><span class="icon icon-university"></span></span>
+              <div><h3 class="m-0">150 Universities Worldwide</h3></div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row mb-5 align-items-center">
+          <div class="col-lg-7 mb-5" data-aos="fade-up" data-aos-delay="100">
+            <div class="course bg-white h-100 align-self-stretch">
+              <figure class="m-0">
+                  <a href="#">
+                      <img src="images/water_rocket.jpg" alt="Image" class="img-fluid">
+                  </a>
+              </figure>
+              
+              <!--
+              <div class="d-flex border-top stats">
+                  <div class="py-3 px-4"><span class="icon-users"></span> 9.21 </div>
+                  <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 3 </div>
+              </div>
+              -->
+            </div>
+          </div>
+          <div class="col-lg-4 ml-auto" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="text-black mb-4">Водная ракета</h2>
+            <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem maxime nam porro possimus fugiat quo molestiae illo.</p>
+
+            <div class="d-flex align-items-center custom-icon-wrap mb-3">
+              <span class="custom-icon-inner mr-3"><span class="icon icon-graduation-cap"></span></span>
+              <div><h3 class="m-0">22,931 Yearly Graduates</h3></div>
+            </div>
+
+            <div class="d-flex align-items-center custom-icon-wrap">
+              <span class="custom-icon-inner mr-3"><span class="icon icon-university"></span></span>
+              <div><h3 class="m-0">150 Universities Worldwide</h3></div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row mb-5 align-items-center">
+          <div class="col-lg-7 mb-5 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
+            <div class="course bg-white h-100 align-self-stretch">
+              <figure class="m-0">
+                  <a href="#">
+                      <img src="images/PID.jpg" alt="Image" class="img-fluid">
+                  </a>
+              </figure>
+              
+              <!--
+              <div class="d-flex border-top stats">
+                  <div class="py-3 px-4"><span class="icon-users"></span> 9.21 </div>
+                  <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 3 </div>
+              </div>
+              -->
+            </div>
+          </div>
+          <div class="col-lg-4 mr-auto order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="text-black mb-4">Система автоматического управления полета ракеты</h2>
+            <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem maxime nam porro possimus fugiat quo molestiae illo.</p>
+
+            <div class="d-flex align-items-center custom-icon-wrap mb-3">
+              <span class="custom-icon-inner mr-3"><span class="icon icon-graduation-cap"></span></span>
+              <div><h3 class="m-0">22,931 Yearly Graduates</h3></div>
+            </div>
+
+            <div class="d-flex align-items-center custom-icon-wrap">
+              <span class="custom-icon-inner mr-3"><span class="icon icon-university"></span></span>
+              <div><h3 class="m-0">150 Universities Worldwide</h3></div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="site-section" id="teachers-section">
+      <div class="container">
+
+        <div class="row mb-5 justify-content-center">
+          <div class="col-lg-7 mb-5 text-center"  data-aos="fade-up" data-aos-delay="">
+            <h2 class="section-title">Наши преподаватели</h2>
+            <p class="mb-5">Спасибо за проявленный интерес к ракетостроению и добро пожаловать к нам на курс.</p>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="teacher text-center">
+              <img src="images/Mikhail.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Мистер Кенингсберг</h3>
+                <p class="position">Специалист широкого спектра задач</p>
+                <p>Первый в Калининграде запустил ракету. P.s. Калининградский Илон Маск</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="teacher text-center">
+              <img src="images/Alexandra.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Мисиис Саша</h3>
+                <p class="position">Учитель всех направлений</p>
+                <p>Этого учителя вам лучше не злить</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="teacher text-center">
+              <img src="images/egor.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Мистер Егор</h3>
+                <p class="position">Что то может рассказать</p>
+                <p>Боиться разных заброшек</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section pb-0">
+
+      <div class="future-blobs">
+        <div class="blob_2">
+          <img src="images/blob_2.svg" alt="Image">
+        </div>
+        <div class="blob_1">
+          <img src="images/blob_1.svg" alt="Image">
+        </div>
+      </div>
+      <div class="container">
+        <div class="row mb-5 justify-content-center" data-aos="fade-up" data-aos-delay="">
+          <div class="col-lg-7 text-center">
+            <h2 class="section-title">О BuRockets</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto align-self-start"  data-aos="fade-up" data-aos-delay="100">
+
+            <div class="p-4 rounded bg-white why-choose-us-box">
+
+              <div class="d-flex align-items-center custom-icon-wrap custom-icon-light mb-3">
+                <div class="mr-3"><span class="custom-icon-inner"><span class="icon icon-graduation-cap"></span></span></div>
+                <div><h3 class="m-0">Ведем лекции/семинары/лабораторные работы</h3></div>
+              </div>
+
+              <div class="d-flex align-items-center custom-icon-wrap custom-icon-light mb-3">
+                <div class="mr-3"><span class="custom-icon-inner"><span class="icon icon-university"></span></span></div>
+                <div><h3 class="m-0">Удобная онлайн платформа</h3></div>
+              </div>
+
+              <div class="d-flex align-items-center custom-icon-wrap custom-icon-light mb-3">
+                <div class="mr-3"><span class="custom-icon-inner"><span class="icon icon-graduation-cap"></span></span></div>
+                <div><h3 class="m-0">Покажем тебе мир глазами инженера</h3></div>
+              </div>
+
+              <div class="d-flex align-items-center custom-icon-wrap custom-icon-light mb-3">
+                <div class="mr-3"><span class="custom-icon-inner"><span class="icon icon-university"></span></span></div>
+                <div><h3 class="m-0">Расширим область твоих знаний</h3></div>
+              </div>
+
+              <div class="d-flex align-items-center custom-icon-wrap custom-icon-light mb-3">
+                <div class="mr-3"><span class="custom-icon-inner"><span class="icon icon-graduation-cap"></span></span></div>
+                <div><h3 class="m-0">Заставим тебя мыслить не стандартно</h3></div>
+              </div>
+
+              <div class="d-flex align-items-center custom-icon-wrap custom-icon-light">
+                <div class="mr-3"><span class="custom-icon-inner"><span class="icon icon-university"></span></span></div>
+                <div><h3 class="m-0">Лучшие преподаватели</h3></div>
+              </div>
+
+            </div>
+
+
+          </div>
+          <div class="col-lg-7 align-self-end"  data-aos="fade-left" data-aos-delay="200">
+            <img src="images/cosmoc.png" alt="Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+<!--contact us-->
+    
+<!--contact us-->
+    <div class="site-section bg-light" id="contact-section">
+      <div class=".container-hluid">
+        <div class="row justify-content-center">
+          <div class="col-md-7">
+
+            <div class="container">
+              <div class="social-icons">
+                  <a href="https://t.me/burockets" target="_blank" class="social-icon">
+                      <i class="fab fa-telegram-plane"></i>
+                  </a>
+                  <a href="https://vk.com/egobun" target="_blank" class="social-icon">
+                      <i class="fab fa-vk"></i>
+                  </a>
+                  <a href="https://www.youtube.com/@egorbunakov" target="_blank" class="social-icon">
+                      <i class="fab fa-youtube"></i>
+                  </a>
+                  
+              </div>
+          </div>
+          
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+     
+    <footer class="footer-section bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <h3>Кто такие BuRockets</h3>
+            <p>BUROCKETS - РАКЕТОСТРОИТЕЛИ. Мы создаем ракеты и обучаем будующих инженеров.</p>
+          </div>
+
+          <div class="col-md-4 ml-auto">
+            <h3>Ссылки</h3>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">Курсы</a></li>
+              <li><a href="#">Проекты</a></li>
+              <li><a href="#">Преподаватели</a></li>
+            </ul>
+          </div>
+
+          
+
+        </div>
+
+        
+      </div>
+    </footer>
+
+  
+    
+  </div> <!-- .site-wrap -->
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+
+  
+  <script src="js/main.js"></script>
+    
+  </btn.btn-black:hover>
+</html>
