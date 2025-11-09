@@ -25,10 +25,11 @@
 
           h1, h2, h3, h4, h5,
         .h1, .h2, .h3, .h4, .h5 {
-            margin-top: 40px;
+          margin-top: 40px;
           color: rgb(57, 58, 59);
           text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-          font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+          font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+          }
           
 
           html, body {
@@ -70,8 +71,23 @@
           /* Примените медиа-запросы для мобильных устройств */
           @media (max-width: 768px) {
               body {
-                  font-size: 14px;
+                  font-size: 10px;
               }
+              .slide-1 h1 {
+                font-size: 20px; /* уменьшите размер для телефонов */
+                margin-top: 80px;
+                margin-bottom: 10px; /* уменьшенный отступ снизу */
+                white-space: pre-line;
+              }
+              /* h1, .h1 {
+                font-size: 1rem;
+                /* margin-top: 2px;
+                color: rgb(200, 204, 207);
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+                font-family: "Muli", -apple-system, BlinkMacSystemFont,
+                  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
+                  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
+              /*} */
           }
 
         #space-section {
@@ -140,8 +156,8 @@
             <div class="col-12">
               <div class="row align-items-center">
                 <div class="col-lg-6 mb-4">
-                  <h1  data-aos="fade-up" data-aos-delay="100" >Александра Злобина</h1>
-                  <h1  data-aos="fade-up" data-aos-delay="100">Я фотограф в Москве</h1>
+                  <h1 data-aos="fade-up" data-aos-delay="100">Александра Злобина
+                  <br>Я фотограф в Москве</h1>
                   <p class="mb-4"  data-aos="fade-up" data-aos-delay="200">Индивидуальные фотосессии и фотосессии мероприятий</p> 
                   <p class="mb-4"  data-aos="fade-up" data-aos-delay="200">Культурные, спортивнфе мероприятия</p>
                   <p data-aos="fade-up" data-aos-delay="300"><a href="#works-section" class="btn btn-primary py-3 px-5 btn-pill">Мои работы</a></p>
@@ -175,7 +191,7 @@
       </div>
     </div>
     <div class="site-section courses-entry-wrap"  data-aos="fade-up" data-aos-delay="100">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
 
           <div class="owl-carousel col-12 nonloop-block-14">
@@ -323,7 +339,7 @@
 <!--contact us-->
     <div id="money-section"></div>
     <div class="container">
-    <h2 class="section-title text-center">01_GIT</h2>
+    <h2 class="section-title text-center">Записывайтесь на съемки</h2>
     <div class="row mb-10 justify-content-center">
         
         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="">
