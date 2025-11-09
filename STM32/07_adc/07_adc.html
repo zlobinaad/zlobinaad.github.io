@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BuRockets</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="../../fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/jquery-ui.css">
+    <link rel="stylesheet" href="../../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="../../css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="../../css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="../../fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="../../css/aos.css">
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Установка Git</title>
+    <style>
+      * {
+            box-sizing: border-box;
+        }
+
+        h1, h2, h3, h4, h5,
+      .h1, .h2, .h3, .h4, .h5 {
+          margin-top: 40px;
+        color: #054597ff;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+        p, ul {
+            width: 100%; /* Ширина 100% относительно контейнера */
+            margin: 10px 0; /* Отступы между элементами */
+            text-align: left;
+        }
+
+        html, body {
+            overflow-x: hidden; /* Скрыть горизонтальную прокрутку */
+        }
+
+        img {
+           
+            height: auto; /* Сохраняем пропорции изображений */
+        }
+
+        .container {
+            max-width: 2000px; /* Максимальная ширина контейнера */
+            margin: 0 auto; /* Центрирование контейнера */
+            padding-left: 15px; /* Убедитесь, что отступы не создают переполнение */
+            padding-right: 15px;
+        }
+        .heading{
+          margin-left: 20%;
+          width: 70%;    
+        }
+        .btn-primary span {
+            color: white; /* Устанавливаем белый цвет текста */
+        }
+
+        .social-icons {
+          display: flex;
+          justify-content: center;
+          margin-top: 50px;
+        }
+        .social-icon {
+            font-size: 40px;
+            margin: 0 20px;
+            transition: transform 0.3s, color 0.3s;
+        }
+        .social-icon:hover {
+            transform: scale(1.2);
+            color: #007bff; /* Цвет при наведении */
+        }
+        .social-icon:hover img {
+          transform: scale(1.2);
+      }
+        
+
+        /* Примените медиа-запросы для мобильных устройств */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+        }
+  </style>
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+    
+    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+      
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <div class="site-logo mr-auto w-25"><a href="../../index.html">
+            <img src="../../images/logo.png" alt="MDN logo" width="20%"/>
+          </a></div>
+
+          <div class="mx-auto text-center">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mx-auto d-none d-lg-block  m-0 p-0">
+                <li><a href="#home-section" class="nav-link">Главная</a></li>
+                <li><a href="#07_adc-section" class="nav-link">07_ADC</a></li>
+                <!--<li><a href="#programs-section" class="nav-link">Программа</a></li>-->
+                <li><a href="#teachers-section" class="nav-link">Преподаватели</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="ml-auto w-25">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block m-0 p-0">
+              <li class="cta"><a href="#contact-section" class="nav-link"><span>Контакты</span></a></li>
+              </ul>
+            </nav>
+            <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
+          </div>
+        </div>
+      </div>
+      
+    </header>
+
+
+
+    
+    <div class="intro-section" id="home-section">
+      
+      <div class="slide-1" style="background-image: url('../../images/STM32.jpg');" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <div class="row align-items-center">
+                
+                <div class="col-lg-6 mb-4">
+                  <h1  data-aos="fade-up" data-aos-delay="100" ><a href="../STM32_course.html">
+                    <img src="../images/return_to_stm32.png" alt="MDN logo" width="50%"/>
+                  </a></h1>
+                  <h1  data-aos="fade-up" data-aos-delay="100" class = "heading">BuRockets</h1>
+                  <h1  data-aos="fade-up" data-aos-delay="100" class = "heading">Лабораторная работа 07_ADC</h1>
+                  <p data-aos="fade-up" data-aos-delay="200" class = "heading">ADC - Аналого-цифровой преобразователь (АЦП, англ. Analog-to-digital converter, ADC) — устройство, преобразующее входной аналоговый сигнал в дискретный код (цифровой сигнал). </p> 
+                  <p data-aos="fade-up" data-aos-delay="300" class = "heading"><a href="#07_adc-section" class="btn btn-primary py-3 px-5 btn-pill">07_ADC</a></p>
+
+                </div>
+
+
+                <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="500">
+                  
+                    <div class="site-logo mr-auto w-25"><a href="07_adc.html">
+                      <img src="images/ADC_logo.png" alt="MDN logo" width="300%"/>
+                    </a></div>
+                  
+                </div>
+
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="07_adc-section"></div>
+        <div class="container">
+            <div class="row mb-10 justify-content-center">
+                <div class="col-lg-7" data-aos="fade-up" data-aos-delay="">
+                    <h2 class="section-title" >07_ADC</h2>
+            
+                    <h1 id="-">АЦП</h1>
+                    <h2 id="-">Видео лекции</h2>
+                    <h3 id="-">Теория</h3>
+                    <ul>
+                    <li><a href="https://www.youtube.com/watch?v=Rogey4YVjaw&amp;list=PLP3ZxgNn8T5LWXRQ_zDEIBWU6aNSY5KWb&amp;index=25">Что такое АЦП. Часть 1</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=4OJ8Pvh7hIk&amp;list=PLP3ZxgNn8T5LWXRQ_zDEIBWU6aNSY5KWb&amp;index=26">Что такое АЦП. Часть 2</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=pRRBu5ZS69o&amp;list=PLP3ZxgNn8T5LWXRQ_zDEIBWU6aNSY5KWb&amp;index=27">Что такое АЦП. Часть 3</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=Oz--ghdBqN4&amp;list=PLP3ZxgNn8T5LWXRQ_zDEIBWU6aNSY5KWb&amp;index=28">Что такое АЦП. Часть 4</a></li>
+                    </ul>
+                    <h3 id="-stm32">АЦП в stm32</h3>
+                    <ul>
+                    <li><a href="https://www.youtube.com/watch?v=_fCVWvL6Eq8&amp;list=PLhtMaaf_npBzsEQ94eGn5RnuE-VdGVObR&amp;index=15">АЦП и ЦАП в stm32</a></li>
+                    </ul>
+                    <h2 id="-">Теория</h2>
+                    <p><strong>АЦП</strong> (аналого-цифровой преобразователь) — это электронное устройство, которое преобразует аналоговый сигнал (например, звуковые волны или изменения температуры) в цифровой формат, понятный компьютерам. Для лучшего понимания, представим, что у нас есть магическая шкатулка, которая умеет переводить слова в числа.</p>
+                    <p>Вот как это работает:</p>
+                    <p><strong>Шаг 1</strong>: Замер аналогового сигнала<br>   Допустим, у нас есть аналоговый сигнал, например, звуковая волна. АЦП берет этот сигнал и измеряет его значение в определенный момент времени.</p>
+                    <p><strong>Шаг 2</strong>: Квантование<br>   Затем АЦП разбивает измеренное значение на отдельные кусочки, как если бы мы разбивали лузгу на кусочки.</p>
+                    <p><strong>Шаг 3</strong>: Дискретизация<br>   После этого каждый кусочек преобразуется в цифровое значение, чтобы компьютер мог его понять. Это похоже на то, как мы переводим слова в числа с помощью магической шкатулки.</p>
+                    <p><strong>Шаг 4</strong>: Передача данных<br>   Наконец, цифровые значения передаются компьютеру для обработки и анализа.</p>
+                    <h2 id="-">Практика</h2>
+                    <p>Для прохождения данной лабораторной работы вам понадобится:</p>
+                    <ul>
+                    <li>отладочная плата BluePill</li>
+                    <li>потенциометр</li>
+                    </ul>
+                    <p><img src="./images/poten.jpg" width="300" height="250"  class = "img-lab"></p>
+                    <p><br></p>
+                    <p>Итак, у нас есть два АЦП (ADC1 и ADC2) на других платах их может быть больше. Ножки обоих АЦП подключены к одному мультиплексору…</p>
+                    <p><img src="./images/adc_rm.jpg" alt="" class = "img-lab"></p>
+                    <p><a href="./doc/reference_manual.pdf">Reference manual RM0008</a> стр. 217</p>
+                    <p>Vref — опорное напряжение для АЦП. У описываемой платы этих входов нет. Схема питания выглядит так…</p>
+                    <p><img src="./images/Vref.jpg" alt="" class = "img-lab"></p>
+                    <p>У BluePill в общей сложности можно настроить 10 аналоговых входов…</p>
+                    <p><img src="./images/pin.png" alt="" class = "img-lab"></p>
+                    <p>Работу АЦП можно условно разделить на два режима — «Независимый» и «Парный». В первом случае можно запускать АЦП1 и АЦП2 (с любыми выбранными каналами) независимо друг от друга (это обычный режим), а во втором можно сделать так, что один АЦП будет запускать другой, либо оба АЦП настроить на работу с одной и той же ножкой (далее канал).</p>
+                    <p>Каналы АЦП можно настроить как регулярные (regular channels), и как инжектированные (Injected channels).</p>
+                    <p>Суть инжектированного канала заключается в том, что у него есть своя отдельная ячейка для сохранения результата. То есть если каналы РА0, РА1, РА2, РА3 настроить как инжектированные, то результаты будут сохранены в четыре разные ячейки.
+                    Инжектированных каналов может быть не больше четырёх. Любой аналоговый вход можно настроить как инжектированный.
+                    У инжектированных каналов есть приоритет над регулярными. То есть если запустить преобразование регулярных каналов, и запустить преобразование инжектированных, то преобразование регулярных будет прервано (а потом продолжено) на время преобразования инжектированных.</p>
+                    <p>У регулярных каналов всего одна ячейка на всех. То есть если каналы РА0, РА1, РА2, РА3 настроить как регулярные, то результат работы каждого канала будет записываться в одну и ту же ячейку, затирая предыдущие данные. Своевременно забирать результаты нам поможет DMA.</p>
+                    <p>Помимо внешних входов АЦП, есть ещё два внутренних. Один подключён к встроенной термопаре, а другой измеряет напряжение питания МК.</p>
+                    <hr>
+                    <p>Сначала будем работать с регулярными каналами, а потом с инжектированными.</p>
+                    <p>Создадим проект в CubeMX…</p>
+                    <p>Настройте тактирование ADC (ADC Prescaler)…</p>
+                    <p><img src="./images/clock.jpg" alt="" class = "img-lab"></p>
+                    <p>Частота АЦП не должна превышать 14МГц.</p>
+                    <p>Инициализируйте ADC1…</p>
+                    <p><img src="./images/parameter%20settings.png" alt="" class = "img-lab"></p>
+                    <p>На вход ADC_IN0 (PA0) нужно подать считываемый сигнал, а в UART будем выводить показания.</p>
+                    <p><br></p>
+                    <p>В main.c добавьте хедер:</p>
+                    <p><br></p>
+                    <pre><code>/* <span class="hljs-keyword">USER</span> <span class="hljs-title">CODE</span> BEGIN Includes */
+                    <span class="hljs-comment">#include "string.h" // это для функции strlen()</span>
+                    /* <span class="hljs-keyword">USER</span> <span class="hljs-title">CODE</span> END Includes */
+                    </code></pre><p>Пару глобальных переменных:</p>
+                    <pre><code>/* <span class="hljs-keyword">USER</span> <span class="hljs-title">CODE</span> BEGIN PV */
+                    char trans_str[<span class="hljs-number">64</span>] = {<span class="hljs-number">0</span>,};
+                    uint16_t adc = <span class="hljs-number">0</span>;
+                    /* <span class="hljs-keyword">USER</span> <span class="hljs-title">CODE</span> END PV */
+                    </code></pre><p>Перед бесконечным циклом добавляем калибровку АЦП:</p>
+                    <pre><code>/* <span class="hljs-keyword">USER</span> <span class="hljs-title">CODE</span> BEGIN <span class="hljs-number">2</span> */
+                    HAL_ADCEx_Calibration_Start(&amp;hadc1);
+                    /* <span class="hljs-keyword">USER</span> <span class="hljs-title">CODE</span> END <span class="hljs-number">2</span> */
+                    </code></pre><p>И в бесконечный цикл добавьте следующий код:</p>
+                    <pre><code><span class="hljs-comment">/* Infinite loop */</span>
+                    <span class="hljs-comment">/* USER CODE BEGIN WHILE */</span>
+                    while (<span class="hljs-number">1</span>)
+                    {
+                            HAL_ADC_Start(&amp;hadc1); <span class="hljs-comment">// запускаем преобразование сигнала АЦП</span>
+                            HAL_ADC_PollForConversion(&amp;hadc1, <span class="hljs-number">100</span>); <span class="hljs-comment">// ожидаем окончания преобразования</span>
+                            adc = HAL_ADC_GetValue(&amp;hadc1); <span class="hljs-comment">// читаем полученное значение в переменную adc</span>
+                            HAL_ADC_Stop(&amp;hadc1); <span class="hljs-comment">// останавливаем АЦП (не обязательно)</span>
+                            snprintf(trans_str, <span class="hljs-number">63</span>, <span class="hljs-string">"ADC %d<span class="hljs-subst">\n</span>"</span>, adc);
+                            HAL_UART_Transmit(&amp;huart1, (uint8_t*)trans_str, strlen(trans_str), <span class="hljs-number">1000</span>);
+                            HAL_Delay(<span class="hljs-number">1000</span>);
+                        <span class="hljs-comment">/* USER CODE END WHILE */</span>
+
+                        <span class="hljs-comment">/* USER CODE BEGIN 3 */</span>
+                    }
+                    </code></pre><p>Прошивайте и смотрите результат. Вы должны получить значение от 0 до 4095 (АЦП у нас 12-ти битный).</p>
+                    <details>
+                    <summary>про АЦП2</summary>
+
+                    Чтобы читать данные со второго АЦП нужно просто изменить hadc1 на hadc2 (предварительно активировав какой-нибудь канал).
+
+                    <code>/* Infinite loop */
+                    /* USER CODE BEGIN WHILE */
+                    while (1)
+                    {
+                            HAL_ADC_Start(&amp;hadc1); // запускаем преобразование сигнала АЦП
+                            HAL_ADC_PollForConversion(&amp;hadc1, 100); // ожидаем окончания преобразования
+                            adc = HAL_ADC_GetValue(&amp;hadc1); // читаем полученное значение в переменную adc
+                            HAL_ADC_Stop(&amp;hadc1); // останавливаем АЦП
+                            snprintf(trans_str, 63, &quot;ADC %d\n&quot;, adc);
+                            HAL_UART_Transmit(&amp;huart1, (uint8_t*)trans_str, strlen(trans_str), 1000);
+
+                            uint16_t adc2 = 0;
+                            HAL_ADC_Start(&amp;hadc2); 
+                            HAL_ADC_PollForConversion(&amp;hadc2, 100); 
+                            adc2 = HAL_ADC_GetValue(&amp;hadc2);
+                            HAL_ADC_Stop(&amp;hadc2); 
+                            snprintf(trans_str, 63, &quot;ADC %d\n&quot;, adc2);
+                            HAL_UART_Transmit(&amp;huart1, (uint8_t*)trans_str, strlen(trans_str), 1000);
+
+                            HAL_Delay(1000);
+                        /* USER CODE END WHILE */
+
+                        /* USER CODE BEGIN 3 */
+                    }</code>
+
+                    Далее (до определённого момента) все примеры будут для первого АЦП.
+                    </details>
+
+                    <p><br></p>
+                    <p>Чтоб программа не тормозилась в ожидании результата, воспользуемся прерыванием по окончании преобразования.</p>
+                    <p>Активируйте глобальное прерывание и сгенерируйте проект…</p>
+                    <p><img src="./images/nvic.jpg" alt="" class = "img-lab"></p>
+                    <p>Добавьте колбек, в котором результат будет копироваться в переменную:</p>
+                    <pre><code><span class="hljs-comment">/* USER CODE BEGIN 0 */</span>
+                    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">HAL_ADC_ConvCpltCallback</span><span class="hljs-params">(ADC_HandleTypeDef* hadc)</span>
+                    </span>{
+                        <span class="hljs-keyword">if</span>(hadc-&gt;Instance == ADC1) <span class="hljs-comment">//check if the interrupt comes from ACD1</span>
+                        {
+                            adc = HAL_ADC_GetValue(&amp;hadc1);
+                        }
+                    }
+                    <span class="hljs-comment">/* USER CODE END 0 */</span>
+                    </code></pre><p>После калибровки запустим АЦП:</p>
+                    <pre><code>/* <span class="hljs-keyword">USER</span> <span class="hljs-title">CODE</span> BEGIN <span class="hljs-number">2</span> */
+                    HAL_ADCEx_Calibration_Start(&amp;hadc1);
+                    HAL_ADC_Start_IT(&amp;hadc1);
+                    /* <span class="hljs-keyword">USER</span> <span class="hljs-title">CODE</span> END <span class="hljs-number">2</span> */
+                    </code></pre><p>В бесконечном цикле будем выводить результат и снова запускать АЦП:</p>
+                    <pre><code>while (<span class="hljs-number">1</span>)
+                    {
+                    snprintf(trans_str, <span class="hljs-number">63</span>, <span class="hljs-string">"ADC %d<span class="hljs-subst">\n</span>"</span>, (uint16_t)adc);
+                    HAL_UART_Transmit(&amp;huart1, (uint8_t*)trans_str, strlen(trans_str), <span class="hljs-number">1000</span>);
+                    adc = <span class="hljs-number">0</span>;
+                    HAL_ADC_Start_IT(&amp;hadc1);
+                    HAL_Delay(<span class="hljs-number">500</span>);
+                    ...
+                    </code></pre><p><br></p>
+                    <p>Чтобы каждый раз не запускать АЦП, можно активировать режим циклического чтения каналов…</p>
+                    <p><img src="./images/continuous_conversion_mode.jpg" alt="" class = "img-lab"></p>
+                    <pre><code>while (<span class="hljs-number">1</span>)
+                    {
+                    snprintf(trans_str, <span class="hljs-number">63</span>, <span class="hljs-string">"ADC %d<span class="hljs-subst">\n</span>"</span>, (uint16_t)adc);
+                    HAL_UART_Transmit(&amp;huart1, (uint8_t*)trans_str, strlen(trans_str), <span class="hljs-number">1000</span>);
+                    adc = <span class="hljs-number">0</span>;
+                    <span class="hljs-comment">//HAL_ADC_Start_IT(&amp;hadc1);</span>
+                    HAL_Delay(<span class="hljs-number">500</span>);
+                    ...
+                    </code></pre><p>В этом режиме АЦП будет стартовать автоматически после окончания предыдущего преобразования.</p>
+                    <details>
+                    <summary>тут есть один нюанс</summary>
+
+                    Нужно увеличить время сэмплирования:
+
+                    <img src="./images/sampling_time.jpg" alt="" class = "img-lab">
+
+                    Если этого не сделать, то опрос АЦП будет происходить слишком быстро и программа будет постоянно висеть в прерывании. Подробно про сэмплирование написано ниже.
+
+                    Другой вариант, это запускать АЦП без прерываний:
+
+                    <code>/* USER CODE BEGIN 2 */
+                    HAL_ADCEx_Calibration_Start(&amp;hadc1);
+                    HAL_ADC_Start(&amp;hadc1);
+                    /* USER CODE END 2 */</code>
+
+                    В цикле делать так:
+
+                    <code>snprintf(trans_str, 63, &quot;ADC %d\n&quot;, (uint16_t)HAL_ADC_GetValue(&amp;hadc1));
+                    HAL_UART_Transmit(&amp;huart1, (uint8_t*)trans_str, strlen(trans_str), 1000);</code>
+
+                    Далее (до определённого момента) все примеры будут для первого АЦП.
+                    </details>
+
+
+                    <p></details></p>
+                    <details>
+                    <summary>Independent mode</summary>
+                        Independent mode (независимый режим) — сейчас там нет возможности выбрать что-либо, однако если настроить АЦП_1 и АЦП_2, то появятся различные варианты («Парный режим» см. ниже).
+
+                    </details>
+
+                    <details>
+                    <summary>Data Alignment</summary>
+                        Data Alignment — выравнивание данных по левому или правому краю. Поскольку АЦП 12-разрядный, а регистры 16-разрядные, то предусмотрена возможность выравнивания результата измерения по левому или по правому краю этих регистров.
+
+                    </details>
+
+                    <details>
+                    <summary>Scan Conversion Mode</summary>
+                        Scan Conversion Mode — этот режим становится активным когда опрашиваются несколько каналов на одном АЦП.
+
+                    </details>
+
+                    <details>
+                    <summary>Continious Conversion Mode</summary>
+                        Continious Conversion Mode — опрос канала/каналов производится циклически (нет необходимости перезапуска).
+
+                    </details>
+
+                    <details>
+                    <summary>Discontinuous Conversion Mode</summary>
+                        Discontinuous Conversion Mode — этот режим позволяет сканировать несколько каналов (на одном АЦП) так, чтобы опрос происходил не по всем каналам сразу, а по одному, или по заранее заданным группам каналов (см. ниже).
+
+                    </details>
+
+                    <details>
+                    <summary>Enable Regular Conversions</summary>
+                        Enable Regular Conversions — Enable — каналы настроены как регулярные.
+                    </details>
+
+                    <p><br></p>
+                    <p><strong>Independent mode</strong> (независимый режим) — сейчас там нет возможности выбрать что-либо, однако если настроить АЦП_1 и АЦП_2, то появятся различные варианты («Парный режим» см. ниже).</p>
+                    <p><strong>Data Alignment</strong> — выравнивание данных по левому или правому краю. Поскольку АЦП 12-разрядный, а регистры 16-разрядные, то предусмотрена возможность выравнивания результата измерения по левому или по правому краю этих регистров.</p>
+                    <p><strong>Scan Conversion Mode</strong> — этот режим становится активным когда опрашиваются несколько каналов на одном АЦП.</p>
+                    <p><strong>Continious Conversion Mode</strong> — опрос канала/каналов производится циклически (нет необходимости перезапуска).</p>
+                    <p><strong>Discontinuous Conversion Mode</strong> — этот режим позволяет сканировать несколько каналов (на одном АЦП) так, чтобы опрос происходил не по всем каналам сразу, а по одному, или по заранее заданным группам каналов (см. ниже).</p>
+                    <p><strong>Enable Regular Conversions</strong> — Enable — каналы настроены как регулярные.</p>
+
+                    <p>Напишите код, где серва будет поворачиваться на угол 90° по нажатию на кнопку, ждать секунду и возвращаться в исходное положение.</p>
+                    
+
+                    <p class="mt-4"><a href="#" class="btn btn-primary">В начало страницы</a></p>
+                </div>
+            </div>
+        </div>
+      </div>
+   
+    </div>
+
+   
+
+    
+  <!---->
+    <div class="site-section" id="teachers-section">
+      <div class="container">
+
+        <div class="row mb-5 justify-content-center">
+          <div class="col-lg-7 mb-5 text-center"  data-aos="fade-up" data-aos-delay="">
+            <h2 class="section-title">Наши преподаватели</h2>
+            <p class="mb-5">Спасибо за проявленный интерес к ракетостроению и добро пожаловать к нам на курс.</p>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="teacher text-center">
+              <img src="../../images/splinter.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 1</h3>
+                <p class="position">Исследователь, научный сотрудник</p>
+                <p>Специальзируется на теме 1</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="teacher text-center">
+              <img src="../../images/yoda.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 2</h3>
+                <p class="position">Инженер программист</p>
+                <p>Специальзируется на теме 2</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="teacher text-center">
+              <img src="../../images/oogway.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 3</h3>
+                <p class="position">Инженер электронщик</p>
+                <p>Специальзируется на теме 3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<!--contact us-->
+<div class="site-section bg-light" id="contact-section">
+  <div class=".container-hluid">
+    <div class="row justify-content-center">
+      <div class="col-md-7">
+
+        <div class="container">
+          <div class="social-icons">
+              <a href="https://t.me/burockets" target="_blank" class="social-icon">
+                  <i class="fab fa-telegram-plane"></i>
+              </a>
+              <a href="https://vk.com/egobun" target="_blank" class="social-icon">
+                  <i class="fab fa-vk"></i>
+              </a>
+              <a href="https://www.youtube.com/@egorbunakov" target="_blank" class="social-icon">
+                  <i class="fab fa-youtube"></i>
+              </a>
+              
+          </div>
+      </div>
+      
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+
+
+
+  
+    
+  </div> <!-- .site-wrap -->
+
+  <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/popper.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/owl.carousel.min.js"></script>
+    <script src="../../js/jquery.stellar.min.js"></script>
+    <script src="../../js/jquery.countdown.min.js"></script>
+    <script src="../../js/bootstrap-datepicker.min.js"></script>
+    <script src="../../js/jquery.easing.1.3.js"></script>
+    <script src="../../js/aos.js"></script>
+    <script src="../../js/jquery.fancybox.min.js"></script>
+    <script src="../../js/jquery.sticky.js"></script>
+
+  
+  <script src="../../js/main.js"></script>
+    
+  </btn.btn-black:hover>
+</html>

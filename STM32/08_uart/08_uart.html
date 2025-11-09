@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BuRockets</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="../../fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/jquery-ui.css">
+    <link rel="stylesheet" href="../../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="../../css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="../../css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="../../fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="../../css/aos.css">
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Установка Git</title>
+    <style>
+      * {
+            box-sizing: border-box;
+        }
+
+        h1, h2, h3, h4, h5,
+      .h1, .h2, .h3, .h4, .h5 {
+          margin-top: 40px;
+        color: #054597ff;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+        p, ul {
+            width: 100%; /* Ширина 100% относительно контейнера */
+            margin: 10px 0; /* Отступы между элементами */
+            text-align: left;
+        }
+
+        html, body {
+            overflow-x: hidden; /* Скрыть горизонтальную прокрутку */
+        }
+
+        img {
+           
+            height: auto; /* Сохраняем пропорции изображений */
+        }
+
+        .container {
+            max-width: 2000px; /* Максимальная ширина контейнера */
+            margin: 0 auto; /* Центрирование контейнера */
+            padding-left: 15px; /* Убедитесь, что отступы не создают переполнение */
+            padding-right: 15px;
+        }
+        .heading{
+          margin-left: 20%;
+          width: 70%;    
+        }
+        .btn-primary span {
+            color: white; /* Устанавливаем белый цвет текста */
+        }
+
+        .social-icons {
+          display: flex;
+          justify-content: center;
+          margin-top: 50px;
+        }
+        .social-icon {
+            font-size: 40px;
+            margin: 0 20px;
+            transition: transform 0.3s, color 0.3s;
+        }
+        .social-icon:hover {
+            transform: scale(1.2);
+            color: #007bff; /* Цвет при наведении */
+        }
+        .social-icon:hover img {
+          transform: scale(1.2);
+      }
+        
+
+        /* Примените медиа-запросы для мобильных устройств */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+        }
+  </style>
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+    
+    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+      
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <div class="site-logo mr-auto w-25"><a href="../../index.html">
+            <img src="../../images/logo.png" alt="MDN logo" width="20%"/>
+          </a></div>
+
+          <div class="mx-auto text-center">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mx-auto d-none d-lg-block  m-0 p-0">
+                <li><a href="#home-section" class="nav-link">Главная</a></li>
+                <li><a href="#08_uart-section" class="nav-link">08_UART</a></li>
+                <!--<li><a href="#programs-section" class="nav-link">Программа</a></li>-->
+                <li><a href="#teachers-section" class="nav-link">Преподаватели</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="ml-auto w-25">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block m-0 p-0">
+              <li class="cta"><a href="#contact-section" class="nav-link"><span>Контакты</span></a></li>
+              </ul>
+            </nav>
+            <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
+          </div>
+        </div>
+      </div>
+      
+    </header>
+
+
+
+    
+    <div class="intro-section" id="home-section">
+      
+      <div class="slide-1" style="background-image: url('../../images/STM32.jpg');" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <div class="row align-items-center">
+                
+                <div class="col-lg-6 mb-4">
+                  <h1  data-aos="fade-up" data-aos-delay="100" ><a href="../STM32_course.html">
+                    <img src="../images/return_to_stm32.png" alt="MDN logo" width="50%"/>
+                  </a></h1>
+                  <h1  data-aos="fade-up" data-aos-delay="100" class = "heading">BuRockets</h1>
+                  <h1  data-aos="fade-up" data-aos-delay="100" class = "heading">Лабораторная работа 08_UART</h1>
+                  <p data-aos="fade-up" data-aos-delay="200" class = "heading">UART - Универсальный асинхронный приёмопередатчик (Universal Asynchronous Receiver-Transmitter, UART) — узел вычислительных устройств, предназначенный для организации связи с другими цифровыми устройствами. </p> 
+                  <p data-aos="fade-up" data-aos-delay="300" class = "heading"><a href="#08_uart-section" class="btn btn-primary py-3 px-5 btn-pill">08_UART</a></p>
+
+                </div>
+
+
+                <div class="col-lg-6 ml-auto" data-aos="fade-up" data-aos-delay="500">
+                  
+                    <div class="site-logo mr-auto w-25"><a href="08_uart.html">
+                      <img src="images/UART_logo.png" alt="MDN logo" width="240%"/>
+                    </a></div>
+                  
+                </div>
+
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="08_uart-section"></div>
+        <div class="container">
+            <div class="row mb-10 justify-content-center">
+                <div class="col-lg-7" data-aos="fade-up" data-aos-delay="">
+                    <h2 class="section-title" >08_UART</h2>
+            
+                    <h1 id="usart">USART</h1>
+                    <p><a href="https://www.youtube.com/watch?v=zhOMC8MaYzU&amp;list=PLhtMaaf_npBzsEQ94eGn5RnuE-VdGVObR&amp;index=10">Видео лекция</a></p>
+                    <p><strong>USART</strong> (Universal Synchronous-Asynchronous Receiver/Transmitter) — универсальный синхронно-асинхронный приёмопередатчик, интерфейс для передачи данных между цифровыми устройствами. Он на столько универсальный, что даже провода по которым к вам домой приходит интернет, это тоже USART (RS485).</p>
+                    <p>В нашем итоговом проекте USART понадобится нам для передачи денных от блока управления ракеты на наш компьютер. Забегая вперед общение с радиомодулем hc-12 осуществляется с помощью интерфейса USART.</p>
+                    <p>USART микроконтроллера stm32 может работать в различных режимах — асинхронный, синхронный, полудуплекс и т.д.</p>
+                    <p>Рассмотрим по подробнее асинхронный режим (UART)</p>
+                    <h2 id="asynchronous">Asynchronous</h2>
+                    <p><img src="./images/asynchronous.jpg" alt="Asynchronous" class = "img-lab"></p>
+                    <p>Интерфейс UART использует два провода для передачи данных: один для отправки (TX) и один для приема (RX). Он работает в асинхронном режиме, что означает, что данные передаются без использования внутреннего тактового сигнала. </p>
+                    <p>На каждом модуле использующем интерфейс UART есть пины подписаные надписями TXD и RXD. Соединяя пины микроконтроллера настроенные на передачу данных по интерфейсу UART с пинами на модуле UART (USB_to_TTL или HC-12), пины TXD и RXD модуля должны быть подключены к Rx и Tx пинам микроконтроллера соответсвенно. T-transmit(пердавать) R-receive(принимать) когда один модуль передает данные, он как бы дергает провод своим выходом Transmit, принимающий же модуль улавливает эти импульсы своим входом Receive.</p>
+                    <p>RX <strong>&lt;&gt;</strong> TX</p>
+                    <p>TX <strong>&lt;&gt;</strong> RX</p>
+                    <h3 id="-">Пакет данных</h3>
+                    <p>Данные передаются по проводам, на которых может быть либо положительное напряжение питания 3V3 (или HIGH - высокое состояние) либо земля GND (или LOW - низкое состояние). Поэтому все передающиеся данные представленны в двоичной системе исчисления, то есть это нули и еденицы. Нуль или еденица называется одим битом информации. Наши данные это и есть последовательность бит (нулей и едениц), физически это установдение 3V3 или GND на проводах TX или RX. 
+                    Когда устройство отправляет данные, оно посылает каждый байт (8 бит) последовательно, начиная со стартого бита, далее биты данных, бит четности (если он используется), и наконец, стоп-бит. Приемное устройство считывает эти биты в правильной последовательности и принимает переданные данные.</p>
+                    <p><img src="./images/bit_packet.jpg" alt="Пакет данных" class = "img-lab"></p>
+                    <h3 id="-">Старт- и Стоп-биты</h3>
+                    <p>Передача каждого байта начинается со старт-бита, который устанавливается в логическую &quot;0&quot;, чтобы указать начало передачи. Затем идут данные, после которых следуют биты четности (если они используются), и наконец, один или несколько стоп-битов, которые устанавливаются в логическую &quot;1&quot; и указывают конец передачи.</p>
+                    <h3 id="-">Пример</h3>
+                    <p>Представим, что мы отправляем байт данных &quot;01001011&quot;. Последовательность будет выглядеть так:</p>
+                    <ul>
+                    <li>Старт-бит: 0</li>
+                    <li>Данные: 01001011</li>
+                    <li>Бит четности (если используется)</li>
+                    <li>Стоп-бит: 1</li>
+                    </ul>
+                    <p>Это позволяет приемнику правильно интерпретировать переданные данные.</p>
+                    <h2 id="-uart-cubeide">Настройки UART в CubeIde</h2>
+                    <p>Тут следует немного пояснить работу USART&#39;а для упрощения понимания некоторых настроек.</p>
+                    <p>Мы будем передавать 8-ми битные байты (в отдельных случаях байты могут 9-ти битные), на скорости 115200 бит в секунду…</p>
+                    <p><img src="./images/settings.jpg" alt="настройки" class = "img-lab"></p>
+                    <ul>
+                    <li><strong>Baud Rate</strong> — скорость передачи (должна совпадать на обоих устройствах общения).</li>
+                    <li><strong>Word Length</strong> — длина данных в педеющемся пакете.</li>
+                    <li><strong>Parity</strong> — использование бита проверки чётности (см. ниже).</li>
+                    <li><strong>Stop Bits</strong> — количество стоповых битов (1 или 2).</li>
+                    <li><strong>Data Direction</strong> — включается приём и передача, или что-то одно.</li>
+                    <li><strong>Over Sampling</strong> — см. ниже.</li>
+                    </ul>
+                    <p>Получаемый пакет из восьми бит (один байт) выглядит так…</p>
+                    <p><img src="./images/bit_packet.jpg" alt="Пакет данных" class = "img-lab"></p>
+                    <p>Отправляемые/получаемые байты отделяются друг от друга стартовыми и стоповыми битами.</p>
+                    <p>Если ничего не передаётся, то линия находится в состоянии HIGH. Передатчик, начиная отправку, прижимает линию к «земле», а приёмник расценивает это как начало пакета — START (стартовый бит). Далее идёт приём (отсчитывая биты) и после последнего (D7) бита проверяется что линия установлена в HIGH — STOP (стоповый бит). Иногда для большей достоверности окончания приёма используются два стоповых бита.</p>
+                    <p>Количество принятых бит подсчитывается следующим образом: как только появляется стартовый бит (переход с HIGH на LOW) сразу же начинается отсчёт — 16 тиков на каждый бит… (количество тиков это и есть <strong>Over Sampling</strong>)</p>
+                    <p><strong>Parity</strong> — бит чётности. С помощью этого бита можно проверять целостность полученного пакета.</p>
+                    <p>Пакет с добавленным битом чётности выглядит так…</p>
+                    <p>Word Length нужно указать 9 Bits. Если оставить 8 Bits, то полезных битов будет 7.</p>
+                    <p>При отправке в этот бит записывается единица или ноль в зависимости от количества единичек в предыдущих восьми битах. Если единичек чётное кол-во, то записывается 0, если нечётное, то 1.</p>
+                    <p>То есть:</p>
+                    <p>Если отправляется 10111101 (шесть единичек — чётное количество), то бит чётности будет 0. Пакет будет выглядеть так — 101111010.</p>
+                    <p>Если отправляется 01110011 (пять единичек — нечётное количество), то бит чётности будет 1. Пакет будет выглядеть так — 011100111.</p>
+                    <p>При приёме такого пакета производится проверка — соответствует ли количество единичек значению в девятом бите, и если не соответствует, то пакет считается повреждённым — ошибка контроля чётности (HAL_UART_ERROR_PE).</p>
+                    <p>Вычисления производятся с помощью битовой операции XOR (исключающее «или»).</p>
+                    <p>Проверка конечно так себе. Теоретически может одна единичка превратится в ноль, а другой ноль в единичку, и тогда проверка ничего не выявит.</p>
+                    <h2 id="-">Элементы кода</h2>
+                    <blockquote>
+                    <p>[!NOTE]
+                    Чтобы принять или отправить данные достаточно описанных выше настроек.</p>
+                    </blockquote>
+                    <h3 id="-">Отправка данных</h3>
+                    <p>Отправить строку «Hello World» можно так:</p>
+                    <blockquote>
+                    <p>HAL_UART_Transmit(&amp;huart1, (uint8_t*)&quot;Hello World\n&quot;, 12, 1000);</p>
+                    </blockquote>
+                    <ul>
+                    <li>Первый аргумент — указатель на структуру USART</li>
+                    <li>Второй аргумент — строка (приведённая к указателю)</li>
+                    <li>Третий кол-во символов в отправляемой строке</li>
+                    <li>Четвёртый — таймаут в миллисекундах (если по каким-то причинам не удастся выполнить отправку в течении секунды, то вернётся ошибка).</li>
+                    </ul>
+                    <p>Эта функция блокирующая, то есть пока она не выполнится программа будет приостановлена.</p>
+                    <p>Чтоб не блокировать программу на время отправки, нужно воспользоваться функцией с прерыванием по завершению передачи.</p>
+                    <p>Включите глобальное прерывание…</p>
+                    <p><img src="./images/interrupt.jpg" alt="Interrupt" class = "img-lab"></p>
+                    <p>Отправлять данные так:</p>
+                    <blockquote>
+                    <p>HAL_UART_Transmit_IT(&amp;huart1, (uint8_t*)&quot;Hello World\n&quot;, 12);</p>
+                    </blockquote>
+                    <p>Здесь нет таймаута так как нам ничего не нужно ждать — отправили и забыли. Остальные аргументы те же, что и у блокирующей функции.</p>
+                    <p>По окончании отправки сработает прерывание и вызовет колбек:</p>
+                    <pre><code><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">HAL_UART_TxCpltCallback</span><span class="hljs-params">(UART_HandleTypeDef *huart)</span>
+                    </span>{
+                            <span class="hljs-keyword">if</span>(huart == &amp;huart1)
+                            {
+                                    <span class="hljs-comment">// можно установить какой-то флаг, сообщающий об окончании отправки</span>
+                            }     
+                    }
+                    </code></pre><p>Отправить массив:</p>
+                    <pre><code><span class="hljs-comment">/* USER CODE BEGIN Includes */</span>
+                    <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"string.h"</span></span>
+                    <span class="hljs-comment">/* USER CODE END Includes */</span>
+                    ...
+
+                    <span class="hljs-keyword">char</span> buff[<span class="hljs-number">16</span>] = {<span class="hljs-number">0</span>,};
+
+                    <span class="hljs-built_in">snprintf</span>(buff, <span class="hljs-number">15</span>, <span class="hljs-string">"Hello World\n"</span>);
+                    HAL_UART_Transmit_IT(&amp;huart1, (<span class="hljs-keyword">uint8_t</span>*)buff, <span class="hljs-built_in">strlen</span>(buff));
+                    </code></pre><p>Второй аргумент — указатель на массив, третий — длина строки в массиве.</p>
+                    <h3 id="-">Прием данных</h3>
+                    <p>Для приёма нужно сделать так:</p>
+                    <pre><code>uint8_t buff[<span class="hljs-number">16</span>] = {<span class="hljs-number">0</span>,};
+                    HAL_UART_Receive(&amp;huart1, (uint8_t*)buff, <span class="hljs-number">15</span>, <span class="hljs-number">1000</span>);
+                    </code></pre><ul>
+                    <li>Второй аргумент — указатель на массив в который будут записываться полученные данные</li>
+                    <li>Третий аргумент — кол-во байт, которые нужно принять</li>
+                    <li>Четвертый аргумент — таймаут.</li>
+                    </ul>
+                    <p>Эта функция тоже блокирующая, она будет ожидать до тех пор пока не получит все запрошенные байты, или пока не истечёт таймаут.</p>
+                    <p>Если для отправки данных блокирующая функция вполне подходит, то для приёма совсем не годится (мы ведь не знаем когда придут данные, если конечно они не идут сплошным потоком). Поэтому нужно использовать функцию вызывающую прерывание…</p>
+                    <pre><code>uint8_t <span class="hljs-keyword">buff[16] </span>= {<span class="hljs-number">0</span>,}<span class="hljs-comment">;</span>
+                    HAL_UART_Receive_IT(&amp;huart1, (uint8_t*)<span class="hljs-keyword">buff, </span><span class="hljs-number">15</span>)<span class="hljs-comment">;</span>
+                    </code></pre><ul>
+                    <li>Второй аргумент — указатель на массив в который будут записываться полученные данные</li>
+                    <li>Третий аргумент — кол-во байт, которые нужно принять.</li>
+                    </ul>
+                    <p>Эта функция не блокирует программу. Прерывание произойдёт только после того, как всё запрошенные байты будут приняты.</p>
+                    <p>Колбек:</p>
+                    <pre><code><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">HAL_UART_RxCpltCallback</span><span class="hljs-params">(UART_HandleTypeDef *huart)</span>
+                    </span>{
+                            <span class="hljs-keyword">if</span>(huart == &amp;huart1)
+                            {
+                                    <span class="hljs-comment">// что-то делаем</span>
+                            }
+                    }
+                    </code></pre><blockquote>
+                    <p>[!NOTE]
+                    Помните о том, что если посылаете данные из какого-то терминала, то этот терминал может посылать символы «новой строки» и «воврат каретки». То есть, если вы пошлёте 15 символов, а терминал добавит ещё свои, то программа получит первые 15, вызовет колбек, примет ещё (то что добавил терминал) и будет ожидать. Короче говоря, программа провернётся через колбек и будет ждать.</p>
+                    </blockquote>
+                    <h3 id="-">Прием посылки неизвестной длинны</h3>
+                    <p>С приёмом есть заморочка, мы можем не знать сколько данных должно прилететь, следовательно непонятно какое кол-во байт указывать. Например, если мы укажем пять байт, а прилетят только три, то прерывание не сработает пока не придут оставшиеся два. На этот случай есть несколько способов приёма.</p>
+                    <p>Если нужно время от времени получать один-два байта, то можно просто в начале программы (перед бесконечным циклом) вызвать функцию приёма…</p>
+                    <pre><code>/* <span class="hljs-keyword">USER</span> <span class="hljs-title">CODE</span> BEGIN PV */
+                    volatile char sim;
+                    /* <span class="hljs-keyword">USER</span> <span class="hljs-title">CODE</span> END PV */
+
+                    ...
+
+                    HAL_UART_Receive_IT(&amp;huart1, (uint8_t*)&amp;sim, <span class="hljs-number">1</span>);
+                    </code></pre><p>… а в колбеке что-то поделывать, и вызывать снова…</p>
+                    <pre><code><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">HAL_UART_RxCpltCallback</span><span class="hljs-params">(UART_HandleTypeDef *huart)</span>
+                    </span>{
+                            <span class="hljs-keyword">if</span>(huart == &amp;huart1)
+                            {
+                                    HAL_UART_Transmit(&amp;huart1, (<span class="hljs-keyword">uint8_t</span>*)&amp;sim, <span class="hljs-number">1</span>, <span class="hljs-number">1000</span>);
+                                    HAL_UART_Receive_IT(&amp;huart1, (<span class="hljs-keyword">uint8_t</span>*)&amp;sim, <span class="hljs-number">1</span>);
+                            }
+                    }
+                    </code></pre><p>Если нужно получать посылки большей длинны, то можно воспользоваться флагом IDLE. Этот флаг устанавливается аппаратно при обнаружении незанятой линии. То есть, если в приёмник поступает несколько байт подряд, а потом возникает пауза (линия находиться в состоянии HIGH некоторое время), то взводится флаг IDLE генерирующий прерывание, а мы по этому прерыванию определяем что данные перестали поступать.</p>
+                    <p>Допустим мы точно не знаем сколько байт должны прийти, но знаем что их не больше 12, тогда делаем так…</p>
+                    <pre><code>HAL_UART_Receive_IT(<span class="hljs-name">&amp;huart1</span>, (<span class="hljs-name">uint8_t*</span>)buff, <span class="hljs-number">15</span>)<span class="hljs-comment">;</span>
+                    __HAL_UART_ENABLE_IT(<span class="hljs-name">&amp;huart1</span>, UART_IT_IDLE)<span class="hljs-comment">;</span>
+                    </code></pre><p>Другое устройство пульнёт нам две строчки…</p>
+                    <pre><code>HAL_UART_Transmit(<span class="hljs-name">&amp;huart2</span>, (<span class="hljs-name">uint8_t*</span>)<span class="hljs-string">"Hello World"</span>, <span class="hljs-number">11</span>, <span class="hljs-number">1000</span>)<span class="hljs-comment">;  </span>
+                    HAL_UART_Transmit(<span class="hljs-name">&amp;huart2</span>, (<span class="hljs-name">uint8_t*</span>)<span class="hljs-string">"Hello World"</span>, <span class="hljs-number">11</span>, <span class="hljs-number">1000</span>)<span class="hljs-comment">;</span>
+                    </code></pre><p>В результате сначала произойдёт прерывание от IDLE (в буфер запишется строка «Hello World»), а потом прерывание при заполнении буфера. В итоге в буфере будет лежать «Hello WorldHell» — 15 байт.</p>
+
+
+                    <p class="mt-4"><a href="#" class="btn btn-primary">В начало страницы</a></p>
+                </div>
+            </div>
+        </div>
+      </div>
+   
+    </div>
+
+   
+
+    
+  <!---->
+    <div class="site-section" id="teachers-section">
+      <div class="container">
+
+        <div class="row mb-5 justify-content-center">
+          <div class="col-lg-7 mb-5 text-center"  data-aos="fade-up" data-aos-delay="">
+            <h2 class="section-title">Наши преподаватели</h2>
+            <p class="mb-5">Спасибо за проявленный интерес к ракетостроению и добро пожаловать к нам на курс.</p>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="teacher text-center">
+              <img src="../../images/splinter.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 1</h3>
+                <p class="position">Исследователь, научный сотрудник</p>
+                <p>Специальзируется на теме 1</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="teacher text-center">
+              <img src="../../images/yoda.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 2</h3>
+                <p class="position">Инженер программист</p>
+                <p>Специальзируется на теме 2</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="teacher text-center">
+              <img src="../../images/oogway.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 3</h3>
+                <p class="position">Инженер электронщик</p>
+                <p>Специальзируется на теме 3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<!--contact us-->
+<div class="site-section bg-light" id="contact-section">
+  <div class=".container-hluid">
+    <div class="row justify-content-center">
+      <div class="col-md-7">
+
+        <div class="container">
+          <div class="social-icons">
+              <a href="https://t.me/burockets" target="_blank" class="social-icon">
+                  <i class="fab fa-telegram-plane"></i>
+              </a>
+              <a href="https://vk.com/egobun" target="_blank" class="social-icon">
+                  <i class="fab fa-vk"></i>
+              </a>
+              <a href="https://www.youtube.com/@egorbunakov" target="_blank" class="social-icon">
+                  <i class="fab fa-youtube"></i>
+              </a>
+              
+          </div>
+      </div>
+      
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+
+
+
+  
+    
+  </div> <!-- .site-wrap -->
+
+  <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/popper.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/owl.carousel.min.js"></script>
+    <script src="../../js/jquery.stellar.min.js"></script>
+    <script src="../../js/jquery.countdown.min.js"></script>
+    <script src="../../js/bootstrap-datepicker.min.js"></script>
+    <script src="../../js/jquery.easing.1.3.js"></script>
+    <script src="../../js/aos.js"></script>
+    <script src="../../js/jquery.fancybox.min.js"></script>
+    <script src="../../js/jquery.sticky.js"></script>
+
+  
+  <script src="../../js/main.js"></script>
+    
+  </btn.btn-black:hover>
+</html>

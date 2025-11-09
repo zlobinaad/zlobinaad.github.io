@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BuRockets</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="../../fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/jquery-ui.css">
+    <link rel="stylesheet" href="../../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="../../css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="../../css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="../../fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="../../css/aos.css">
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Установка Git</title>
+    <style>
+      * {
+            box-sizing: border-box;
+        }
+
+        h1, h2, h3, h4, h5,
+      .h1, .h2, .h3, .h4, .h5 {
+          margin-top: 40px;
+        color: #054597ff;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+        p, ul {
+            width: 100%; /* Ширина 100% относительно контейнера */
+            margin: 10px 0; /* Отступы между элементами */
+            text-align: left;
+        }
+
+        html, body {
+            overflow-x: hidden; /* Скрыть горизонтальную прокрутку */
+        }
+
+        img {
+           
+            height: auto; /* Сохраняем пропорции изображений */
+        }
+
+        .container {
+            max-width: 2000px; /* Максимальная ширина контейнера */
+            margin: 0 auto; /* Центрирование контейнера */
+            padding-left: 15px; /* Убедитесь, что отступы не создают переполнение */
+            padding-right: 15px;
+        }
+        .heading{
+          margin-left: 20%;
+          width: 70%;    
+        }
+        .btn-primary span {
+            color: white; /* Устанавливаем белый цвет текста */
+        }
+
+        .social-icons {
+          display: flex;
+          justify-content: center;
+          margin-top: 50px;
+        }
+        .social-icon {
+            font-size: 40px;
+            margin: 0 20px;
+            transition: transform 0.3s, color 0.3s;
+        }
+        .social-icon:hover {
+            transform: scale(1.2);
+            color: #007bff; /* Цвет при наведении */
+        }
+        .social-icon:hover img {
+          transform: scale(1.2);
+        }
+        .blue-text {
+          color: #054597ff; /* светло-голубой цвет */
+          font-weight: bold;  /* чтобы сделать жирным */
+        }
+        .bold-text {
+          font-weight: bold;  /* чтобы сделать жирным */
+        }
+        
+
+        /* Примените медиа-запросы для мобильных устройств */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+        }
+  </style>
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+    
+    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+      
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <div class="site-logo mr-auto w-25"><a href="../../index.html">
+            <img src="../../images/logo.png" alt="MDN logo" width="20%"/>
+          </a></div>
+
+          <div class="mx-auto text-center">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mx-auto d-none d-lg-block  m-0 p-0">
+                <li><a href="#home-section" class="nav-link">Главная</a></li>
+                <li><a href="#01_git-section" class="nav-link">01_Git</a></li>
+                <!--<li><a href="#programs-section" class="nav-link">Программа</a></li>-->
+                <li><a href="#teachers-section" class="nav-link">Преподаватели</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="ml-auto w-25">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block m-0 p-0">
+              <li class="cta"><a href="#contact-section" class="nav-link"><span>Контакты</span></a></li>
+              </ul>
+            </nav>
+            <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
+          </div>
+        </div>
+      </div>
+      
+    </header>
+
+
+
+    
+    <div class="intro-section" id="home-section">
+      
+      <div class="slide-1" style="background-image: url('../../images/STM32.jpg');" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <div class="row align-items-center">
+                
+                <div class="col-lg-6 mb-4">
+                  <h1  data-aos="fade-up" data-aos-delay="100" ><a href="../STM32_course.html">
+                    <img src="../images/return_to_stm32.png" alt="MDN logo" width="50%"/>
+                  </a></h1>
+                  <h1  data-aos="fade-up" data-aos-delay="100" class = "heading">BuRockets</h1>
+                  <h1  data-aos="fade-up" data-aos-delay="100" class = "heading">Лабораторная работа 01_GIT</h1>
+                  <p data-aos="fade-up" data-aos-delay="200" class = "heading">GIT - распределённая система управления версиями. </p> 
+                  <p data-aos="fade-up" data-aos-delay="300" class = "heading"><a href="#01_git-section" class="btn btn-primary py-3 px-5 btn-pill">01_GIT</a></p>
+
+                </div>
+
+
+                <div class="col-lg-4 ml-auto" data-aos="fade-up" data-aos-delay="500">
+                  
+                    <div class="site-logo mr-auto w-25"><a href="01_git.html">
+                      <img src="images/git_logo.png" alt="MDN logo" width="300%"/>
+                    </a></div>
+                  
+                </div>
+
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="01_git-section"></div>
+    <div class="container">
+        <div class="row mb-10 justify-content-center">
+            <div class="col-lg-7" data-aos="fade-up" data-aos-delay="">
+                <h2 class="section-title">01_GIT</h2>
+
+                <h1>Установка Git</h1>
+                <ol>
+                    <li>Установить:
+                        <ul>
+                            <li><a href="https://git-scm.com">Git</a></li>
+                            <li><a href="https://putty.org.ru">Putty</a></li>
+                            <li><a href="https://tortoisegit.org">TortoiseGit</a></li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h2>Начало работы с Git</h2>
+                <h1>Клонирование удалённого репозитория</h1>
+                <ul>
+                    <div>
+                        С git можно работать как из командной строки, так и использовать сторонние приложения.  
+                        Мы рекомендуем использовать сторонние приложения-GUI в качестве просмотровщиков состояния вашего репозитория: веток, коммитов и т.д. (об этом поговорим чуть позже).
+                        В разделе "Установка Git" некоторые пункты будут для работы именно через программу TortoiseGit — пропустите их, если хотите клонировать репозиторий и работать через командную строку.
+                    </div>
+                    <li>
+                      Генерация ключа SSH для доступа к GitHub: безопасной аутентификации и подключения к вашему аккаунту без постоянного ввода логина и пароля.
+                      
+                      <li>Открыть Проводник ⇒ в строке адреса написать <span class="command">cmd</span> ⇒ нажать Enter (откроется командная строка).</li>
+                      <li>В командной строке написать команду <strong class="command">ssh-keygen</strong> (Enter, Enter, Enter, ... Всё по дефолту).</li>
+                      <img src="./images/cmd.png" alt="Командная строка" class="img-lab">
+                      <img src="./images/keygen.png" alt="Генерация ключа" class="img-lab">
+                      <li>После этого в папке вашего пользователя на ПК появится скрытая папка <code>.ssh</code>, в которой находятся два файла:
+                          <ul>
+                              <div>один с расширением <code>.pub</code> — публичный ключ;</div>
+                              <div>второй без расширения — приватный ключ.</div>
+                          </ul>
+                      </li>
+                      <div>Публичный ключ загружается на GitHub, приватный ключ должен храниться у вас локально на компьютере.</div>
+                      <div>Когда вы будете клонировать (создавать локальную копию) удалённый репозиторий с GitHub, Git использует SSH-протокол для подключения к серверу GitHub.</div>
+                      <div>Клиент (ваш компьютер) отправляет серверу GitHub информацию о своей публичной части ключа.</div>
+                      <div>Далее GitHub сравнивает присланный публичный ключ с ключами, зарегистрированными в вашем аккаунте.</div>
+                      <div>Сервер создаёт случайный вызов (challenge) и отправляет его клиенту — зашифрованный с помощью вашего публичного ключа.</div>
+                      <div>Клиент с помощью приватного ключа расшифровывает вызов и посылает ответ обратно.</div>
+                      <div>Если всё пройдет без ошибок, аутентификация будет успешной.</div>
+                      
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <b class="blue-text">TortoiseGit</b> ⇒ Открыть PuTTygen:
+                        <ul>
+                            <li>load key (приватный ключ, который без расширения, созданный ssh-keygen)</li>
+                        </ul>
+                    </li>
+                    <img src="./images/load.png" alt="Загрузка ключа" class="img-lab">
+                    <li>save private key, without passphrase (имя_ключа.ppk)</li>
+                    <img src="./images/save.png" alt="Сохранение ключа" class="img-lab">
+                </ul>
+
+                <ul>
+                    <li>
+                        Создать аккаунт на сайте <a href="https://github.com/">GitHub</a>:
+                        <ul>
+                            <li>придумать понятный никнейм</li>
+                            <li>загрузить аватарку</li>
+                            <li>сообщить свой никнейм преподавателю для получения доступа к курсу</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Зайти в свой аккаунт GitHub ⇒ Аватар (правый верхний угол) ⇒ Settings ⇒ SSH and GPG keys (в левом столбце) ⇒ New SSH key ⇒ вставить в поле key содержимое публичного ключа (имя_ключа.pub)
+                        (за исключением последних символов до знака =) ⇒ нажать Add key
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <b class="blue-text">TortoiseGit</b> ⇒ Запустить Pageant:
+                        <p>Если вы получаете такую ошибку:</p>
+                        <img src="./images/pagenterror.png" alt="Ошибка Pageant" class="img-lab">
+                        <p>Тогда ваш Pageant уже запущен и нужно открыть его таким способом:</p>
+                        <img src="./images/pagent_run.png" alt="Запуск Pageant" class="img-lab">
+                        <p>После запуска Pageant добавляем .ppk ключ <strong>Add Key</strong> (имя_ключа.ppk)</p>
+                        <img src="./images/add_key.png" alt="Добавление ключа" class="img-lab">
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <div>Так как мы хотим создать локальную версию уже созданного кем-то и расположенного на удалённом сервере (в нашем случае GitHub является таким сервером) репозитория, 
+                        то вам необходимо либо создать свой репозиторий на GitHub где вы будете иметь полные права как на чтение, так и на запись удалённого реаозитория.</div>
+                        <div>Для этого заходим на <a href="https://github.com">GitHub</a>, авторизуемся и создаём удалённый репозиторий:</div>
+                        <div>Во вкладке <strong>Repositories</strong> нажимаем на кнопку <b class="bold-text">New</b> ⇒</div>
+                        <div>Вводим название репозитория и нажимаем <b class="bold-text">Create repository</b></div>
+                        <div>
+                            <img src="./images/remote_rep.png" alt="Создание удалённого репозитория" class="img-lab">
+                        </div>
+                        <div>После создания репозитория скопируем URL-ссылку для его клонирования по SSH</div>
+                        <p>Code ⇒ Local ⇒ скопировать URL</p>
+                        <div>
+                            <img src="./images/code.png" alt="Код репозитория" class="img-lab">
+                        </div>
+                    </li>
+                    <li>
+                        <b class="blue-text">TortoiseGit</b> ⇒ Зайти в проводник (где вы хотите разместить папку с лабораторными работами) ⇒ щёлкнуть правой кнопкой мыши ⇒ Git Clone...
+                        <img src="./images/clone.png" alt="Клонирование репозитория" class="img-lab">
+                        ⇒ в URL вставить скопированный с сайта URL ⇒ Enter
+                        <img src="./images/url.png" alt="Вставка URL" class="img-lab">
+                    </li>
+                    <li>
+                        <b class="blue-text">Command git</b> ⇒ Если вы планируете работать с git через командную строку и пропускаете пункты помеченные <b class="blue-text">TortoiseGit</b>, то выполните этот пункт
+                    </li>
+                    <li>После установки git у вас появится возможность работать с командной строкой bash</li>
+                    <div>
+                        Зайдите в папку, в которую хотите склонировать удалённый репозиторий, нажмите правой кнопкой мыши и выберите <b class="bold-text">Git Bash</b>
+                        <img src="./images/git_bash.png" alt="Git Bash" class="img-lab">
+                    </div>
+                    <div>Откроется командная строка Bash, запишите команду git clone [url] для клонирования удалённого репозитория с скопированным нами ранее URL</div>
+                    <div>Команда будет выглядеть вот так: <span class="command">git clone git@github.com:Rocket-B/STM_Labs.git</span></div>
+                </ul>
+
+                <div class="highlight">
+                    <h3>Если всё прошло успешно, то поздравляю, вы склонировали репозиторий с лабораторными работами к себе на компьютер!</h3>
+                </div>
+
+                <h1>Теория</h1>
+                <ul>
+                  <h2>Локальность операций</h2>
+                  <div>Для осуществления практически всех операций системе Git требуются только локальные файлы и ресурсы.</div>
+                  <div>Git ищет старый файл и вычисляет внесённые в него правки, вместо того чтобы просить об этой операции удалённый сервер или считывать с этого сервера старую версию файла для локального сравнения.</div>
+                  <div>Это также означает, что практически все операции могут проводиться в автономном режиме и без использования виртуальной частной сети.</div>
+
+                  <h2>Целостность GIT</h2>
+                  <div>В системе Git для всех данных перед сохранением вычисляется контрольная сумма, по которой они впоследствии ищутся.</div>
+                  <div>Механизм, которым пользуется Git для вычисления контрольных сумм, называется хешем SHA-1. Это строка из 40 символов, включающая в себя числа в <b>шестнадцатеричной</b> системе (0–9 и a–f) и вычисляемая на основе содержимого файла или структуры папки в Git. Хеш SHA-1 выглядит примерно так:<br>
+                  <code>24b9da6552252987aa493b52f8696cd6d3b00373</code></div>
+                  <div>Git сохраняет данные в базе не по именам файлов, а по хешу их содержимого.</div>
+
+                  <h2>Основные состояния в Git</h2>
+                  <div>В Git можно выделить три основных состояния: модифицированное, индексированное, зафиксированное.</div>
+                  <ul>
+                    <li><b class="bold-text">Зафиксированное (committed)</b> состояние означает, что данные надёжно сохранены в локальной базе.</li>
+                    <li><b class="bold-text">Модифицированное (modified)</b> состояние означает, что изменения уже внесены в файл, но пока не зафиксированы в базе данных.</li>
+                    <li><b class="bold-text">Индексированное (staged)</b> состояние означает, что вы пометили текущую версию модифицированного файла как предназначенную для следующей фиксации.</li>
+                  </ul>
+
+                  <div>Файлы в Git имеют состояния: отслеживаемый и неотслеживаемый. Отслеживаемые файлы могут быть изменёнными, неизменёнными или подготовленными к фиксации.</div>
+
+                </ul>
+
+                <h1>Как работать с Git:</h1>
+                <ul>
+                    <li>Для большего понимания работы Git советуем посмотреть несколько <a href="https://youtu.be/dK6wgAixwhE?si=vhiid7AkZty6qdii">видео</a> про git из плейлиста.</li>
+                    <li>Или целый <a href="https://www.youtube.com/playlist?list=PLDyvV36pndZFHXjXuwA_NywNrVQO0aQqb">плейлист</a> про гит.</li>
+                </ul>
+
+                <h3>Контрольные вопросы по git:</h3>
+                <ul>
+                    <li>Что такое репозиторий?</li>
+                    <li>Чем отличается локальный и удалённый репозиторий?</li>
+                    <li>Что означают команды:
+                        <ul>
+                            <li><span class="command">git add</span></li>
+                            <li><span class="command">git commit</span></li>
+                            <li><span class="command">git push</span></li>
+                        </ul>
+                    </li>
+                    <li>Что такое ветки и как с ними работать?
+                        <ul>
+                            <li><span class="command">git merge</span></li>
+                            <li><span class="command">switch/checkout to ...</span></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p class="mt-4"><a href="#" class="btn btn-primary">В начало страницы</a></p>
+            </div>
+        </div>
+      </div>
+
+
+   
+
+    
+  <!---->
+    <div class="site-section" id="teachers-section">
+      <div class="container">
+
+        <div class="row mb-5 justify-content-center">
+          <div class="col-lg-7 mb-5 text-center"  data-aos="fade-up" data-aos-delay="">
+            <h2 class="section-title">Наши преподаватели</h2>
+            <p class="mb-5">Спасибо за проявленный интерес к ракетостроению и добро пожаловать к нам на курс.</p>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="teacher text-center">
+              <img src="../../images/splinter.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 1</h3>
+                <p class="position">Исследователь, научный сотрудник</p>
+                <p>Специальзируется на теме 1</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="teacher text-center">
+              <img src="../../images/yoda.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 2</h3>
+                <p class="position">Инженер программист</p>
+                <p>Специальзируется на теме 2</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="teacher text-center">
+              <img src="../../images/oogway.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 3</h3>
+                <p class="position">Инженер электронщик</p>
+                <p>Специальзируется на теме 3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--contact us-->
+<div class="site-section bg-light" id="contact-section">
+  <div class=".container-hluid">
+    <div class="row justify-content-center">
+      <div class="col-md-7">
+
+        <div class="container">
+          <div class="social-icons">
+              <a href="https://t.me/burockets" target="_blank" class="social-icon">
+                  <i class="fab fa-telegram-plane"></i>
+              </a>
+              <a href="https://vk.com/egobun" target="_blank" class="social-icon">
+                  <i class="fab fa-vk"></i>
+              </a>
+              <a href="https://www.youtube.com/@egorbunakov" target="_blank" class="social-icon">
+                  <i class="fab fa-youtube"></i>
+              </a>
+              
+          </div>
+      </div>
+      
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+
+
+
+  
+    
+  </div> <!-- .site-wrap -->
+
+  <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/popper.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/owl.carousel.min.js"></script>
+    <script src="../../js/jquery.stellar.min.js"></script>
+    <script src="../../js/jquery.countdown.min.js"></script>
+    <script src="../../js/bootstrap-datepicker.min.js"></script>
+    <script src="../../js/jquery.easing.1.3.js"></script>
+    <script src="../../js/aos.js"></script>
+    <script src="../../js/jquery.fancybox.min.js"></script>
+    <script src="../../js/jquery.sticky.js"></script>
+
+  
+  <script src="../../js/main.js"></script>
+    
+  </btn.btn-black:hover>
+</html>

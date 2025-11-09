@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BuRockets</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="../../fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/jquery-ui.css">
+    <link rel="stylesheet" href="../../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="../../css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="../../css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="../../fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="../../css/aos.css">
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>EXTI</title>
+    <style>
+        * {
+              box-sizing: border-box;
+          }
+  
+          h1, h2, h3, h4, h5,
+        .h1, .h2, .h3, .h4, .h5 {
+            margin-top: 40px;
+            text-align: left;
+          color: #054597ff;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+          font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+          p, ul {
+              width: 100%; /* Ширина 100% относительно контейнера */
+              margin: 10px 0; /* Отступы между элементами */
+              text-align: left;
+          }
+  
+          html, body {
+              overflow-x: hidden; /* Скрыть горизонтальную прокрутку */
+          }
+  
+          img {
+             
+              height: auto; /* Сохраняем пропорции изображений */
+          }
+  
+          .container {
+              max-width: 2000px; /* Максимальная ширина контейнера */
+              margin: 0 auto; /* Центрирование контейнера */
+              padding-left: 15px; /* Убедитесь, что отступы не создают переполнение */
+              padding-right: 15px;
+          }
+          .heading{
+            margin-left: 20%;
+            width: 70%;    
+          }
+          .btn-primary span {
+              color: white; /* Устанавливаем белый цвет текста */
+          }
+  
+          .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+          }
+          .social-icon {
+              font-size: 40px;
+              margin: 0 20px;
+              transition: transform 0.3s, color 0.3s;
+          }
+          .social-icon:hover {
+              transform: scale(1.2);
+              color: #007bff; /* Цвет при наведении */
+          }
+          .social-icon:hover img {
+            transform: scale(1.2);
+        }
+          
+  
+          /* Примените медиа-запросы для мобильных устройств */
+          @media (max-width: 768px) {
+              body {
+                  font-size: 14px;
+              }
+          }
+    </style>
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+    
+    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+      
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <div class="site-logo mr-auto w-25"><a href="../../index.html">
+            <img src="../../images/logo.png" alt="MDN logo" width="20%"/>
+          </a></div>
+
+          <div class="mx-auto text-center">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mx-auto d-none d-lg-block  m-0 p-0">
+                <li><a href="#home-section" class="nav-link">Главная</a></li>
+                <li><a href="#05_exti-section" class="nav-link">05_EXTI</a></li>
+                <!--<li><a href="#programs-section" class="nav-link">Программа</a></li>-->
+                <li><a href="#teachers-section" class="nav-link">Преподаватели</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="ml-auto w-25">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block m-0 p-0">
+              <li class="cta"><a href="#contact-section" class="nav-link"><span>Контакты</span></a></li>
+              </ul>
+            </nav>
+            <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
+          </div>
+        </div>
+      </div>
+      
+    </header>
+
+
+
+    
+    <div class="intro-section" id="home-section">
+      
+      <div class="slide-1" style="background-image: url('../../images/STM32.jpg');" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <div class="row align-items-center">
+                
+                <div class="col-lg-6 mb-4">
+                  <h1  data-aos="fade-up" data-aos-delay="100" ><a href="../STM32_course.html">
+                    <img src="../images/return_to_stm32.png" alt="MDN logo" width="50%"/>
+                  </a></h1>
+                  <h1  data-aos="fade-up" data-aos-delay="100" class="heading">BuRockets</h1>
+                  <h1  data-aos="fade-up" data-aos-delay="100" class="heading">Лабораторная работа 05_EXTI</h1>
+                  <p   data-aos="fade-up" data-aos-delay="200" class="heading">EXTI - контроллер внешних прерываний или событий.</p> 
+                  <p data-aos="fade-up" data-aos-delay="300" class="heading"><a href="#05_exti-section" class="btn btn-primary py-3 px-6 btn-pill" >05_EXTI</a></p>
+
+                </div>
+
+
+                <div class="col-lg-4 ml-auto" data-aos="fade-up" data-aos-delay="500">
+                  
+                    <div class="site-logo mr-auto w-25"><a href="05_exti.html">
+                      <img src="images/EXTI_logo.png" alt="MDN logo" width="180%"/>
+                    </a></div>
+                  
+                </div>
+
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="05_exti-section"></div>
+        <div class="container">
+            <div class="row mb-10 justify-content-center">
+                <div class="col-lg-7" data-aos="fade-up" data-aos-delay="">
+                    
+                    <h1 id="hal-exti-">HAL EXTI внешние прерывания</h1>
+                    <p><a href="https://www.youtube.com/watch?v=bVaeav9mZZ0&amp;list=PLhtMaaf_npBzsEQ94eGn5RnuE-VdGVObR&amp;index=7">Видео лекция</a> </p>
+                    <p>Внешние прерывания — это такие прерывания, которые обрабатываются вследствие возникновения некоторых событий на определённой ножке порта микроконтроллера. Таких событий может быть несколько не смотря на всего 2 логических состояния. Разнообразие данных событий легко увидеть, раскрыв их список в CubeMX в настройке ножек портов.</p>
+                    <p><img src="./images/type.png" width="420" height="150" class = "img-lab"></p>
+                    <p>Можно разделить данные типы на 2 группы пополам. первая группа — External Interrupt — это обработка внешних прерываний. А второй — обработка событий.</p>
+                    <details>
+                    <summary> Прерывание (Interrupt)</summary>
+
+                    - Прерывание - это механизм, который позволяет микроконтроллеру прервать выполнение текущей инструкции и перейти к выполнению обработчика прерывания.
+                    - Прерывания используются для обработки внешних сигналов (например, сигналов от периферийных устройств, таких как таймеры, UART, GPIO), чтобы реагировать на события в реальном времени.
+                    - Прерывания могут быть маскируемыми (разрешаемыми и запрещаемыми) и немаскируемыми (не могут быть запрещены).
+                    - Каждое прерывание имеет свой приоритет, что позволяет определять порядок их обработки.
+
+                    </details>
+
+                    <details>
+                    <summary>Событие (Event)</summary>
+
+                    - Событие - это изменение состояния или сигнал, который 
+                    происходит внутри микроконтроллера или программы.
+                    - События не приводят к немедленной остановке выполнения 
+                    текущего кода, как это делает прерывание. Вместо этого 
+                    они могут быть обработаны программой в удобное для нее 
+                    время.
+                    - События могут быть использованы для уведомления 
+                    программы о том, что произошло определенное условие или 
+                    изменение состояния, но они не требуют немедленного 
+                    вмешательства.
+
+                    </details>
+
+                    <p><br></p>
+                    <p>Рассмотрим более подробно прерывания и их настройки в CubeMX:</p>
+                    <p>⇒ Обнаружен восходящий фронт (изменение уровня 0 на 1),</p>
+                    <p>⇒ Обнаружен нисходящий фронт (изменение уровня 1 на 0),</p>
+                    <p>⇒ Обнаружен любой из вышеперечисленных фронтов.</p>
+                    <p>В лабораторной работе GPIO для самостоятельной работы было выдано задание, включать и выключать светодиод только по нажатию на кнопку. Вы должны были заметить, что опрашивая ножку мк подключенную к кнопке в бесконечном цикле, и в зависимости от ее состояния зажигая или гася светодиод система работала не стабильно. И иногда при нажатии светодиод мог резко загореться и сразу же погаснуть. </p>
+                    <p>Веной всему этому дребезг контактов, который приводит к нестабильному состоянию кнопки во время нажатия.</p>
+                    <p><img src="./images/contact_chatter.png" alt="" class = "img-lab"></p>
+                    <p>Существует несколько решений проблемы дребезга контактов, сегодня рассмотрим одно из них с использованием системы внешних прерываний.</p>
+                    <p>Для начала повторим часть лабораторной работы GPIO:</p>
+                    <ul>
+                    <li>физически подключим кнопку </li>
+                    <li>настроим светодиод в CubeMX </li>
+                    </ul>
+                    <p>Теперь в отличии от лабораторной работы GPIO, настроим ножку мк подключенную к кнопке как <strong>GPIO_EXTI14</strong></p>
+                    <p><img src="./images/pc14_gpio_exti.png" alt="" class = "img-lab"></p>
+                    <p>Так как наша кнопка подключена к земле, то сделаем внутреннюю подтяжку ножки <strong>PC14</strong> к питанию, а прерывание будет вызываться при нисходящем фронте сигнала.</p>
+                    <p><img src="./images/pc14_gpio_exti_settings.png" alt="" class = "img-lab"></p>
+                    <blockquote>
+                    <p>[!NOTE]
+                    Второй способ дать ножке название: нажать правой кнопкой мыши на ножку мк (к примеру PC14) ⇒ <strong>Enter User Label</strong> ⇒ <strong><em>Btn</em></strong></p>
+                    </blockquote>
+                    <p>Также включим NVIC:</p>
+                    <p><img src="./images/nvic.png" alt="" class = "img-lab"></p>
+                    <p>Далее генерируем код <img src="./images/codgen.png" alt="" class = "img-lab"></p>
+                    <p>Создадим две переменные</p>
+                    <pre><code>uint8_t flag_irq = <span class="hljs-number">0</span><span class="hljs-comment">;</span>
+                    uint32_t time_irq = <span class="hljs-number">0</span><span class="hljs-comment">;</span>
+                    </code></pre><p>Переопределим колбек внешнего прерывания</p>
+                    <pre><code><span class="hljs-comment">/* USER CODE BEGIN 4 */</span>
+                    <span class="hljs-keyword">void</span> HAL<span class="hljs-number">_G</span>PIO<span class="hljs-number">_</span>EXTI<span class="hljs-number">_</span>Callback(uint<span class="hljs-number">16_</span>t GPIO<span class="hljs-number">_P</span><span class="hljs-keyword">in</span>){
+                        <span class="hljs-keyword">if</span>(GPIO<span class="hljs-number">_P</span><span class="hljs-keyword">in</span> == Btn<span class="hljs-number">_P</span><span class="hljs-keyword">in</span>){
+                            HAL<span class="hljs-number">_</span>NVIC<span class="hljs-number">_</span>DisableIRQ(EXTI<span class="hljs-number">15_10_</span>IRQn);  <span class="hljs-comment">// сразу же отключаем прерывания на этом пине</span>
+                            flag<span class="hljs-number">_</span>irq = <span class="hljs-number">1</span>;                            <span class="hljs-comment">//поднимаем флажок</span>
+                            time<span class="hljs-number">_</span>irq = HAL<span class="hljs-number">_G</span>etTick();                <span class="hljs-comment">//запоминаем текущее время</span>
+                        }
+                    }
+                    <span class="hljs-comment">/* USER CODE END 4 */</span>
+                    </code></pre><p>При попаданию в колбек мы сразу отключаем прерывание, чтобы избежать вызова следующего прерывания от дребезга контактов, далее устанавливаем флаг, и сохраняем значение HAL_GetTick().</p>
+                    <p>Всё что связано с таймером нам больше не нужно.</p>
+                    <p>В бесконечном цикле проверяем флаг и ждём когда счётчик превысит 200мс…</p>
+                    <pre><code>  <span class="hljs-comment">/* USER CODE BEGIN WHILE */</span>
+                    <span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>)
+                    {
+                        <span class="hljs-keyword">if</span>(flag<span class="hljs-number">_</span>irq &amp;&amp; (HAL<span class="hljs-number">_G</span>etTick() - time<span class="hljs-number">_</span>irq) &gt; <span class="hljs-number">200</span>)
+                        {
+                            <span class="hljs-number">__</span>HAL<span class="hljs-number">_G</span>PIO<span class="hljs-number">_</span>EXTI<span class="hljs-number">_</span>CLEAR<span class="hljs-number">_</span>IT(Btn<span class="hljs-number">_P</span><span class="hljs-keyword">in</span>);  <span class="hljs-comment">// очищаем бит EXTI_PR</span>
+                            NVIC<span class="hljs-number">_</span>ClearPendingIRQ(EXTI<span class="hljs-number">15_10_</span>IRQn); <span class="hljs-comment">// очищаем бит NVIC_ICPRx</span>
+
+                            HAL<span class="hljs-number">_G</span>PIO<span class="hljs-number">_T</span>ogglePin(LED<span class="hljs-number">_G</span>PIO<span class="hljs-number">_P</span>ort, LED<span class="hljs-number">_P</span><span class="hljs-keyword">in</span>);
+
+                            HAL<span class="hljs-number">_</span>NVIC<span class="hljs-number">_</span>EnableIRQ(EXTI<span class="hljs-number">15_10_</span>IRQn);   <span class="hljs-comment">// включаем внешнее прерывание</span>
+
+                            flag<span class="hljs-number">_</span>irq = <span class="hljs-number">0</span>;
+                        }
+
+                        <span class="hljs-comment">/* USER CODE END WHILE */</span>
+
+                        <span class="hljs-comment">/* USER CODE BEGIN 3 */</span>
+                    }
+                    </code></pre><p>Через 200 мс очищаем биты, меняем состояние светодиода и включаем внешнее прерывание (ожидаем следующее нажатие на кнопку).</p>
+                    <p>Собираем код и заливаем на плату, если все прошло успешно, то баги с дребезгом контактов должны быть устранены.</p>
+                    <h2 id="-hal">Используемые функции HAL</h2>
+                    <ul>
+                    <li>HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);</li>
+                    <li>HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);</li>
+                    <li>HAL_NVIC_DisableIRQ(EXTI15_10_IRQn);</li>
+                    <li>__HAL_GPIO_EXTI_CLEAR_IT(Btn_Pin);</li>
+                    <li>HAL_GetTick();</li>
+                    </ul>
+                    <h2 id="-">Самостоятельная работа</h2>
+                    <p>Попробуйте самостоятельно реализовать программу подсчета нажатий на кнопку.</p>
+                    <h2 id="-">Решение самостоятельной работы</h2>
+                    <pre><code><span class="hljs-comment">/* USER CODE BEGIN WHILE */</span>
+                    <span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>)
+                    {
+                        <span class="hljs-keyword">if</span>(flag<span class="hljs-number">_</span>irq &amp;&amp; (HAL<span class="hljs-number">_G</span>etTick() - time<span class="hljs-number">_</span>irq) &gt; <span class="hljs-number">200</span> &amp;&amp; HAL<span class="hljs-number">_G</span>PIO<span class="hljs-number">_</span>ReadPin(Btn<span class="hljs-number">_G</span>PIO<span class="hljs-number">_P</span>ort, Btn<span class="hljs-number">_P</span><span class="hljs-keyword">in</span>) == GPIO<span class="hljs-number">_P</span>IN<span class="hljs-number">_</span>RESET)
+                        {
+                            <span class="hljs-number">__</span>HAL<span class="hljs-number">_G</span>PIO<span class="hljs-number">_</span>EXTI<span class="hljs-number">_</span>CLEAR<span class="hljs-number">_</span>IT(Btn<span class="hljs-number">_P</span><span class="hljs-keyword">in</span>);  <span class="hljs-comment">// очищаем бит EXTI_PR</span>
+                            NVIC<span class="hljs-number">_</span>ClearPendingIRQ(EXTI<span class="hljs-number">15_10_</span>IRQn); <span class="hljs-comment">// очищаем бит NVIC_ICPRx</span>
+
+                            counter ++;
+                            HAL<span class="hljs-number">_</span>NVIC<span class="hljs-number">_</span>EnableIRQ(EXTI<span class="hljs-number">15_10_</span>IRQn);   <span class="hljs-comment">// включаем внешнее прерывание</span>
+
+                            flag<span class="hljs-number">_</span>irq = <span class="hljs-number">0</span>;
+                        }
+
+                        <span class="hljs-comment">/* USER CODE END WHILE */</span>
+
+                        <span class="hljs-comment">/* USER CODE BEGIN 3 */</span>
+                    }
+                    </code></pre><pre><code>  <span class="hljs-comment">/* USER CODE BEGIN 4 */</span>
+                    <span class="hljs-keyword">void</span> HAL<span class="hljs-number">_G</span>PIO<span class="hljs-number">_</span>EXTI<span class="hljs-number">_</span>Callback(uint<span class="hljs-number">16_</span>t GPIO<span class="hljs-number">_P</span><span class="hljs-keyword">in</span>){
+                        <span class="hljs-keyword">if</span>(GPIO<span class="hljs-number">_P</span><span class="hljs-keyword">in</span> == Btn<span class="hljs-number">_P</span><span class="hljs-keyword">in</span>){
+                            HAL<span class="hljs-number">_</span>NVIC<span class="hljs-number">_</span>DisableIRQ(EXTI<span class="hljs-number">15_10_</span>IRQn);  <span class="hljs-comment">// сразу же отключаем прерывания на этом пине</span>
+                            flag<span class="hljs-number">_</span>irq = <span class="hljs-number">1</span>;                            <span class="hljs-comment">//поднимаем флажок</span>
+                            time<span class="hljs-number">_</span>irq = HAL<span class="hljs-number">_G</span>etTick();                <span class="hljs-comment">//запоминаем текущее время</span>
+                        }
+                    }
+                    <span class="hljs-comment">/* USER CODE END 4 */</span>
+                    </code></pre><p>Из кода выше понятно, что при каждом нажатии переменная <strong>counter</strong> увеличивается на единицу, но как же отследить значение <strong>counter</strong>? Для этого нам нужен <a href="https://ru.wikipedia.org/wiki/%D0%9E%D1%82%D0%BB%D0%B0%D0%B4%D1%87%D0%B8%D0%BA">отладчик (debugger)</a>.</p>
+                    <p>После сборки программы нажимаем кнопку &quot;<strong><em>войти в отладчик</em></strong>&quot; <img src="./images/debug.png" alt="">
+                    Далее в правой части экрана находим вкладу <strong>Live Expressions</strong></p>
+                    <p><img src="./images/live_expressions.png" alt="" class = "img-lab"></p>
+                    <p>Нажимаем кнопку <strong>Add new expression</strong> и вводим название отслеживаемой переменной. В итоге должно получиться так:</p>
+                    <p><img src="./images/counter.png" alt="" class = "img-lab"></p>
+                    <p>Далее нажимаем кнопку <strong>Resume</strong> <img src="./images/resume.png" alt="" class = "img-lab">, программа начнет выполняться и мы сможем наблюдать, как наша переменная увеличивается при нажатии на кнопку.</p>
+                    <p>Отлично, но что если бы данные за которыми мы следили были бы не целыми или например изменяли знак и резко менялись, наблюдать за нами было бы гораздо приятнее на графике. Давайте сделаем это:</p>
+                    <p>Первым делом выходим из отладчика, нажав кнопку <strong>Terminate</strong> <img src="./images/terminate.png" alt="" class = "img-lab"></p>
+                    <p>Далее настроим Дебаггер </p>
+                    <p><img src="./images/debug_config.png" alt="" class = "img-lab"></p>
+                    <p><img src="./images/debug_configurations_2.png" alt="" class = "img-lab"></p>
+                    <p>Ставим галочку ⇒ нажимаем <strong>Apply</strong> ⇒ <strong>Close</strong></p>
+                    <p>Далее заходим в отладчик и включаем сам график </p>
+                    <p><img src="./images/graph.png" alt="" class = "img-lab"></p>
+                    <p>Должна появиться вкладка <strong>SWV Data Trace Timeline Graph</strong>, заходим в нее нажимаем на значок инструментов</p>
+                    <p><img src="./images/SWV.png" alt="" class = "img-lab"></p>
+                    <p>тут ставим галочку и пишем название переменной, которую хотим отобразить на графике</p>
+                    <p><img src="./images/data_trace.png" alt="" class = "img-lab"></p>
+                    <p>нажимаем OK</p>
+                    <p>далее <strong>Resume</strong> <img src="./images/resume.png" alt="" class = "img-lab"></p>
+                    <p>и следим как значение counter увеличивается на графике при нажатии на кнопку</p>
+                    <p><img src="./images/final_graph.png" alt="" class = "img-lab"></p>
+
+                        
+
+                    <p class="mt-4"><a href="#" class="btn btn-primary">В начало страницы</a></p>
+                    
+                </div>
+            </div>
+        </div>
+      </div>
+   
+    </div>
+
+   
+
+    
+  <!---->
+    <div class="site-section" id="teachers-section">
+      <div class="container">
+
+        <div class="row mb-5 justify-content-center">
+          <div class="col-lg-7 mb-5 text-center"  data-aos="fade-up" data-aos-delay="">
+            <h2 class="section-title">Наши преподаватели</h2>
+            <p class="mb-5">Спасибо за проявленный интерес к ракетостроению и добро пожаловать к нам на курс.</p>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="teacher text-center">
+              <img src="../../images/splinter.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 1</h3>
+                <p class="position">Исследователь, научный сотрудник</p>
+                <p>Специальзируется на теме 1</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="teacher text-center">
+              <img src="../../images/yoda.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 2</h3>
+                <p class="position">Инженер программист</p>
+                <p>Специальзируется на теме 2</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="teacher text-center">
+              <img src="../../images/oogway.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 3</h3>
+                <p class="position">Инженер электронщик</p>
+                <p>Специальзируется на теме 3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<!--contact us-->
+<div class="site-section bg-light" id="contact-section">
+  <div class=".container-hluid">
+    <div class="row justify-content-center">
+      <div class="col-md-7">
+
+        <div class="container">
+          <div class="social-icons">
+              <a href="https://t.me/burockets" target="_blank" class="social-icon">
+                  <i class="fab fa-telegram-plane"></i>
+              </a>
+              <a href="https://vk.com/egobun" target="_blank" class="social-icon">
+                  <i class="fab fa-vk"></i>
+              </a>
+              <a href="https://www.youtube.com/@egorbunakov" target="_blank" class="social-icon">
+                  <i class="fab fa-youtube"></i>
+              </a>
+              
+          </div>
+      </div>
+      
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+
+
+  
+    
+  </div> <!-- .site-wrap -->
+
+  <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/popper.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/owl.carousel.min.js"></script>
+    <script src="../../js/jquery.stellar.min.js"></script>
+    <script src="../../js/jquery.countdown.min.js"></script>
+    <script src="../../js/bootstrap-datepicker.min.js"></script>
+    <script src="../../js/jquery.easing.1.3.js"></script>
+    <script src="../../js/aos.js"></script>
+    <script src="../../js/jquery.fancybox.min.js"></script>
+    <script src="../../js/jquery.sticky.js"></script>
+
+  
+  <script src="../../js/main.js"></script>
+    
+  </btn.btn-black:hover>
+</html>

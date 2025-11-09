@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BuRockets</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="../../fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/jquery-ui.css">
+    <link rel="stylesheet" href="../../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="../../css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="../../css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="../../fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="../../css/aos.css">
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Установка Git</title>
+    <style>
+      * {
+            box-sizing: border-box;
+        }
+
+        h1, h2, h3, h4, h5,
+      .h1, .h2, .h3, .h4, .h5 {
+          margin-top: 40px;
+        color: #054597ff;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+        p, ul {
+            width: 100%; /* Ширина 100% относительно контейнера */
+            margin: 10px 0; /* Отступы между элементами */
+            text-align: left;
+        }
+
+        html, body {
+            overflow-x: hidden; /* Скрыть горизонтальную прокрутку */
+        }
+
+        img {
+           
+            height: auto; /* Сохраняем пропорции изображений */
+        }
+
+        .container {
+            max-width: 2000px; /* Максимальная ширина контейнера */
+            margin: 0 auto; /* Центрирование контейнера */
+            padding-left: 15px; /* Убедитесь, что отступы не создают переполнение */
+            padding-right: 15px;
+        }
+        .heading{
+          margin-left: 20%;
+          width: 70%;    
+        }
+        .btn-primary span {
+            color: white; /* Устанавливаем белый цвет текста */
+        }
+
+        .social-icons {
+          display: flex;
+          justify-content: center;
+          margin-top: 50px;
+        }
+        .social-icon {
+            font-size: 40px;
+            margin: 0 20px;
+            transition: transform 0.3s, color 0.3s;
+        }
+        .social-icon:hover {
+            transform: scale(1.2);
+            color: #007bff; /* Цвет при наведении */
+        }
+        .social-icon:hover img {
+          transform: scale(1.2);
+      }
+        
+
+        /* Примените медиа-запросы для мобильных устройств */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+        }
+  </style>
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+    
+    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+      
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <div class="site-logo mr-auto w-25"><a href="../../index.html">
+            <img src="../../images/logo.png" alt="MDN logo" width="20%"/>
+          </a></div>
+
+          <div class="mx-auto text-center">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mx-auto d-none d-lg-block  m-0 p-0">
+                <li><a href="#home-section" class="nav-link">Главная</a></li>
+                <li><a href="#06_tim-section" class="nav-link">06_TIM</a></li>
+                <!--<li><a href="#programs-section" class="nav-link">Программа</a></li>-->
+                <li><a href="#teachers-section" class="nav-link">Преподаватели</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="ml-auto w-25">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block m-0 p-0">
+              <li class="cta"><a href="#contact-section" class="nav-link"><span>Контакты</span></a></li>
+              </ul>
+            </nav>
+            <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
+          </div>
+        </div>
+      </div>
+      
+    </header>
+
+
+
+    
+    <div class="intro-section" id="home-section">
+      
+      <div class="slide-1" style="background-image: url('../../images/STM32.jpg');" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <div class="row align-items-center">
+                
+                <div class="col-lg-6 mb-4">
+                  <h1  data-aos="fade-up" data-aos-delay="100" ><a href="../STM32_course.html">
+                    <img src="../images/return_to_stm32.png" alt="MDN logo" width="50%"/>
+                  </a></h1>
+                  <h1  data-aos="fade-up" data-aos-delay="100" class = "heading">BuRockets</h1>
+                  <h1  data-aos="fade-up" data-aos-delay="100" class = "heading">Лабораторная работа 06_TIM</h1>
+                  <p data-aos="fade-up" data-aos-delay="200" class = "heading">TIM - таймеры, с их помощью можно замерять время, длину импульсов, считать импульсы, создавать ШИМ-сигнал, запускать один таймер другим, запускать таймером некоторую периферию, запускать ракеты в космос и т.д. </p> 
+                  <p data-aos="fade-up" data-aos-delay="300" class = "heading"><a href="#06_tim-section" class="btn btn-primary py-3 px-5 btn-pill">06_TIM</a></p>
+
+                </div>
+
+
+                <div class="col-lg-4 ml-auto" data-aos="fade-up" data-aos-delay="500">
+                  
+                    <div class="site-logo mr-auto w-25"><a href="06_tim.html">
+                      <img src="images/TIM_logo.png" alt="MDN logo" width="100%"/>
+                    </a></div>
+                  
+                </div>
+
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="06_tim-section"></div>
+        <div class="container">
+            <div class="row mb-10 justify-content-center">
+                <div class="col-lg-7" data-aos="fade-up" data-aos-delay="">
+                    <h2 class="section-title" >06_TIM</h2>
+            
+                    <h1 id="timers">Timers</h1>
+                    <p><a href="https://www.youtube.com/watch?v=7iBBkNumYlo&amp;list=PLhtMaaf_npBzsEQ94eGn5RnuE-VdGVObR&amp;index=8">Видео лекция. Часть 1</a></p>
+                    <p><a href="https://www.youtube.com/watch?v=hmySSeW2ifI">Видео лекция. Часть 2</a></p>
+                    <p>Таймеры представляют собой потрясающее устройство, доступное в микроконтроллерах. Они позволяют измерять временные интервалы, длину импульсов, подсчитывать импульсы, генерировать ШИМ-сигналы, запускать один таймер от другого, активировать определенные периферийные устройства, запускать ракеты в космос и многое другое. Особенность заключается в том, что все эти операции выполняются на аппаратном уровне, обходя процессор.</p>
+                    <p>Таймеры stm32 делятся на три вида:</p>
+                    <p>Advanced-control timers (TIM1 и TIM8) — самые «нафаршированные».
+                    General-purpose timers (TIM2, TIM3, TIM4, TIM5) — функционал чуть меньше чем у предыдущих.
+                    Basic timers (все остальные) — сильно урезанный функционал.</p>
+                    <p>Описание сделано на примере таймера №1.</p>
+                    <p>Начнём с самого простого — выполнение какого-нибудь действия через определённые промежутки времени. Таймер будет каждые 500мс генерировать прерывание и мигать светодиодом в обработчике.</p>
+                    <p>На всякий случай:</p>
+                    <ul>
+                    <li>мс — миллисекунда (1000мс = 1сек).</li>
+                    <li>мкс — микросекунда (1000000мкс = 1сек).</li>
+                    <li>нс — наносекунда (1000000000нс = 1сек)</li>
+                    </ul>
+                    <blockquote>
+                    <p>[!NOTE]
+                    В дальнейшем будем говорит о частоте тактирования и периоде. Стоит понимать, что время одного такта  ꚍ = 1/ϑ , где ϑ - это частота тактирования. Период (T) это время за которое проходит N тактов, то есть T = N * ꚍ</p>
+                    </blockquote>
+                    <p>Первым делом нужно выбрать источник тактирования…</p>
+                    <p><img src="./images/source.jpg" alt="" class = "img-lab"></p>
+                    <p>Clock Source ⇨ Internal Clock — в данном случае источник будет внутренний — частота от шины APB2…</p>
+                    <p><img src="./images/frec.jpg" alt="" class = "img-lab"></p>
+                    <p>Далее настраиваем таймер…</p>
+                    <p><img src="./images//parametrs_settings.jpg" width="450" height="250" class = "img-lab"></p>
+                    <details>
+                      <summary>Prescaler</summary>
+                    
+                    <code>Prescaler — предделитель системной частоты таймера (частоты поступающей с шины APB2).
+                    
+                    Предделитель это цифровой счётчик, который считает между тиками таймера. То есть, допустим мы установили предделитель равным какому-то значению, тогда между каждым тиком таймера, счётчик предделителя будет со скоростью системной частоты таймера отсчитывать от 0 до этого значения и обнуляться. При каждом обнулении счётчика, таймер будет совершать очередной тик. Таким образом происходит деление частоты.
+                    
+                    Поскольку в цифровых счётчиках отсчёт начинается с нуля (0, 1, 2, 3...), то предделитель нужно указывать с вычетом единички. При значении Prescaler = 0, коэфф.деления = 1:1. При Prescaler = 1, коэфф.деления = 1:2.
+                    То есть, чтобы разделить частоту на 2, нужно в Prescaler записать 1, чтобы разделить частоту на 3, нужно в Prescaler записать 2, и т.д. То есть в нашем случае чтоб получить частоту 100кГц нужно указать Prescaler 719.</code>
+                    
+                    &gt; [!NOTE]
+                    &gt; В примерах я округляю значение для удобства восприятия информации, но в рабочих проектах обязательно вычитайте единичку.
+                    
+                    </details>
+                    
+                    <details>
+                      <summary>Counter Mode</summary>
+                    
+                    <code>⇒ Up — счётчик будет считать «вверх», от нуля до значения переполнения.
+                    
+                    ⇒ Down — счётчик будет считать «вниз», от значения переполнения до нуля.
+                    
+                    ⇒ Режимы Center Aligned описаны в разделе про ШИМ.</code>
+                    
+                    </details>
+                    
+                    <details>
+                      <summary>Counter Period</summary>
+                    
+                    <code>Counter Period — переполнение. Счётчик будет считать до 50000. При частоте 100кГц он досчитает до 50000 за 500мс.
+                    
+                    Здесь такая же ситуация как и с Prescaler&#39;ом, нужно вычитать единичку из значения. То есть вместо 50000, нужно писать 49999.</code>
+                    
+                    </details>
+                    
+                    <details>
+                      <summary>Internal Clock Division</summary>
+                    
+                    <code>Делитель системной частоты таймера для формирования вспомогательного тактового сигнала, который используется в цифровых фильтрах, и для формирования времени запаздывания при работе в режиме PWM с комплементарными выходами (dead-time). Смотрите пункт про цифровой фильтр.</code>
+                    
+                    </details>
+                    
+                    <details>
+                      <summary>Repetition Counter</summary>
+                    
+                    <code>Если указать число больше нуля, то прерывание будет генерироваться не при каждом переполнение счётчика, а на каждые N переполнений. Например, если указываем 4, то прерывание будет вызываться при каждом четвёртом переполнении.</code><br>
+                    </details>
+                    
+                    <details>
+                      <summary>auto-reload preload</summary>
+                    
+                    <code>У некоторых регистров таймера есть дублирующие регистры, основной регистр называется «теневым» (на схема его рисуют с тенью, доступ из программы к нему невозможен), а дублирующий называется буферным регистром. Запись в теневой регистр производится через буферный — записали новое значение в буферный регистр, а оттуда оно переносится в теневой.</code>
+                    
+                    <img src="./images/arr.jpg" alt="" class = "img-lab">
+                    
+                    <code>Регистр ARR — Auto-reload register (в нём хранится значение переполнения, в нашем случае это — 50000).
+                    
+                    Когда мы изменяем значение переполнения, то новое значение записывается в буферный регистр, а дальше происходит следующее: если указано Disable, то новое значение тут же переносится в теневой регистр, а если указать Enable, то новое значение перенесётся в теневой регистр только после того, как таймер переполнится. Таким образом можно защитится от несвоевременного изменения значения, когда это значение нужно менять по ходу программы.</code>
+                    </details>
+                    
+                    
+                    <p>Теперь включите прерывание…</p>
+                    <p><img src="./images/interrupt.jpg" alt="" class = "img-lab"></p>
+                    <p>TIM1 update interrupt — прерывание при переполнении. Счётчик переполнился и обновился (update).</p>
+                    <p>Перед бесконечным циклом запустим таймер в режиме прерывания:</p>
+                    <pre><code>/* <span class="hljs-keyword">USER</span> <span class="hljs-title">CODE</span> BEGIN <span class="hljs-number">2</span> */
+                    HAL_TIM_Base_Start_IT(&amp;htim1);
+                    /* <span class="hljs-keyword">USER</span> <span class="hljs-title">CODE</span> END <span class="hljs-number">2</span> */
+                    </code></pre><p>В колбеке мигаем светиком:</p>
+                    <pre><code><span class="hljs-comment">/* USER CODE BEGIN 0 */</span>
+                    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">HAL_TIM_PeriodElapsedCallback</span><span class="hljs-params">(TIM_HandleTypeDef *htim)</span>
+                    </span>{
+                            <span class="hljs-keyword">if</span>(htim-&gt;Instance == TIM1) <span class="hljs-comment">//check if the interrupt comes from TIM1</span>
+                            {
+                                    HAL_GPIO_TogglePin(led13_GPIO_Port, led13_Pin); 
+                            }
+                    }
+                    </code></pre><p>Это самое распространённое использование таймера — выполнение каких-либо действий через определённые интервалы времени.</p>
+                    <h2 id="-">Каналы таймера</h2>
+                    <p>Теперь давайте познакомимся с каналами таймера.</p>
+                    <p>У каждого таймера есть четыре независимых канала, которые могут подключаться к физическим пинам микроконтроллера, то есть работать как внешние входы/выходы, а могут и не подключаться, и работать как внутренние входы/выходы для взаимодействия с другими таймерами. У некоторых МК, например у F303, есть доп. каналы (5 и 6) не имеющие выхода наружу.</p>
+                    <p>Поэкспериментируем с первым каналом в режиме выхода — Output Compare. В этом режиме можно устанавливать уровень (HIGH или LOW) на выводной пин. Уровень переключается в момент сравнения. В этот момент можно генерировать прерывание.</p>
+                    <p>Удалите все прежние настройки таймера и сделайте так…</p>
+                    <p><img src="./images/mode.jpg" alt="" class = "img-lab"></p>
+                    <p>Указываем режим Output Compare для первого канала. Если в этом режиме не указывать источник тактирования, то по умолчанию используется системная частота таймера.</p>
+                    <p><img src="./images/counter_settings.jpg" alt="" class = "img-lab"></p>
+                    <p>Здесь устанавливаем предделитель 7200, а переполнение 50000. Таким образом переполнение будет происходить каждые 5 сек.</p>
+                    <p><img src="./images/pulse.jpg" alt="" class = "img-lab"></p>
+                    <p>Mode ⇨ Toggle on match — в момент сравнения, на пине PA8 (TIM1_CH1) будет происходить смена уровня с HIGH на LOW и наоборот. В данном режиме не важно какое указано сравнение, главное чтоб оно было больше нуля и меньше (или равным) переполнения (50000).</p>
+                    <p></details></p>
+                    <p><details>
+                      <summary>Другие варианты</summary></p>
+                    <pre><code>⇒ Frozen — в момент сравнения <span class="hljs-built_in">состояние</span> выхода <span class="hljs-keyword">не</span> изменяется. Таймер в этом режиме может использоваться <span class="hljs-keyword">для</span> того, чтобы формировать интервалы времени в программе (прерывания <span class="hljs-keyword">по</span> сравнению).
+                    
+                    ⇒ Active Level on match — в момент сравнения на выход подаётся HIGH <span class="hljs-keyword">и</span> больше <span class="hljs-keyword">не</span> изменяется.
+                    
+                    ⇒ Inactive Level on match - в момент сравнения на выход подаётся HIGH <span class="hljs-keyword">и</span> больше <span class="hljs-keyword">не</span> изменяется.
+                    
+                    ⇒ Inactive Level on match — в момент сравнения на выход подаётся LOW <span class="hljs-keyword">и</span> больше <span class="hljs-keyword">не</span> изменяется.
+                    
+                    ⇒ Forced Active — на выход сразу же (независимо от значений переполнения <span class="hljs-keyword">и</span> сравнения) подаётся HIGH <span class="hljs-keyword">и</span> больше <span class="hljs-keyword">не</span> изменяется.
+                    
+                    ⇒ Forced Inactive — на выход сразу же (независимо от значений переполнения <span class="hljs-keyword">и</span> сравнения) подаётся LOW <span class="hljs-keyword">и</span> больше <span class="hljs-keyword">не</span> изменяется.
+                    </code></pre><p></details>
+                    <br>
+                    Pulse — здесь вписывается значение сравнения. В данном случае прерывание по сравнению будет происходить когда счётчик досчитает до 25000.</p>
+                    <p>Сейчас сгенерируйте проект, подключите к PA8 светодиод, а в коде впишите (перед бесконечным циклом) команду…</p>
+                    <pre><code>/* <span class="hljs-keyword">USER</span> <span class="hljs-title">CODE</span> BEGIN <span class="hljs-number">2</span> */
+                    HAL_TIM_OC_Start_IT(&amp;htim1, TIM_CHANNEL_1); // генерирует прерывание
+                    //HAL_TIM_OC_Start(&amp;htim1, TIM_CHANNEL_1); // не генерирует прерывание
+                    /* <span class="hljs-keyword">USER</span> <span class="hljs-title">CODE</span> END <span class="hljs-number">2</span> */
+                    </code></pre><p>Таймер запускается в режиме Output Compare для канала №1.</p>
+                    <p>Прошейте и нажмите кнопочку Reset. Светодиод загорится через 2.5 секунды, то есть после того как счётчик досчитает до сравнения. Если же изменить полярность сигнала — CH Polarity ⇨ Low, то после Reset&#39;а светик загорится сразу же, а погаснет через 2.5 секунды. То есть этот пункт позволяет выбрать — когда будет устанавливаться высокий уровень на линии, до сравнения или после.</p>
+                    <p>CH Idle State — определяет логический уровень сигнала на выходе канала в состоянии ожидания (пока не трогайте).</p>
+                    <p>Если нужно чтоб в момент сравнения генерировалось прерывание, то его нужно активировать…</p>
+                    <p><img src="./images/NVIC.jpg" alt="" class = "img-lab"></p>
+                    <p>А в программу добавить колбек…</p>
+                    <pre><code><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">HAL_TIM_OC_DelayElapsedCallback</span><span class="hljs-params">(TIM_HandleTypeDef *htim)</span>
+                    </span>{
+                            <span class="hljs-keyword">if</span>(htim-&gt;Instance == TIM1)
+                            {
+                                    HAL_GPIO_TogglePin(led13_GPIO_Port, led13_Pin);
+                                    <span class="hljs-built_in">snprintf</span>(trans_str, <span class="hljs-number">31</span>, <span class="hljs-string">"Compare %lu\n"</span>, __HAL_TIM_GET_COUNTER(&amp;htim1));
+                                    HAL_UART_Transmit(&amp;huart1, (<span class="hljs-keyword">uint8_t</span>*)trans_str, <span class="hljs-built_in">strlen</span>(trans_str), <span class="hljs-number">1000</span>);
+                            }
+                    }
+                    </code></pre><blockquote>
+                    <p>[!NOTE]
+                    На строчки <code>snprintf(trans_str, 31, &quot;Compare %lu\n&quot;, __HAL_TIM_GET_COUNTER(&amp;htim1));</code> и <code>HAL_UART_Transmit(&amp;huart1, (uint8_t*)trans_str, strlen(trans_str), 1000);</code> пока не особо обращайте внимания, они нужны для отправки данных на компьютер с микроконтроллера, это будет описано в следующей лабе.</p>
+                    </blockquote>
+                    <h2 id="pwm-">PWM - ШИМ</h2>
+                    <p>ШИМ (PWR) — это разновидность режима сравнения.</p>
+                    <p>ШИМ (широтно-импульсная модуляция) — это метод управления сигналом, который используется для управления мощностью или скоростью электрического устройства. Он основан на генерации серии импульсов, называемых широтно-импульсными сигналами, с различной длительностью.</p>
+                    <p>Вот графики, демонстрирующие работу ШИМ с разной <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BA%D0%B2%D0%B0%D0%B6%D0%BD%D0%BE%D1%81%D1%82%D1%8C">скважностью</a>:</p>
+                    <p><img src="./images//PWM.jpg" width="450" height="250" class = "img-lab"></p>
+                    <p><br>
+                    На графике представлены импульсы ШИМ. Они имеют разную длительность во времени. Длительность каждого импульса определяет, насколько долго будет активным выходной сигнал. Если импульс длится долго, то выходной сигнал будет активным на протяжении большей части времени. Если импульс короткий, то выходной сигнал будет активным только на короткое время.</p>
+                    <p>Преимущество ШИМ заключается в том, что он позволяет управлять мощностью устройства или скоростью двигателя, изменяя отношение между временем активности и неактивности сигнала. Это делает ШИМ очень полезным для управления яркостью светодиодов, скоростью электродвигателей, углом поворота сервопривода.</p>
+                    <p>Удалите всё что настроено и сделайте так…</p>
+                    <p><img src="./images/PWM_mode.jpg" alt="" class = "img-lab"></p>
+                    <p>Указываем режим PWM (ШИМ) для первого канала. Если в этом режиме не указывать источник тактирования, то по умолчанию используется системная частота таймера.</p>
+                    <p><img src="./images/PWM_c_s.jpg" alt="" class = "img-lab"></p>
+                    <p>Предделитель по нулям, пущай жарит на всю катушку, а переполнение делаем 60000.</p>
+                    <p><img src="./images/PWM_pulse.jpg" alt="" class = "img-lab"></p>
+                    <ul>
+                    <li><p>Pulse — в режиме ШИМ, сравнением мы устанавливаем коэффициент заполнения, то есть продолжительность высокого уровня (длина импульса). В данном случае коэффициент заполнения будет 50%. Если указать сравнение 15000, то коэффициент заполнения будет 25%.</p>
+                    </li>
+                    <li><p>CH Polarity ⇨ High — полярность сигнала. Если в режиме Output Compare при значении High светодиод загорался после перехода через сравнение, то в режиме PWR Generation всё наоборот, сначала подаётся высокий уровень, а после перехода через сравнение низкий. Полярность сигнала можно менять не только в этом пункте, но и в пункте Mode ⇨ PWM mode (см. ниже).</p>
+                    </li>
+                    </ul>
+                    <p>Таким образом у нас получается: период — 60000, а длина импульса — 30000. То есть мы получим вот такой ШИМ…</p>
+                    <p><img src="./images/T.png" alt="" class = "img-lab"></p>
+                    <ul>
+                    <li>t — длина импульса.</li>
+                    <li>T — период.</li>
+                    </ul>
+                    <p>Период будет равен ~840мкс (на частоте 72мГц один тик таймера выполняется за ~14нс, значит 14 * 60000 = 840000нс = 840мкс).</p>
+                    <p>В программе добавьте запуск ШИМа:</p>
+                    <pre><code>/* <span class="hljs-keyword">USER</span> <span class="hljs-title">CODE</span> BEGIN <span class="hljs-number">2</span> */
+                    HAL_TIM_PWM_Start_IT(&amp;htim1, TIM_CHANNEL_1);
+                    /* <span class="hljs-keyword">USER</span> <span class="hljs-title">CODE</span> END <span class="hljs-number">2</span> */
+                    </code></pre><p>Светик будет гореть в половину накала.</p>
+                    <p>Чтобы светик плавно разгорался и затухал, надо сделать так…</p>
+                    <pre><code><span class="hljs-comment">/* USER CODE BEGIN 2 */</span>
+                      HAL_TIM_PWM_Start_IT(&amp;htim1, TIM_CHANNEL_1)<span class="hljs-comment">;</span>
+                      uint16_t i = <span class="hljs-number">0</span><span class="hljs-comment">;</span>
+                      volatile uint16_t <span class="hljs-keyword">j </span>= <span class="hljs-number">0</span><span class="hljs-comment">;</span>
+                      <span class="hljs-comment">/* USER CODE END 2 */</span>
+                    
+                      <span class="hljs-comment">/* Infinite loop */</span>
+                      <span class="hljs-comment">/* USER CODE BEGIN WHILE */</span>
+                      while (<span class="hljs-number">1</span>)
+                      {
+                              for(i = <span class="hljs-number">0</span><span class="hljs-comment">; i &lt;= 60000; i++)</span>
+                              {
+                                      TIM1-&gt;CCR1 = i<span class="hljs-comment">;</span>
+                                      for(<span class="hljs-keyword">j </span>= <span class="hljs-number">0</span><span class="hljs-comment">; j &lt; 100; j++) __NOP();</span>
+                              }
+                    
+                              HAL_Delay(<span class="hljs-number">500</span>)<span class="hljs-comment">;</span>
+                    
+                              for(i = <span class="hljs-number">60000</span><span class="hljs-comment">; i &gt; 0; i--)</span>
+                              {
+                                      TIM1-&gt;CCR1 = i<span class="hljs-comment">;</span>
+                                      for(<span class="hljs-keyword">j </span>= <span class="hljs-number">0</span><span class="hljs-comment">; j &lt; 100; j++) __NOP();</span>
+                              }
+                    
+                              HAL_Delay(<span class="hljs-number">500</span>)<span class="hljs-comment">;</span>
+                              ...
+                    </code></pre><p>Здесь ведётся работа напрямую с регистром сравнения первого канала <strong>(CCR1)</strong>, увеличивая, а потом уменьшая его значение. То есть мы плавно меняем значение </p>
+                    <p>Вместо работы с регистрами можно воспользоваться HALовскими макросами, например, в данном случае можно заменить строчки <strong>TIM1-&gt;CCR1 = i;</strong> на макрос <strong>__HAL_TIM_SET_COMPARE(&amp;htim1, TIM_CHANNEL_1, i);</strong></p>
+                    <p>Различные макросы можно посмотреть в файле <strong>stm32f1xx_hal_tim.h</strong></p>
+                    <p>Чтобы генерить прерывание в конце импульса, надо его включить…</p>
+                    <p><img src="./images/PWM_NVIC.jpg" alt="" class = "img-lab"></p>
+                    <p>То же самое что и в режиме Output Compare.</p>
+                    <p>И ловить в колбеке…</p>
+                    <pre><code><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">HAL_TIM_PWM_PulseFinishedCallback</span><span class="hljs-params">(TIM_HandleTypeDef *htim)</span>
+                    </span>{
+                            <span class="hljs-keyword">if</span>(htim-&gt;Instance == TIM1)
+                            {
+                                    HAL_GPIO_TogglePin(led13_GPIO_Port, led13_Pin);
+                            }
+                    }
+                    </code></pre><h2 id="-">Сервопривод</h2>
+                    <p>Выше был описан далеко не весь функционал таймера. Нам по большей мере нужен будет режим таймера PWM для работы с сервоприводом.</p>
+                    <p>Мы будем использовать сервопривод MG90S, для начала посмотрим на его <a href="../doc/MG90S_datasheet.pdf">datasheet</a>.</p>
+                    <p>В первую очередь обратим внимание на подключение сервы:</p>
+                    <ul>
+                    <li><font color="red">Красный</font> провод питания - <font color="red">5V</font> (можно взять напрямую у st-link v2)</li>
+                    <li><font color="brown">Коричневый</font> - <font color="brown">GND</font> (есть на плате BluePill)</li>
+                    <li><font color="orange">Оранжевый</font> - на него будем подавать <font color="orange">PWM сигнал</font>
+                    
+                    </li>
+                    </ul>
+                    <p>Подключаем питание и землю ⇒ создаем проект сервы в CubeIde:</p>
+                    <p>Включаем интерфейс отладки Serial Wire ⇒ активируем TIM2 CHANNEL 1 как выход PWM ⇒ настраиваем Prescaler и Counter Period:</p>
+                    <p><img src="./images/parameter_settings.png" width="450" height="250" class = "img-lab"></p>
+                    <p>Поделим частоту тактирования таймера (8 MHz) на 8 ⇒ получаем частоту 1 MHz.</p>
+                    <p>По datasheet на серву период ШИМ сигнала должен быть 20мс.</p>
+                    <p>Так как частота тактирования 1 MHz значит время одного тика таймера 1мкс, мы хотим, чтобы период был 20мс, то есть в одном периоде должно быть X количество счетов, так, чтобы 1мкс <em> X = 20мс <em>*⇒</em></em> X = $\frac{20 \times 10^{-3}}{1 \times 10^{-6}}$</p>
+                    <p>Количество счетов X это и есть Counter Period, а Prescaler - делитель частоты, который в нашем случае равен 8.</p>
+                    <blockquote>
+                    <p>[!NOTE]
+                    Мы определили, что Prescaler = 8, а Counter Period = 20 000, но в соответствующие поля в CubeMx нужно писать: <strong><em>(высчитанное значение) - 1</em></strong> (так мы и сделали, смотри скриншот выше)</p>
+                    </blockquote>
+                    <p>Теперь выставим pulse:</p>
+                    <p>Для корректного вращения сервы от -90° до 90° нужно, чтобы время положительного сигнала на выходе таймера было 0,5-2,5 мс за период, следовательно если пересчитать это в тики, то это составит от 500 до 2500 тиков. Количество тиков до изменения фронта сигнала это pulse (полярность оставляем High).</p>
+                    <p>На рисунке ниже показано, что значение pulse записывается в регистр CCRx (где x - номер канала соответствующего таймера), а в ARR лежит значение Counter Period.</p>
+                    <p><img src="./images/register.jpg" width="280" height="250" class = "img-lab"></p>
+                    <p><br></p>
+                    <p>Установим pulse в разделе PWM Generation Channel 1:</p>
+                    <p><img src="./images/pulse.png" width="430" height="250" class = "img-lab"></p>
+                    <p>С настройками CubeMx все, теперь перейдем к коду:</p>
+                    <p>Для начала запустим таймер в режиме PWM:</p>
+                    <pre><code>/* <span class="hljs-keyword">USER</span> <span class="hljs-title">CODE</span> BEGIN <span class="hljs-number">2</span> */
+                      HAL_TIM_PWM_Start(&amp;htim2, TIM_CHANNEL_1);
+                      /* <span class="hljs-keyword">USER</span> <span class="hljs-title">CODE</span> END <span class="hljs-number">2</span> */
+                    </code></pre><p>Далее в бесконечном цикле будем изменять pulse от минимального (500) значения до максимального (2500) и обратно:</p>
+                    <pre><code>for(int i = <span class="hljs-number">500</span>; i &lt; <span class="hljs-number">2500</span>; i += <span class="hljs-number">10</span>){
+                            TIM2-&gt;CCR1 = i;
+                            HAL_Delay(<span class="hljs-number">10</span>);
+                    }
+                    for(int i = <span class="hljs-number">2500</span>; i &gt; <span class="hljs-number">500</span>; i -= <span class="hljs-number">10</span>){
+                            __HAL_TIM_SET_COMPARE(&amp;htim2,TIM_CHANNEL_1,i);
+                            HAL_Delay(<span class="hljs-number">10</span>);
+                    }
+                    </code></pre><p>Как видите из кода можно изменять pulse двумя способами:</p>
+                    <ul>
+                    <li>напрямую изменять значение регистра CCR <strong><em>TIM2-&gt;CCR1 = i;</em></strong></li>
+                    <li>воспользоваться макросом HAL <strong><em>__HAL_TIM_SET_COMPARE(&amp;htim2,TIM_CHANNEL_1,i);</em></strong></li>
+                    </ul>
+                    <p>Так как серва не мгновенно выходит в требуемое положение, а наш бесконечный цикл <strong><em>while</em></strong> очень быстрый, то добавим задержки после каждого изменения pulse на 10 мс. </p>
+                    <p>Далее собираем проект и заливаем его на плату.</p>
+                    <p>Если вы все сделали верно, то серва должна изменять свое положение от -90° до 90°.</p>
+                    <h3 id="-hal">Используемые функции HAL</h3>
+                    <ul>
+                    <li>HAL_TIM_Base_Start(&amp;htim1);</li>
+                    <li>HAL_TIM_Base_Start_IT(&amp;htim1);</li>
+                    <li>HAL_TIM_PWM_Start(&amp;htim2, TIM_CHANNEL_1);</li>
+                    <li>HAL_TIM_PWM_Start_IT(&amp;htim1, TIM_CHANNEL_1);</li>
+                    <li>HAL_TIM_OC_Start(&amp;htim1, TIM_CHANNEL_1);</li>
+                    <li>HAL_TIM_OC_Start_IT(&amp;htim1, TIM_CHANNEL_1);</li>
+                    <li>HAL_GPIO_TogglePin(led13_GPIO_Port, led13_Pin);</li>
+                    </ul>
+                    <h3 id="-hal">Используемые макросы HAL</h3>
+                    <ul>
+                    <li>__HAL_TIM_GET_COUNTER(&amp;htim1);</li>
+                    <li>__HAL_TIM_SET_COMPARE(&amp;htim2,TIM_CHANNEL_1,i);</li>
+                    </ul>
+                    <h3 id="-">Обращение к регистрам</h3>
+                    <ul>
+                    <li>TIM2-&gt;CCR1 = i;</li>
+                    </ul>
+                    <h2 id="-">Самостоятельная работа</h2>
+                    <p>Напишите код, где серва будет поворачиваться на угол 90° по нажатию на кнопку, ждать секунду и возвращаться в исходное положение.</p>
+                    
+
+                    <p class="mt-4"><a href="#" class="btn btn-primary">В начало страницы</a></p>
+                </div>
+            </div>
+        </div>
+      </div>
+   
+    </div>
+
+   
+
+    
+  <!---->
+    
+    <div class="site-section" id="teachers-section">
+      <div class="container">
+
+        <div class="row mb-5 justify-content-center">
+          <div class="col-lg-7 mb-5 text-center"  data-aos="fade-up" data-aos-delay="">
+            <h2 class="section-title">Наши преподаватели</h2>
+            <p class="mb-5">Спасибо за проявленный интерес к ракетостроению и добро пожаловать к нам на курс.</p>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="teacher text-center">
+              <img src="../../images/splinter.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 1</h3>
+                <p class="position">Исследователь, научный сотрудник</p>
+                <p>Специальзируется на теме 1</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="teacher text-center">
+              <img src="../../images/yoda.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 2</h3>
+                <p class="position">Инженер программист</p>
+                <p>Специальзируется на теме 2</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="teacher text-center">
+              <img src="../../images/oogway.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 3</h3>
+                <p class="position">Инженер электронщик</p>
+                <p>Специальзируется на теме 3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<!--contact us-->
+<div class="site-section bg-light" id="contact-section">
+  <div class=".container-hluid">
+    <div class="row justify-content-center">
+      <div class="col-md-7">
+
+        <div class="container">
+          <div class="social-icons">
+              <a href="https://t.me/burockets" target="_blank" class="social-icon">
+                  <i class="fab fa-telegram-plane"></i>
+              </a>
+              <a href="https://vk.com/egobun" target="_blank" class="social-icon">
+                  <i class="fab fa-vk"></i>
+              </a>
+              <a href="https://www.youtube.com/@egorbunakov" target="_blank" class="social-icon">
+                  <i class="fab fa-youtube"></i>
+              </a>
+              
+          </div>
+      </div>
+      
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+
+
+
+  
+    
+  </div> <!-- .site-wrap -->
+
+  <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/popper.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/owl.carousel.min.js"></script>
+    <script src="../../js/jquery.stellar.min.js"></script>
+    <script src="../../js/jquery.countdown.min.js"></script>
+    <script src="../../js/bootstrap-datepicker.min.js"></script>
+    <script src="../../js/jquery.easing.1.3.js"></script>
+    <script src="../../js/aos.js"></script>
+    <script src="../../js/jquery.fancybox.min.js"></script>
+    <script src="../../js/jquery.sticky.js"></script>
+
+  
+  <script src="../../js/main.js"></script>
+    
+  </btn.btn-black:hover>
+</html>

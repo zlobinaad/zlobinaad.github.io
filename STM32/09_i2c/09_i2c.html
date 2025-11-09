@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BuRockets</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="../../fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/jquery-ui.css">
+    <link rel="stylesheet" href="../../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="../../css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="../../css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="../../fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="../../css/aos.css">
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Установка Git</title>
+    <style>
+      * {
+            box-sizing: border-box;
+        }
+
+        h1, h2, h3, h4, h5,
+      .h1, .h2, .h3, .h4, .h5 {
+          margin-top: 40px;
+        color: #054597ff;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+        p, ul {
+            width: 100%; /* Ширина 100% относительно контейнера */
+            margin: 10px 0; /* Отступы между элементами */
+            text-align: left;
+        }
+
+        html, body {
+            overflow-x: hidden; /* Скрыть горизонтальную прокрутку */
+        }
+
+        img {
+           
+            height: auto; /* Сохраняем пропорции изображений */
+        }
+
+        .container {
+            max-width: 2000px; /* Максимальная ширина контейнера */
+            margin: 0 auto; /* Центрирование контейнера */
+            padding-left: 15px; /* Убедитесь, что отступы не создают переполнение */
+            padding-right: 15px;
+        }
+        .heading{
+          margin-left: 20%;
+          width: 70%;    
+        }
+        .btn-primary span {
+            color: white; /* Устанавливаем белый цвет текста */
+        }
+
+        .social-icons {
+          display: flex;
+          justify-content: center;
+          margin-top: 50px;
+        }
+        .social-icon {
+            font-size: 40px;
+            margin: 0 20px;
+            transition: transform 0.3s, color 0.3s;
+        }
+        .social-icon:hover {
+            transform: scale(1.2);
+            color: #007bff; /* Цвет при наведении */
+        }
+        .social-icon:hover img {
+          transform: scale(1.2);
+      }
+        
+
+        /* Примените медиа-запросы для мобильных устройств */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+        }
+  </style>
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+    
+    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+      
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <div class="site-logo mr-auto w-25"><a href="../../index.html">
+            <img src="../../images/logo.png" alt="MDN logo" width="20%"/>
+          </a></div>
+
+          <div class="mx-auto text-center">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mx-auto d-none d-lg-block  m-0 p-0">
+                <li><a href="#home-section" class="nav-link">Главная</a></li>
+                <li><a href="#09_i2c-section" class="nav-link">09_I2C</a></li>
+                <!--<li><a href="#programs-section" class="nav-link">Программа</a></li>-->
+                <li><a href="#teachers-section" class="nav-link">Преподаватели</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="ml-auto w-25">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block m-0 p-0">
+              <li class="cta"><a href="#contact-section" class="nav-link"><span>Контакты</span></a></li>
+              </ul>
+            </nav>
+            <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
+          </div>
+        </div>
+      </div>
+      
+    </header>
+
+
+
+    
+    <div class="intro-section" id="home-section">
+      
+      <div class="slide-1" style="background-image: url('../../images/STM32.jpg');" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <div class="row align-items-center">
+                
+                <div class="col-lg-6 mb-4">
+                  <h1  data-aos="fade-up" data-aos-delay="100" ><a href="../STM32_course.html">
+                    <img src="../images/return_to_stm32.png" alt="MDN logo" width="50%"/>
+                  </a></h1>
+                  <h1  data-aos="fade-up" data-aos-delay="100" class = "heading">BuRockets</h1>
+                  <h1  data-aos="fade-up" data-aos-delay="100" class = "heading">Лабораторная работа 09_I2C</h1>
+                  <p data-aos="fade-up" data-aos-delay="200" class = "heading">I2C - таймеры, с их помощью можно замерять время, длину импульсов, считать импульсы, создавать ШИМ-сигнал, запускать один таймер другим, запускать таймером некоторую периферию, запускать ракеты в космос и т.д. </p> 
+                  <p data-aos="fade-up" data-aos-delay="300" class = "heading"><a href="#09_i2c-section" class="btn btn-primary py-3 px-5 btn-pill">09_I2C</a></p>
+
+                </div>
+
+
+                <div class="col-lg-4 ml-auto" data-aos="fade-up" data-aos-delay="500">
+                  
+                    <div class="site-logo mr-auto w-25"><a href="09_i2c.html">
+                      <img src="images/I2C_logo.png" alt="MDN logo" width="100%"/>
+                    </a></div>
+                  
+                </div>
+
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="09_i2c-section"></div>
+        <div class="container">
+            <div class="row mb-10 justify-content-center">
+                <div class="col-lg-7" data-aos="fade-up" data-aos-delay="">
+                    <h2 class="section-title" >09_I2C</h2>
+            
+                    <h1 id="i2c">I2C</h1>
+                    <h2 id="-">Теория</h2>
+                    <p>Шина I
+                    2C - это очень популярная и мощная шина, используемая для связи между ведущим устройством (или несколькими
+                    ведущими устройствами) и одним или несколькими подчиненными устройствами. На рисунке 1 показано, сколько различных периферийных устройств может
+                    совместно использовать шину, подключенную к процессору всего по двум проводам, что является одним из самых больших преимуществ</p>
+                    <p>шины I 2C по сравнению с другими интерфейсами.
+                    Это руководство по применению предназначено для того, чтобы помочь пользователям понять, как
+                    работает шина I 2C.
+                    На рисунке 1 показан типичный пример I
+                    Шина 2C для встраиваемой системы, в которой используется несколько подчиненных устройств. То
+                    микроконтроллер представляет собой I
+                    2C master и управляет расширителями ввода-вывода, различными датчиками, EEPROM,
+                    АЦП/ЦАП и многое другое. Все они управляются всего двумя контактами от главного устройства.</p>
+                    <p><img src="" alt="" class = "img-lab"></p>
+                    <h2 id="-">Практика</h2>
+                    <h3 id="-">Описание библиотеки</h3>
+                    <p>Так как нам нужно получать данные об ускорении движения ракеты, на борту у нас будет стоять датчик MPU9250, он общается с микроконтроллером с помощью интерфейса I2C.</p>
+                    <p>Как инициализировать датчик и забирать из его памяти значения <a href="https://ru.wikipedia.org/wiki/%D0%93%D0%B8%D1%80%D0%BE%D1%81%D0%BA%D0%BE%D0%BF">гироскопа</a>, <a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BA%D1%81%D0%B5%D0%BB%D0%B5%D1%80%D0%BE%D0%BC%D0%B5%D1%82%D1%80">акселерометра</a> и <a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%B3%D0%BD%D0%B8%D1%82%D0%BE%D0%BC%D0%B5%D1%82%D1%80">магнитометра</a> вы можете почитать в <a href="../doc/PS_MPU9250.1.pdf">Product Specification</a> или <a href="../doc/RM_MPU9250.pdf"download>Register Map</a>.</p>
+                    <p>Чтобы упростить и ускорить процесс работы с датчиком mpu9250 воспользуемся готовой библиотекой, которая состоит из .c файла <a href="./example/Core/Src/MPU9250.c">MPU9250.c</a> и трех .h файлов <a href="./example/Core/Inc/i2c_er.h">i2c_er.h</a> ; <a href="./example/Core/Inc/MPU9250_reg.h">MPU9250_reg.h</a> ;
+                    <a href="./example/Core/Inc/MPU9250.h">MPU9250.h</a>.</p>
+                    <p>В файле <a href="./example/Core/Inc/i2c_er.h">i2c_er.h</a> описываюся порты и пины проводов SDA и SCL , а также реализованы две функции для удобной работы с i2c, они используются в функциях, описанных в файле MPU9250.c</p>
+                    <p>В файле <a href="./example/Core/Inc/MPU9250_reg.h">MPU9250_reg.h</a> задефайнены адреса регистров mpu, которые описаны в <a href="../doc/RM_MPU9250.pdf"download>Register Map</a>. Это сделано для читаемости кода, чтобы не было необходимости при чтении или записи в mpu каждый раз обращаться к карте адресов.</p>
+                    <p>Основные два файла это <a href="./example/Core/Src/MPU9250.c">MPU9250.c</a> и <a href="./example/Core/Inc/MPU9250.h">MPU9250.h</a> в них описаны функции инициализации датчиков встроенных в mpu9250.</p>
+                    <p>Пройдемся вкратце по основным функциям:</p>
+                    <ul>
+                    <li>void MPU_init(void);                      //функция инициализации акселерометра и гироскопа.</li>
+                    <li>void MAGN_init(float * destination);      //функция инициализации магнитометра.</li>
+                    <li>void MPU_get_magn(int16_t * destination); //получить </li>
+                    <li>void MPU_get_accel(float * destination);</li>
+                    <li>void MPU_get_gyro(float * destination);</li>
+                    </ul>
+                    <p>Как вы могли заметить, некоторые функции принимают аргументом указатель на int16_t или float: в функциях, в названиях которых присутствует приставка get, значения с соответствующего датчика будут класться в массив, указатель на который вы передадите в функцию.</p>
+                    <p>В коде эти массивы задаются вот так:</p>
+                    <pre><code><span class="hljs-comment">/* USER CODE BEGIN PV */</span>
+                    <span class="hljs-type">float</span> destination_a[<span class="hljs-number">3</span>] = { <span class="hljs-number">0</span>, };
+                    <span class="hljs-type">float</span> destination_g[<span class="hljs-number">3</span>] = { <span class="hljs-number">0</span>, };
+                    int16_t destination_m[<span class="hljs-number">3</span>] = { <span class="hljs-number">0</span>, };
+                    </code></pre><h3 id="-cubeide">Создание проекта CubeIde</h3>
+                    <p>Создаем проект в CubeIde ⇒ подключаем пины для интерфейса отладки Serial Wire ⇒ включаем i2c1:</p>
+                    <p><img src="./images/parametr_settings.png" alt="" class = "img-lab"></p>
+                    <p>Во вкладке Mode выбираем I2C и переходим к Configuration:
+                    Первым выставим скорость передачи данных:
+                    stm32 поддерживает две скорости передачи: это Standard Mode (Clock Speed == 100MHz) и Fast Mode (Clock Speed == 400MHz). В нашем случае можно выбрать любую скорость передачи, я сделаю так:</p>
+                    <p><strong>I2C Speed Mode</strong> == <strong>Fast Mode</strong></p>
+                    <p>В этот момент автоматически изменится Clock Speed.</p>
+                    <p>Остальные настройки оставляем по умолчанию.</p>
+                    <p>В правой части экрана выделились два пина PB6 и PB7, соответственно SCL и SDA.</p>
+                    <p>С настройками в CubeIde все ⇒ генерируем код.</p>
+                    <h3 id="-">Подключение библиотеки</h3>
+                    <p>После автоматической генерации файлов CubeMx подключим нашу библиотеку к проекту, для этого:</p>
+                    <p>В проводнике в папке проекта заходим в папку Src по адресу <strong><em>../MPU9250/example/Core/Src</em></strong> и вставляем туда файл <a href="./example/Core/Src/MPU9250.c">MPU9250.c</a></p>
+                    <p>и в папку Inc по адресу <strong><em>../MPU9250/example/Core/Inc</em></strong> и вставляем туда файлы:</p>
+                    <ul>
+                    <li><a href="./example/Core/Inc/MPU9250.h">MPU9250.h</a></li>
+                    <li><a href="./example/Core/Inc/i2c_er.h">i2c_er.h</a></li>
+                    <li><a href="./example/Core/Inc/MPU9250_reg.h">MPU9250_reg.h</a></li>
+                    </ul>
+                    <p>Далее удаляем проект из Project Explorer</p>
+                    <p><img src="./images/delete.png"  class = "img-lab"></p>
+                    <p><img src="./images/delete_resources.png" width="450" height="230" class = "img-lab"></p>
+                    <p>Далее откроем проект заново: для этого запускаем файл .project из папки с проектом и проект откроется в CubeIde уже с файлами библиотеки в папках Inc и Src.</p>
+                    <p>После подключения файлов, проверьте, что в файле <a href="./example/Core/Inc/i2c_er.h">i2c_er.h</a> для проводов SCL и SDA указаны нужные порты и пины (как в CubeMx):</p>
+                    <pre><code><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SCL_PIN     GPIO_PIN_6</span>
+                    <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SCL_PORT    GPIOB</span>
+
+                    <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SDA_PIN     GPIO_PIN_7</span>
+                    <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SDA_PORT    GPIOB</span>
+                    </code></pre><p>Далее перейдем к файлу <strong>main.c</strong></p>
+                    <p>В первую очередь подключим необходимые файлы библиотек:</p>
+                    <pre><code><span class="hljs-comment">/* USER CODE BEGIN Includes */</span>
+                    <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">"string.h"</span></span>
+                    <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+                    <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">"i2c_er.h"</span></span>
+                    <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">"MPU9250_reg.h"</span></span>
+                    <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">"MPU9250.h"</span></span>
+                    <span class="hljs-comment">/* USER CODE END Includes */</span>
+                    </code></pre><p>Создадим массивы куда будем складывать данные акселерометра, гироскопа и магнетометра:</p>
+                    <pre><code><span class="hljs-comment">/* USER CODE BEGIN PV */</span>
+                    <span class="hljs-type">float</span> destination_a[<span class="hljs-number">3</span>] = { <span class="hljs-number">0</span>, };
+                    <span class="hljs-type">float</span> destination_g[<span class="hljs-number">3</span>] = { <span class="hljs-number">0</span>, };
+                    int16_t destination_m[<span class="hljs-number">3</span>] = { <span class="hljs-number">0</span>, };
+                    </code></pre><p>Проинициализируем акселерометр, гироскоп и магнетометр:</p>
+                    <pre><code>/* <span class="hljs-keyword">USER</span> <span class="hljs-title">CODE</span> BEGIN <span class="hljs-number">2</span> */
+                    MPU_init();
+                    MAGN_init((float*)destination_m);
+                    /* <span class="hljs-keyword">USER</span> <span class="hljs-title">CODE</span> END <span class="hljs-number">2</span> */
+                    </code></pre><p>Теперь в бесконечном цикле будем считывать значения с mpu:</p>
+                    <pre><code>/* <span class="hljs-keyword">USER</span> <span class="hljs-title">CODE</span> BEGIN WHILE */
+                    while (<span class="hljs-number">1</span>)
+                    {
+                        MPU_get_gyro(destination_g);
+                        MPU_get_accel(destination_a);
+                        MPU_get_magn(destination_m);
+                        /* <span class="hljs-keyword">USER</span> <span class="hljs-title">CODE</span> END WHILE */
+                    </code></pre>
+
+                    <p class="mt-4"><a href="#" class="btn btn-primary">В начало страницы</a></p>
+                </div>
+            </div>
+        </div>
+      </div>
+   
+    </div>
+
+   
+
+    
+  <!---->
+    <div class="site-section" id="teachers-section">
+      <div class="container">
+
+        <div class="row mb-5 justify-content-center">
+          <div class="col-lg-7 mb-5 text-center"  data-aos="fade-up" data-aos-delay="">
+            <h2 class="section-title">Наши преподаватели</h2>
+            <p class="mb-5">Спасибо за проявленный интерес к ракетостроению и добро пожаловать к нам на курс.</p>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="teacher text-center">
+              <img src="../../images/splinter.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 1</h3>
+                <p class="position">Исследователь, научный сотрудник</p>
+                <p>Специальзируется на теме 1</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="teacher text-center">
+              <img src="../../images/yoda.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 2</h3>
+                <p class="position">Инженер программист</p>
+                <p>Специальзируется на теме 2</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="teacher text-center">
+              <img src="../../images/oogway.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 3</h3>
+                <p class="position">Инженер электронщик</p>
+                <p>Специальзируется на теме 3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<!--contact us-->
+<div class="site-section bg-light" id="contact-section">
+  <div class=".container-hluid">
+    <div class="row justify-content-center">
+      <div class="col-md-7">
+
+        <div class="container">
+          <div class="social-icons">
+              <a href="https://t.me/burockets" target="_blank" class="social-icon">
+                  <i class="fab fa-telegram-plane"></i>
+              </a>
+              <a href="https://vk.com/egobun" target="_blank" class="social-icon">
+                  <i class="fab fa-vk"></i>
+              </a>
+              <a href="https://www.youtube.com/@egorbunakov" target="_blank" class="social-icon">
+                  <i class="fab fa-youtube"></i>
+              </a>
+              
+          </div>
+      </div>
+      
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+
+
+
+  
+    
+  </div> <!-- .site-wrap -->
+
+  <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/popper.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/owl.carousel.min.js"></script>
+    <script src="../../js/jquery.stellar.min.js"></script>
+    <script src="../../js/jquery.countdown.min.js"></script>
+    <script src="../../js/bootstrap-datepicker.min.js"></script>
+    <script src="../../js/jquery.easing.1.3.js"></script>
+    <script src="../../js/aos.js"></script>
+    <script src="../../js/jquery.fancybox.min.js"></script>
+    <script src="../../js/jquery.sticky.js"></script>
+
+  
+  <script src="../../js/main.js"></script>
+    
+  </btn.btn-black:hover>
+</html>
