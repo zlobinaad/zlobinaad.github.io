@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BuRockets</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="../fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="../css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="../css/aos.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <style>
+      * {
+            box-sizing: border-box;
+        }
+
+        h1, h2, h3, h4, h5,
+      .h1, .h2, .h3, .h4, .h5 {
+          margin-top: 40px;
+        color: #054597ff;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+        p, ul {
+            width: 100%; /* Ширина 100% относительно контейнера */
+            margin: 10px 0; /* Отступы между элементами */
+            text-align: left;
+        }
+
+        html, body {
+            overflow-x: hidden; /* Скрыть горизонтальную прокрутку */
+        }
+
+        img {
+           
+            height: auto; /* Сохраняем пропорции изображений */
+        }
+
+        .container {
+            max-width: 2000px; /* Максимальная ширина контейнера */
+            margin: 0 auto; /* Центрирование контейнера */
+            padding-left: 15px; /* Убедитесь, что отступы не создают переполнение */
+            padding-right: 15px;
+        }
+        .heading{
+          margin-left: 20%;
+          width: 70%;    
+        }
+        .heading-2{
+          text-align: center;
+           
+        }
+        .btn-primary span {
+            color: white; /* Устанавливаем белый цвет текста */
+        }
+
+        .social-icons {
+          display: flex;
+          justify-content: center;
+          margin-top: 50px;
+        }
+        .social-icon {
+            font-size: 40px;
+            margin: 0 20px;
+            transition: transform 0.3s, color 0.3s;
+        }
+        .social-icon:hover {
+            transform: scale(1.2);
+            color: #007bff; /* Цвет при наведении */
+        }
+        .social-icon:hover img {
+          transform: scale(1.2);
+      }
+        
+
+        /* Примените медиа-запросы для мобильных устройств */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+        }
+  </style>
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+    
+    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+      
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <div class="site-logo mr-auto w-25"><a href="../index.html" >
+            <img src="../images/logo.png" alt="MDN logo" width="20%"/>
+          </a></div>
+
+          <div class="mx-auto text-center">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mx-auto d-none d-lg-block  m-0 p-0">
+                <li><a href="#home-section" class="nav-link">Главная</a></li>
+                <li><a href="#programs-section" class="nav-link">Описание</a></li>
+                <li><a href="#STM32_lab-section" class="nav-link">STM32 Lab</a></li>
+                <li><a href="#teachers-section" class="nav-link">Преподаватели</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="ml-auto w-25">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block m-0 p-0">
+              <li class="cta"><a href="#contact-section" class="nav-link"><span>Контакты</span></a></li>
+              </ul>
+            </nav>
+            <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
+          </div>
+        </div>
+      </div>
+      
+    </header>
+
+
+
+    
+    <div class="intro-section" id="home-section">
+      
+      <div class="slide-1" style="background-image: url('../images/STM32.jpg');" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <div class="row align-items-center">
+                <div class="col-lg-6 mb-4">
+                  <h1  data-aos="fade-up" data-aos-delay="100" class = "heading">BuRockets</h1>
+                  <h1  data-aos="fade-up" data-aos-delay="100" class = "heading">Лабораторные работы STM32</h1>
+                  <p   data-aos="fade-up" data-aos-delay="200" class = "heading">STM32 - семейство 32-битных микроконтроллеров </p> 
+                  <p   data-aos="fade-up" data-aos-delay="200" class = "heading">С помощью данного микроконтроллера ты сможешь создать более технологичную ракету</p>
+                  <p data-aos="fade-up" data-aos-delay="300" class = "heading"><a href="#STM32_lab-section" class="btn btn-primary py-3 px-5 btn-pill">STM32 Lab</a></p>
+
+                </div>
+
+
+                <div class="col-lg-4 ml-auto" data-aos="fade-up" data-aos-delay="500">
+                  
+                    <div class="site-logo mr-auto w-25"><a href="STM32_course.html" 09_I2C>
+                      <img src="images/stm32_logo.png" alt="MDN logo" width="320%"/>
+                    </a></div>
+                  
+                </div>
+
+
+                
+
+
+
+
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div id="programs-section"></div>
+        <div class="container">
+            <div class="row mb-10 justify-content-center">
+                <div class="col-lg-7" data-aos="fade-up" data-aos-delay="">
+                    <h2 class="section-title" >STM32 Lab</h2>
+                    
+                    <p><strong>Лабораторные работы, программирование STM32.</strong></p>
+                    <h1 id="-">Описание курса</h1>
+                    <h2 id="-">Введение</h2>
+                    <p>Данный курс расчитан на школьников, в нем изучаются основы программирования с углублением в разработку программ для микроконтроллера STM32. </p>
+                    <h2 id="github">GitHub</h2>
+                    <p>GitHub — это облачная платформа для ведения IT-проектов и совместной разработки, внутри которой находится система контроля версий Git, а также полноценная социальная сеть для разработчиков. Простыми словами с помощью Git мы сможем хранить историю изменений нашего проекта и работать над ним совместо. Также все лабораторные работы размещены на репозитории Git, на котором вы сейчас находитесь. Ученик должен создать свой git репозитрий, и хранить в нем все свои выполненые лабораторные работы.</p>
+                    <h2 id="-stm32">Микроконтроллер STM32</h2>
+                    <p>Сердцем вашего финального проекта будет микроконтроллер STM32, внутри него и будет происходить вся магия, он как дирижер, заставляет работать все внешние устройства правильно и в нужный момент.</p>
+                    <h2 id="-">Блоки, Интерфейсы, Протоколы</h2>
+                    <p><strong>При прохождении лабораторных работ будут изучены блоки микроконтроллера, такие как:</strong></p>
+                    <ul>
+                    <li><p>GPIO (General Purpose Input/Output): Это интерфейс, который позволяет микроконтроллеру взаимодействовать с внешними устройствами, отправляя или принимая цифровые сигналы.</p>
+                    </li>
+                    <li><p>TIM (Timer): Это функциональный блок в микроконтроллере, который позволяет создавать временные задержки, измерять интервалы времени и генерировать события по истечении определенного времени.</p>
+                    </li>
+                    <li><p>UART (Universal Asynchronous Receiver/Transmitter): Это метод связи, используемый для передачи данных между устройствами посредством последовательной передачи битов информации.</p>
+                    </li>
+                    <li><p>I2C (Inter-Integrated Circuit): Это протокол коммуникации, который позволяет нескольким устройствам обмениваться данными через общие провода данных и тактовой сигнал.</p>
+                    </li>
+                    <li><p>SPI (Serial Peripheral Interface): Это синхронный протокол обмена данными, который позволяет микроконтроллеру взаимодействовать с несколькими внешними устройствами, передавая данные в полудуплексном режиме.</p>
+                    </li>
+                    </ul>
+                    <h2 id="-">Результат прохождения курса</h2>
+                    <p>Главным результатом после прохождения курса станут приобретенные навыки и знания с помощью которых школьник сможет самостоятельно разработать программу системы спасения ракеты. </p>
+                    <h1 id="-">Требования для прохождения курса</h1>
+                    <h2 id="-">Оборудование для прохождения лабораторных работ</h2>
+                    <ul>
+                    <li>Компьютер (с операционной системой windows)</li>
+                    <li>Макетная плата для сборки электрических схем</li>
+                    <li>Отладочная лата bluepill с микроконтроллером stm32f103</li>
+                    <li>Программатор stlink v2</li>
+                    <li>Модуль usb to ttl</li>
+                    <li>Светодиод</li>
+                    <li>Кнопка</li>
+                    <li>Сервопривод</li>
+                    <li>9-ти осевой датчик mpu9250</li>
+                    <li>Радио-модуль hc-12</li>
+                    <li>Потенциометр</li>
+                    <li>Провода для подключения модулей</li>
+                    </ul>
+                    <h2 id="-">Программное обеспечение</h2>
+                    <ul>
+                    <li><a href="https://code.visualstudio.com">Visual Studio Code</a></li>
+                    <li><a href="https://www.st.com/en/development-tools/stm32cubeide.html">CubeIde</a></li>
+                    <li><a href="https://www.hw-group.com/software/hercules-setup-utility">Hercules</a></li>
+                    <li><a href="https://www.st.com/en/development-tools/stsw-link004.html">St-link utility</a></li>
+                    </ul>
+                    <blockquote>
+                    <p>[!NOTE] 
+                    При скачивании программ с сайта <a href="https://www.st.com/en/development-tools/stm32-software-development-tools/products.html">www.st.com</a> нужно зарегистрироваться при регистрации не указывайте страну - Россия</p>
+                    </blockquote>
+
+                    
+                </div>
+            </div>
+        </div>
+      </div>
+   
+    </div>
+
+
+
+
+
+    <div class="site-section courses-title" id="STM32_lab-section">
+        <div class="container">
+            <div class="row mb-10 justify-content-center">
+                <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="">
+                    <h2 class="section-title">STM32 Lab</h2>
+            
+                    <p class = "heading-2"><a href="01_git/01_git.html" class="btn btn-primary">01_GIT</a></p>
+                    <p class = "heading-2"><a href="02_basics_C/02_basics_C.html" class="btn btn-primary">02_Basics_C</a></p>
+                    <p class = "heading-2"><a href="02_1_memory/02_1_memory.html" class="btn btn-primary">02_1_Memory</a></p>
+                    <p class = "heading-2"><a href="03_blinkled/03_blinkled.html" class="btn btn-primary">03_Blink_Led</a></p>
+                    <p class = "heading-2"><a href="04_gpio/04_gpio.html" class="btn btn-primary">04_GPIO</a></p>
+                    <p class = "heading-2"><a href="05_exti/05_exti.html" class="btn btn-primary">05_EXTI</a></p>
+                    <p class = "heading-2"><a href="06_tim/06_tim.html" class="btn btn-primary">06_TIM</a></p>
+                    <p class = "heading-2"><a href="07_adc/07_adc.html" class="btn btn-primary">07_ADC</a></p>
+                    <p class = "heading-2"><a href="08_uart/08_uart.html" class="btn btn-primary">08_UART</a></p>
+                    <p class="heading-2"><a href="09_i2c/09_i2c.html" class="btn btn-primary">09_I2C</a></p>
+
+                    <p class="heading-2"><a href="#" class="btn btn-primary">В начало страницы</a></p>
+                </div>
+            </div>
+        </div>
+      </div>
+
+    </div>
+
+   
+
+    
+  <!---->
+    <div class="site-section" id="teachers-section">
+      <div class="container">
+
+        <div class="row mb-5 justify-content-center">
+          <div class="col-lg-7 mb-5 text-center"  data-aos="fade-up" data-aos-delay="">
+            <h2 class="section-title">Наши преподаватели</h2>
+            <p class="mb-5 text-center">Спасибо за проявленный интерес к ракетостроению и добро пожаловать к нам на курс.</p>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="teacher text-center">
+              <img src="../images/splinter.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 1</h3>
+                <p class="position">Исследователь, научный сотрудник</p>
+                <p>Специальзируется на теме 1</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="teacher text-center">
+              <img src="../images/yoda.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 2</h3>
+                <p class="position">Инженер программист</p>
+                <p>Специальзируется на теме 2</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="teacher text-center">
+              <img src="../images/oogway.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 3</h3>
+                <p class="position">Инженер электронщик</p>
+                <p>Специальзируется на теме 3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+      
+   <!--contact us-->
+    
+    
+     
+   <div class="site-section bg-light" id="contact-section">
+    <div class=".container-hluid">
+      <div class="row justify-content-center">
+        <div class="col-md-7">
+
+          <div class="container">
+            <div class="social-icons">
+                <a href="https://t.me/burockets"  class="social-icon">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+                <a href="https://vk.com/egobun"  class="social-icon">
+                    <i class="fab fa-vk"></i>
+                </a>
+                <a href="https://www.youtube.com/@egorbunakov"  class="social-icon">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                
+            </div>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+          
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+   
+  <footer class="footer-section bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <h3>Кто такие BuRockets</h3>
+          <p>BUROCKETS - РАКЕТОСТРОИТЕЛИ. Мы создаем ракеты и обучаем будующих инженеров.</p>
+        </div>
+
+        <div class="col-md-4 ml-auto">
+          <h3>Ссылки</h3>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#home-section">Главная</a></li>
+            <li><a href="#programs-section">Описание</a></li>
+            <li><a href="#STM32_lab-section">STM32 Lab</a></li>
+            <li><a href="#teachers-section">Преподаватели</a></li>
+          </ul>
+        </div>
+
+        
+
+      </div>
+
+      
+    </div>
+  </footer>
+    
+    
+  </div> <!-- .site-wrap -->
+
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../js/jquery-ui.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js/jquery.stellar.min.js"></script>
+  <script src="../js/jquery.countdown.min.js"></script>
+  <script src="../js/bootstrap-datepicker.min.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+  <script src="../js/aos.js"></script>
+  <script src="../js/jquery.fancybox.min.js"></script>
+  <script src="../js/jquery.sticky.js"></script>
+
+  
+  <script src="../js/main.js"></script>
+    
+  </btn.btn-black:hover>
+</html>

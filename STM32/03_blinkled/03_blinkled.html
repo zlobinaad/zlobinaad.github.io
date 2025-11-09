@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BuRockets</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="../../fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/jquery-ui.css">
+    <link rel="stylesheet" href="../../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="../../css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="../../css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="../../fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="../../css/aos.css">
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Установка Git</title>
+    <style>
+      * {
+            box-sizing: border-box;
+        }
+
+        h1, h2, h3, h4, h5,
+      .h1, .h2, .h3, .h4, .h5 {
+          margin-top: 40px;
+          text-align: left;
+        color: #054597ff;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+        p, ul {
+            width: 100%; /* Ширина 100% относительно контейнера */
+            margin: 10px 0; /* Отступы между элементами */
+            text-align: left;
+        }
+
+        html, body {
+            overflow-x: hidden; /* Скрыть горизонтальную прокрутку */
+        }
+
+        img {
+           
+            height: auto; /* Сохраняем пропорции изображений */
+        }
+
+        .container {
+            max-width: 2000px; /* Максимальная ширина контейнера */
+            margin: 0 auto; /* Центрирование контейнера */
+            padding-left: 15px; /* Убедитесь, что отступы не создают переполнение */
+            padding-right: 15px;
+        }
+        .heading{
+          margin-left: 20%;
+          width: 70%;    
+        }
+        .btn-primary span {
+            color: white; /* Устанавливаем белый цвет текста */
+        }
+
+        .social-icons {
+          display: flex;
+          justify-content: center;
+          margin-top: 50px;
+        }
+        .social-icon {
+            font-size: 40px;
+            margin: 0 20px;
+            transition: transform 0.3s, color 0.3s;
+        }
+        .social-icon:hover {
+            transform: scale(1.2);
+            color: #007bff; /* Цвет при наведении */
+        }
+        .social-icon:hover img {
+          transform: scale(1.2);
+      }
+        
+
+        /* Примените медиа-запросы для мобильных устройств */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+        }
+  </style>
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="500">
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+    
+    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+      
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <div class="site-logo mr-auto w-25"><a href="../../index.html">
+            <img src="../../images/logo.png" alt="MDN logo" width="20%"/>
+          </a></div>
+
+          <div class="mx-auto text-center">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mx-auto d-none d-lg-block  m-0 p-0">
+                <li><a href="#home-section" class="nav-link">Главная</a></li>
+                <li><a href="#03_blinkled-section" class="nav-link">03_Blink_Led</a></li>
+                <!--<li><a href="#programs-section" class="nav-link">Программа</a></li>-->
+                <li><a href="#teachers-section" class="nav-link">Преподаватели</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="ml-auto w-25">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block m-0 p-0">
+              <li class="cta"><a href="#contact-section" class="nav-link"><span>Контакты</span></a></li>
+              </ul>
+            </nav>
+            <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
+          </div>
+        </div>
+      </div>
+      
+    </header>
+
+    
+    <!---->
+    
+    <div class="intro-section" id="home-section">
+      
+      <div class="slide-1" style="background-image: url('../../images/STM32.jpg');" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <div class="row align-items-center">
+                <div class="col-lg-6 mb-2">
+                  <h1  data-aos="fade-up" data-aos-delay="100" ><a href="../STM32_course.html">
+                    <img src="../images/return_to_stm32.png" alt="MDN logo" width="50%"/>
+                  </a></h1>
+                  <h1  data-aos="fade-up" data-aos-delay="100" class = "heading">BuRockets</h1>
+                  <h1  data-aos="fade-up" data-aos-delay="100" class = "heading">Лабораторная работа 03_Blink_Led</h1>
+                  <p   data-aos="fade-up" data-aos-delay="200" class = "heading">В этой лабораторной мы научимся мигать светодиодом на плате bluepill</p> 
+                  <p data-aos="fade-up" data-aos-delay="300" class = "heading"><a href="#03_blinkled-section" class="btn btn-primary py-3 px-5 btn-pill">03_Blink_Led</a></p>
+
+                </div>
+
+
+                <div class="col-lg-6 ml-auto" data-aos="fade-up" data-aos-delay="500">
+                  
+                    <div class="site-logo mr-auto w-25"><a href="03_blinkled.html">
+                      <img src="images/blinkled_logo.png" alt="MDN logo" width="500%"/>
+                    </a></div>
+                  
+                </div>
+
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="03_blinkled-section"></div>
+        <div class="container">
+            <div class="row mb-10 justify-content-center">
+                <div class="col-lg-7" data-aos="fade-up" data-aos-delay="">
+                    <h2 class="section-title" >03_Blink_Led</h2>
+            
+                    <h2>Поморгаем светодиодом</h2>
+                    
+                    <h1 id="-">Первая прошивка</h1>
+                    <h2 id="-">Необходимые компоненты</h2>
+                    <p>Для прохождение данной лабораторной работы вам понадобится:</p>
+                    <ul>
+                    <li>отладочная плата с stm32 (BluePill)</li>
+                    <li>программатор ST-Link V2</li>
+                    <li>программа CubeIde</li>
+                    <li>программа ST-Link Utility</li>
+                    </ul>
+                    <blockquote>
+                    <p>[!NOTE] 
+                    Ссылки на для скачивания программ есть в низу страницы <a href="../STM32_course.html">курса</a></p>
+                    </blockquote>
+                    <h2 id="-">Подключение</h2>
+                    <p>Первым делом нужно подключить BluePill к программатору ST-Link V2</p>
+                    <p>Ниже представлена схема подключения:</p>
+                    <p><img src="./images/connect.png" class="img-lab" width="450" height="150"></p>
+                    <h2 id="st-link-utility">ST-Link Utility</h2>
+                    <p>Далее подключаем ST-Link V2 к компьютеру через USB порт, и открываем ST-Link Utility. Данная программа потребуется нам для проверки, работает ли сам чип stm, с помощью нее мы можем подключиться к микроконтроллеру, считать его прошивку, или загрузить на него уже готовую прошивку в виде .bin файла.</p>
+                    <p>После того как программа открылась, нажимаем <strong>Connect to the target</strong> <img src="./images/connect_to_the_target.png" class="img-lab" alt=""></p>
+                    <p>Если вы все подключили верно и плата работает, то память будет считана и частично отображаться на экране.</p>
+                    <p><img src="./images/read_memory.png"  class="img-lab" width="450" height="375"></p>
+                    <p>После того как мы убедились, что все работает, отключаемся от stm_ки, нажав кнопку <strong>Disconnect from the target</strong>  <img src="./images/disconnect.png" class="img-lab" alt=""> и закрываем программу.</p>
+                    <blockquote>
+                    <p>![NOTE]
+                    Возможно, что на вашей новой stm не будет никакой прошивки, когда вы достанете ее из коробки. Тогда при подключении считываемая память будет заполнена FFFFFFFF. Если в дальнейшем вы захотите отчистить свой контроллер от прошивки ⇒ нажимаете <strong>Full chip erase</strong> <img src="./images/full_chip_erase.png" class="img-lab" alt=""> и память будет отчищена (заполнена FFFFFFFF).</p>
+                    </blockquote>
+                    <p><img src="./images/chip_erase.png" class="img-lab" width="450" height="375"></p>
+                    <h2 id="-">Первая прошивка платы</h2>
+                    <p>После того, как мы убедились, что все верно подключили, давайте напишем свою первую прошивку, которая будет мигать светодиодом на плате BluePill, для этого:</p>
+                    <p>Открываем CubeIde и в верхней панели выбираем: </p>
+                    <p>⇒ File ⇒ New ⇒ STM32 Project</p>
+                    <p><img src="./images/STM32_project.png" class="img-lab" alt=""></p>
+                    <p>Далее вводим название модели чипа stm ⇒ выбираем его в правой нижней области экрана ⇒ жмем <strong>Next</strong></p>
+                    <p><img src="./images/f103C8t6.png" class="img-lab" alt=""></p>
+                    <p>Отлично, теперь наш проект под именно наш контроллер сгенерировался. В левой части экрана открывается поле Project Explorer, где мы можем видеть все файлы проекта. </p>
+                    <p><img src="./images/Project_explorer.png" alt=""></p>
+                    <p>Справа открылся файл с расширением .ioc, слева вкладки для настройки тактирования, портов ввода-вывода и различной периферии.</p>
+                    <p><img src="./images/ioc.png" class="img-lab" alt=""></p>
+                    <p>В первую очередь подключим два пина на контроллере для отладки нашей будущей программы:</p>
+                    <p>⇒ <strong>System Core</strong> ⇒ <strong>SYS</strong> ⇒ <strong>Debug</strong> (Serial Wire)</p>
+                    <p><img src="./images/Serial_wire.png" class="img-lab" alt=""></p>
+                    <p>В итоге должно получиться вот так:</p>
+                    <p><img src="./images/SWD.png" class="img-lab" width="300" height="300"></p>
+                    <p>Далее подключим GPIO пин настроенный на выход для светодиода.</p>
+                    <p>Чтобы определить какой пин подключен к светодиоду на плате BluePill, необходимо открыть <a href="../doc/Blue_Pill.pdf">схемотехнику платы</a>. </p>
+                    <p>На схемотехнике необходимо найти светодиод по его условно графическому обозначению (УГО). </p>
+                    <p><img src="./images/led_diod.png" class="img-lab" alt=""></p>
+                    <blockquote>
+                    <p>[!NOTE]
+                    Светодиод пропускает через себя ток, только в том случае, если напряжение на аноде больше, чем напряжение на катоде. УГО светодиода напоминает стрелку в направлении которой должен течь ток, для того, чтобы светодиод загорелся. Ток течет от большего напряжения к наименьшему.</p>
+                    <p>По определению напряжение == разность потенциалов. За нулевой потенциал мы берем землю (на схемах обозначается как <code>GND</code>), от земли и будем отсчитывать все напряжения.</p>
+                    </blockquote>
+                    <p>Как мы видим на плате есть два светодиода, верхний подключен с одной стороны к общему питанию платы, которое составляет 3,3 В (VCC3V3), а с другой через резистор к земле платы (GND). То есть в момент, когда на плате будет питание == 3V3, этот светодиод будет гореть.</p>
+                    <blockquote>
+                    <p>[!NOTE]
+                    Зачастую на схемах питание обозначается буквами <code>Vсс</code> или конкретно номиналом <code>3V3</code>, <code>5V0</code>, земля же может обозначаться как <code>Vss</code> или <code>GND</code> </p>
+                    </blockquote>
+                    <p>Рассмотрим теперь нижний светодиод, которым мы хотим поморгать, ток через него будет течь только в том случае, если в точке <strong><em>1</em></strong> будет напряжение меньше чем 3V3, в нашем случае GND, возьмем это на вооружение.</p>
+                    <p><img src="./images/leds.png" class="img-lab" alt=""></p>
+                    <p>Заметим, что точка <strong><em>1</em></strong> подключена к ножке PC13 микроконтроллера (в дальнейшем для краткости мк).</p>
+                    <p>Настроим ножку как GPIO_Output, вкратце данный режим позволит нам подтягивать (подключать) ножку либо к питанию, либо к земле, тем самым включать и выключать светодиод.</p>
+                    <p><img src="./images/GPIO_output.png" class="img-lab" height="300" alt=""></p>
+                    <p><img src="./images/GPIO_input.png" class="img-lab" height="300" alt=""></p>
+                    <p>Теперь настроим GPIO:</p>
+                    <p>⇒ <strong>System Core</strong> ⇒ <strong>GPIO</strong></p>
+                    <p>Выставим:</p>
+                    <ul>
+                    <li><strong>GPIO output level</strong> == High</li>
+                    <li><strong>User label</strong> == led</li>
+                    </ul>
+                    <p><img src="./images/led_config_1.png" class="img-lab" width="360" height="300"></p>
+                    <p><br></p>
+                    <p><img src="./images/led_config_2.png" class="img-lab" width="360" height="300"></p>
+                    <p><br></p>
+                    <p>Теперь, после настройки ножек мк, нажимаем на шестеренку <img src="./images/gear.png" class="img-lab" alt=""> в верхней панели, тем самым CubeIde сгенерирует код на языке си, где уже будет прописано все, что мы выставили ранее.</p>
+                    <p>В левой части экрана ... НАДО ПИСАТЬ ДАЛЬШЕ !!!</p>
+                    <p>Генератор кода вызвал функции инициализации тактирования и GPIO. </p>
+                    <pre><code><span class="hljs-comment">/* Private function prototypes -----------------------------------------------*/</span>
+                    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">SystemClock_Config</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>;
+                    <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">MX_GPIO_Init</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>;
+                    </code></pre><blockquote>
+                    <p>[!TIP]
+                    Для понимания, что такое <a href="https://www.youtube.com/watch?v=eMGKPx5rwMI&amp;list=PLhtMaaf_npBzsEQ94eGn5RnuE-VdGVObR&amp;index=2">сборка проекта</a></p>
+                    <p>[!TIP]
+                    Что такое <a href="https://www.youtube.com/watch?v=z8AqQY_WKKo&amp;list=PLhtMaaf_npBzsEQ94eGn5RnuE-VdGVObR&amp;index=3">ядро</a> микроконтроллера stm32</p>
+                    <p>[!TIP]
+                    <a href="https://www.youtube.com/watch?v=PP94Q0OYLkY&amp;list=PLhtMaaf_npBzsEQ94eGn5RnuE-VdGVObR&amp;index=4">Система тактирования и сброса</a></p>
+                    </blockquote>
+
+
+                    <p class="mt-4"><a href="#" class="btn btn-primary">В начало страницы</a></p>
+                </div>
+            </div>
+        </div>
+      </div>
+   
+    </div>
+
+   
+
+    
+  <!---->
+    <div class="site-section" id="teachers-section">
+      <div class="container">
+
+        <div class="row mb-5 justify-content-center">
+          <div class="col-lg-7 mb-5 text-center"  data-aos="fade-up" data-aos-delay="">
+            <h2 class="section-title">Наши преподаватели</h2>
+            <p class="mb-5">Спасибо за проявленный интерес к ракетостроению и добро пожаловать к нам на курс.</p>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="teacher text-center">
+              <img src="../../images/splinter.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 1</h3>
+                <p class="position">Исследователь, научный сотрудник</p>
+                <p>Специальзируется на теме 1</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="teacher text-center">
+              <img src="../../images/yoda.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 2</h3>
+                <p class="position">Инженер программист</p>
+                <p>Специальзируется на теме 2</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="teacher text-center">
+              <img src="../../images/oogway.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 3</h3>
+                <p class="position">Инженер электронщик</p>
+                <p>Специальзируется на теме 3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--contact us-->
+<div class="site-section bg-light" id="contact-section">
+  <div class=".container-hluid">
+    <div class="row justify-content-center">
+      <div class="col-md-7">
+
+        <div class="container">
+          <div class="social-icons">
+              <a href="https://t.me/burockets" target="_blank" class="social-icon">
+                  <i class="fab fa-telegram-plane"></i>
+              </a>
+              <a href="https://vk.com/egobun" target="_blank" class="social-icon">
+                  <i class="fab fa-vk"></i>
+              </a>
+              <a href="https://www.youtube.com/@egorbunakov" target="_blank" class="social-icon">
+                  <i class="fab fa-youtube"></i>
+              </a>
+              
+          </div>
+      </div>
+      
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+
+
+  
+    
+  </div> <!-- .site-wrap -->
+
+  <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/popper.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/owl.carousel.min.js"></script>
+    <script src="../../js/jquery.stellar.min.js"></script>
+    <script src="../../js/jquery.countdown.min.js"></script>
+    <script src="../../js/bootstrap-datepicker.min.js"></script>
+    <script src="../../js/jquery.easing.1.3.js"></script>
+    <script src="../../js/aos.js"></script>
+    <script src="../../js/jquery.fancybox.min.js"></script>
+    <script src="../../js/jquery.sticky.js"></script>
+
+  
+  <script src="../../js/main.js"></script>
+    
+  </btn.btn-black:hover>
+</html>

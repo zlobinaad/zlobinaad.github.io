@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BuRockets</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="../../fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/jquery-ui.css">
+    <link rel="stylesheet" href="../../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="../../css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="../../css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="../../fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="../../css/aos.css">
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>02_01_Memory</title>
+    <style>
+      * {
+            box-sizing: border-box;
+        }
+
+        h1, h2, h3, h4, h5,
+      .h1, .h2, .h3, .h4, .h5 {
+          margin-top: 40px;
+        color: #054597ff;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+        p, ul {
+            width: 100%; /* Ширина 100% относительно контейнера */
+            margin: 10px 0; /* Отступы между элементами */
+            text-align: left;
+        }
+
+        html, body {
+            overflow-x: hidden; /* Скрыть горизонтальную прокрутку */
+        }
+
+        img {
+           
+            height: auto; /* Сохраняем пропорции изображений */
+        }
+
+        .container {
+            max-width: 2000px; /* Максимальная ширина контейнера */
+            margin: 0 auto; /* Центрирование контейнера */
+            padding-left: 15px; /* Убедитесь, что отступы не создают переполнение */
+            padding-right: 15px;
+        }
+        .heading{
+          margin-left: 20%;
+          width: 70%;    
+        }
+        .btn-primary span {
+            color: white; /* Устанавливаем белый цвет текста */
+        }
+
+        .social-icons {
+          display: flex;
+          justify-content: center;
+          margin-top: 50px;
+        }
+        .social-icon {
+            font-size: 40px;
+            margin: 0 20px;
+            transition: transform 0.3s, color 0.3s;
+        }
+        .social-icon:hover {
+            transform: scale(1.2);
+            color: #007bff; /* Цвет при наведении */
+        }
+        .social-icon:hover img {
+          transform: scale(1.2);
+        }
+        .blue-text {
+          color: #054597ff; /* светло-голубой цвет */
+          font-weight: bold;  /* чтобы сделать жирным */
+        }
+        .bold-text {
+          font-weight: bold;  /* чтобы сделать жирным */
+        }
+
+        pre.prettyprint {
+            background-color: #e0f0ff; /* светло-голубой фон */
+            border: 1px solid #aaccee; /* светлая голубая рамка */
+            padding: 15px;             /* внутренние отступы */
+            border-radius: 5px;        /* скругленные углы */
+            overflow-x: auto;          /* горизонтальная прокрутка при необходимости */
+            font-family: Consolas, Monaco, 'Courier New', monospace; /* шрифт для кода */
+            font-size: 14px;
+        }
+        pre.prettyprint code {
+            color: #003366;            /* темно-синий цвет текста */
+        }
+
+        
+
+        /* Примените медиа-запросы для мобильных устройств */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+        }
+  </style>
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+    
+    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+      
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <div class="site-logo mr-auto w-25"><a href="../../index.html">
+            <img src="../../images/logo.png" alt="MDN logo" width="20%"/>
+          </a></div>
+
+          <div class="mx-auto text-center">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mx-auto d-none d-lg-block  m-0 p-0">
+                <li><a href="#home-section" class="nav-link">Главная</a></li>
+                <li><a href="#02_1_memory-section" class="nav-link">02_1_memory</a></li>
+                <!--<li><a href="#programs-section" class="nav-link">Программа</a></li>-->
+                <li><a href="#teachers-section" class="nav-link">Преподаватели</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="ml-auto w-25">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block m-0 p-0">
+              <li class="cta"><a href="#contact-section" class="nav-link"><span>Контакты</span></a></li>
+              </ul>
+            </nav>
+            <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
+          </div>
+        </div>
+      </div>
+      
+    </header>
+
+
+
+    
+    <div class="intro-section" id="home-section">
+      
+      <div class="slide-1" style="background-image: url('../../images/STM32.jpg');" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <div class="row align-items-center">
+                
+                <div class="col-lg-6 mb-4">
+                  <h1  data-aos="fade-up" data-aos-delay="100" ><a href="../STM32_course.html">
+                    <img src="../images/return_to_stm32.png" alt="MDN logo" width="50%"/>
+                  </a></h1>
+                  <h1  data-aos="fade-up" data-aos-delay="100" class = "heading">BuRockets</h1>
+                  <h1  data-aos="fade-up" data-aos-delay="100" class = "heading">Лабораторная работа 02_1_memory</h1>
+                  <p data-aos="fade-up" data-aos-delay="200" class = "heading">Memory </p> 
+                  <p data-aos="fade-up" data-aos-delay="300" class = "heading"><a href="#02_1_memory-section" class="btn btn-primary py-3 px-5 btn-pill">02_1_memory</a></p>
+
+                </div>
+
+
+                <div class="col-lg-4 ml-auto" data-aos="fade-up" data-aos-delay="500">
+                  
+                    <div class="site-logo mr-auto w-25"><a href="02_1_memory.html">
+                      <img src="images/memory_logo.png" alt="MDN logo" width="300%"/>
+                    </a></div>
+                  
+                </div>
+
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="02_1_memory-section"></div>
+    <div class="container">
+        <div class="row mb-10 justify-content-center">
+            <div class="col-lg-7" data-aos="fade-up" data-aos-delay="">
+                <h2 class="section-title">02_1_memory</h2>
+
+                <div class="topic topic-type-topic js-topic">
+                <h1 class="title word-wrap">
+                                STM32 - память
+                    
+                    
+                        </h1>
+
+                <div class="topic-info-favourite" onclick="return ls.favourite.toggle(130,$('#fav_topic_130'),'topic');">
+                    <i id="fav_topic_130" class="favourite "></i>
+                    <span class="favourite-count" id="fav_count_topic_130"></span>
+                </div>
+
+                
+
+                <div class="topic-content text">
+
+                
+                    
+                            <br/>
+                <br/>
+                <img src="images/1.jpg" class="img-lab"/><br/>
+
+                <br/>
+                <br/>
+                <a name="cut" rel="nofollow"></a> <br/>
+                <br/>
+                Здравствуйте.<br/>
+                <br/>
+                В статье рассказано про организацию памяти микроконтроллера stm32, использования flash'а для хранения пользовательских данных, и про всякие пользовательские биты/биты защиты.<br/>
+                <br/>
+                <br/>
+                <br/>
+                Память ядра <armcolor>ARM Cortex-M</armcolor>, на котором основаны микроконтроллеры stm32, выглядит так…<br/>
+                <br/>
+                <img src="images/2.jpg" class="img-lab"/><br/>
+                Конечно же в вашем микроконтроллере нет никаких гигабайтов памяти <img src="images/3.png"/> однако камень 32-х битный, а значит можно адресовать <grei><em>(обратится по адресу)</em></grei> до 4ГБ. Это стандартизированная модель обеспечивающая переносимость кода между различными микроконтроллерами stm32, а так же дающая возможность подключать внешнюю память и совершенно спокойно обращаться к ней. То же самое касается и периферии, производитель микроконтроллеров на базе ядра Cortex, может напихать туда оооочень много всего и при этом не беспокоиться о нехватке адресов. Что же касается размера, то некоторых адресов просто нет, вместо них зарезервированные пустоты. Если обратится к зарезервированной области, то произойдёт аппаратный сбой процессора.<br/>
+                <br/>
+                Для примера часть адресов блока <sinee>Peripheral</sinee> микроконтроллера F103…<br/>
+                <br/>
+                <img src="images/4.jpg" class="img-lab"/><br/>
+
+                <em>Reference manual — <a href="https://www.st.com/content/ccc/resource/technical/document/reference_manual/59/b9/ba/7f/11/af/43/d5/CD00171190.pdf/files/CD00171190.pdf/jcr:content/translations/en.CD00171190.pdf" rel="nofollow">rm0008</a> стр. 51<br/>
+                <br/>
+                <grei>Тут видны адреса некоторых таймеров, портов GPIO, и другой периферии. Все они находятся выше 0x40000000 и ниже 0x5fffffff.</grei></em><br/>
+                <br/>
+                Если попробовать прочитать зарезервированный адрес…<br/>
+                <br/>
+                <pre class="prettyprint"><code>volatile uint32_t var = *(uint32_t*)0x40015800;</code></pre><br/>
+                <br/>
+                То получим Hard Fault…<br/>
+                <br/>
+                <img src="images/5.jpg" class="img-lab"/><br/>
+                <br/>
+                <br/>
+                Прежде чем продолжать, надо скачать программу <a href="https://www.st.com/en/development-tools/stm32cubeprog.html" rel="nofollow">STM32CubeProgrammer</a> с помощью которой можно ковыряться в микроконтроллере. <em>Прога хороша тем, что есть варианты для <img src="//istarik.ru/uploads/images/00/00/01/2019/09/24/585e79.png"/> и <img src="//istarik.ru/uploads/images/00/00/01/2019/09/24/795713.png"/></em><br/>
+                <br/>
+                Запускаем и жмём Connect, подключатся можно через ST-Link или UART…<br/>
+                <br/>
+                <img src="images/6.jpg" class="img-lab"/><br/>
+                Нажимаем верхнюю левую кнопку <em>(с карандашиком)</em>, и на вкладке Device memory видим программу залитую в камень. Можно указать адрес, с которого читать <em>(по умолчанию стоит начальный адрес флеш-памяти)</em> и сколько байт прочитать. Кнопочка Read считывает данные и показывает как на картинке. Если вместо Read выбрать Save As, то программа сдампится в указанный файл <em>(надо только размер считываемых данных правильно указать, а то по умолчанию 1К)</em>.<br/>
+                <br/>
+                <div><b class="spoiler-title" title="Там что-то есть...">другие функции CubeProgrammer</b><div class="spoiler-body">Если нажать вкладку Open file, то можно открыть какой-нибудь .hex или .bin файл прямо в программе.<br/>
+                <br/>
+                Кнопка <img src="images/7.jpg" class="img-lab"/> открывает интерфейс для загрузки прошивки в МК…<br/>
+                <br/>
+                <img src="images/8.png" class="img-lab"/><br/>
+                Выбираем нужный файл, очищаем флеш полностью <em>(Full chip erase)</em> или выборочные страницы, и жмём Start Programming.<br/>
+                <br/>
+                <img src="images/9.jpg" class="img-lab"/>  — что-то связанное с внешним загрузчиком или внешним девайсом, не знаю, не вникал. <br/>
+                <br/>
+                <img src="images/10.jpg" class="img-lab"/>  — очищает флеш.<br/>
+                </div></div><br/>
+                <br/>
+                В нижней части лог подключения, а справа-снизу полезная информация о вашем МК. Здесь интересны два пункта…<br/>
+                <br/>
+                <strong>Device</strong> — серия микроконтроллера и плотность <em>(Medium-density)</em>.<br/>
+                <br/>
+                <em>Некоторые микроконтроллеры stm32, в рамках одной серии, например популярный F103, он же BluePill, выпускается не только в разных корпусах с разным количеством «ножек», но и разной плотности (объёмом флеш-памяти)...</em><br/>
+                <br/>
+                <img src="images/11.jpg" class="img-lab"/><br/>
+                <em>Connectivity line devices — это, на сколько я понимаю, микроконтроллеры которые умеют работать с интернетом. Programming manual — <a href="https://www.st.com/content/ccc/resource/technical/document/programming_manual/10/98/e8/d4/2b/51/4b/f5/CD00283419.pdf/files/CD00283419.pdf/jcr:content/translations/en.CD00283419.pdf" rel="nofollow">PM0075</a> стр. 5.</em><br/>
+                <br/>
+                <br/>
+                <strong>Device ID</strong> — код, который зашит в системный бутлоадер, и по нему ST-Link определяет что это за микроконтроллер.<br/>
+                <br/>
+                <div><b class="spoiler-title" title="Там что-то есть...">коды</b><div class="spoiler-body">Коды можно посмотреть в <a href="https://www.st.com/content/ccc/resource/technical/document/application_note/b9/9b/16/3a/12/1e/40/0c/CD00167594.pdf/files/CD00167594.pdf/jcr:content/translations/en.CD00167594.pdf" rel="nofollow">AN2606</a> стр. 307.<br/>
+                <br/>
+                <img src="images/12.jpg" class="img-lab"/><br/>
+                </div></div><br/>
+                <br/>
+                Теперь нажмём кнопочку <img src="images/13.jpg" class="img-lab"/> чтоб появился список Option bytes…<br/>
+                <br/>
+                <img src="images/14.jpg" class="img-lab"/><br/>
+                … и вернёмся к изучению памяти.<br/>
+                <br/>
+                <br/>
+                Всё что выше <sinee>Peripheral</sinee> особого интереса не представляет, <szel>SRAM</szel> — это оперативная память, а <tgelt>Code Area</tgelt> выглядит так…<br/>
+                <br/>
+                <img src="images/15.jpg" class="img-lab"/><br/>
+                <br/>
+                <br/>
+                <strong>Option bytes</strong> — здесь находятся различные биты для настройки МК. Защита от чтения/записи, включение/отключение вачдогов, и несколько пользовательских битов для хранения какой-либо инфы.<br/>
+                <br/>
+                <img src="images/16.jpg" class="img-lab"/><br/>
+                Бит RDP — если установить, то нельзя будет ни прочитать прошивку, ни загрузить новую. Чтобы установить, нужно поставить галочку, нажать кнопку Apply и обресетить МК. Снимается так же. При снятии защиты, существующая в МК прошивка будет удалена. <em>Такой механизм гарантирует невозможность прочесть прошивку в залоченом камне.</em><br/>
+                <br/>
+                В более серьёзных камнях RDP имеет несколько уровней…<br/>
+                <br/>
+
+                <img src="images/17.jpg" class="img-lab"/><br/>
+                <blak>AA</blak> — нет защиты.<br/>
+                <blak>BB</blak> — защита включена.<br/>
+                <blak>СС</blak> — микроконтроллер безвозвратно заблокирован от чтения/записи. <red>Warning!</red> Если установите этот уровень защиты, то больше никогда не сможете прошить МК. Операция необратима.<br/>
+                <br/>
+                <br/>
+                <img src="images/18.jpg" class="img-lab"/><br/>
+                Тут комментировать особо нечего, думаю и так всё понятно. Однако очень не рекомендую снимать галочку с вачдога — камень будет постоянно ресетится. Настройки применяются так же, галочку сняли/поставили, и кнопка Apply. <em>В более мощных МК есть доп. настройки.</em><br/>
+                <br/>
+                <br/>
+                <img src="images/19.jpg" class="img-lab"/><br/>
+                Сюда можно сохранить какие-то свои данные, правда не много <img src="images/20.png"/><br/>
+                <br/>
+                <br/>
+                <img src="images/21.jpg" class="img-lab"/><br/>
+                Защита от записи конкретных страниц флеш-памяти. <em>К этому вернёмся чуть позже.</em><br/>
+                <br/>
+                <br/>
+                <br/>
+                <strong>System memory</strong> — это область в которой располагается системный загрузчик <em>(bootloader)</em>, он зашивается на заводе при изготовлении, его нельзя ни удалить, ни изменить. <br/>
+                <br/>
+                <div><b class="spoiler-title" title="Там что-то есть...">Bootloader</b><div class="spoiler-body">Bootloader это такая небольшая программка, которая позволяет прошивать микроконтроллер через различные интерфейсы. Если подтянуть пин BOOT_0 к «земле» и нажать ресет, то загрузиться bootloader и будет ожидать поступления новой прошивки. Простенькие камни, типа F103, можно <a href="https://istarik.ru/blog/stm32/111.html" rel="nofollow">прошивать только через USART</a>, а более «крутые» позволяют делать это и через другие интерфейсы. Посмотреть это можно в <a href="https://www.st.com/content/ccc/resource/technical/document/application_note/b9/9b/16/3a/12/1e/40/0c/CD00167594.pdf/files/CD00167594.pdf/jcr:content/translations/en.CD00167594.pdf" rel="nofollow">AN2606</a> стр. 25. Например вот…<br/>
+                <br/>
+                <img src="images/22.jpg" class="img-lab"/><br/>
+                </div></div><br/>
+                <br/>
+                <strong><tgelt>Flash</tgelt></strong> — это область энергонезависимой памяти, в которой хранится ваша прошивка. Выглядит эта область следующим образом…<br/>
+                <br/>
+                <img src="images/23.jpg" class="img-lab"/><br/>
+                <em><a href="https://www.st.com/content/ccc/resource/technical/document/reference_manual/59/b9/ba/7f/11/af/43/d5/CD00171190.pdf/files/CD00171190.pdf/jcr:content/translations/en.CD00171190.pdf" rel="nofollow">RM0008</a> стр. 55. (Рис. 1)</em><br/>
+                <br/>
+                <blak>Information block</blak> — это описанные выше System memory и Option Bytes.<br/>
+                <br/>
+                <blak>Flash memory interface registers</blak> — это регистры отвечающие за работу Flash-памяти, они находятся в области <sinee>Peripheral</sinee>. <br/>
+                <br/>
+                <blak>Main memory</blak> — это и есть наша Flash-память.<br/>
+                <br/>
+                <br/>
+                <strong><tgelt>Flash</tgelt></strong>-память организована постранично, а размер страницы колеблется от одного до нескольких килобайт, в зависимости от серии микроконтроллера. У F103 <em>(Рис. 1)</em> размер равен 1К, а вот например у F4 выглядит так…<br/>
+                <br/>
+                <img src="images/24.jpg" class="img-lab"/><br/>
+                <em>Часть страниц по 16К, одна 64К, а часть по 128К. Здесь страницы называются секторами.</em><br/>
+                <br/>
+                <grei><em>OTP area — это биты защиты, которые можно записать только один раз (One-Time-Programmable). Больше ничего про это сказать не могу — у меня нет такой платы.</em></grei><br/>
+                <br/>
+                <br/>
+                Тут есть один любопытный момент. Компания <blue><em>ST</em></blue> выпускает два почти одинаковых камня F103, один F103C<strong>8</strong>хх c объёмом флеш-памяти 64К <em>(BluePill)</em>, и F103C<strong>B</strong>хх c объёмом 128К. Однако на самом деле у обоих этих камней объём флеш-памяти равен 128К <em>(128 страниц по 1К)</em>. <br/>
+                <br/>
+                Во-первых в мануале нет камней с 64-мя страницами <em>(см. рис. 1)</em>, а во-вторых, не смотря на то, что ST-Link показывает объём 64К, у всех моих F103C<strong>8</strong>хх читаются и пишутся все 128 страниц. То есть программу размером больше 64К залить через TrueStudio не удаётся, а вот производить чтение/запись этих областей из своей программы можно. Да и STM32CubeProgrammer их тоже совершенно спокойно читает…<br/>
+                <br/>
+                <img src="images/25.jpg" class="img-lab"/><br/>
+                <em>127-я страница на камне F103C8хх.</em><br/>
+                <br/>
+                <div><b class="spoiler-title" title="Там что-то есть...">пояснения</b><div class="spoiler-body">Если я правильно понимаю, то такая ситуация с памятью связана с тем, что на заводе делают камни с 128К, а после проверки, если тестирование проходит больше 64К, но меньше 128К, то маркируют как 64К <em>(F103C<strong>8</strong>хх)</em>. В общем это не брак, и не «китайская» подделка. А использовать «незадекларированную» область можно на свой страх и риск, сохранность записанных туда данных производитель не гарантирует. <br/>
+                </div></div><br/>
+                <br/>
+                <br/>
+                Выше я говорил что мы вернёмся к вопросу защиты конкретных страниц от чтения/записи…<br/>
+                <br/>
+                <img src="images/26.jpg" class="img-lab"/><br/>
+                <br/>
+                Биты WRPх защищают сразу по несколько страниц. Количество защищаемых страниц зависит от плотности <em>(density)</em> МК.<br/>
+                <br/>
+                Вот вырезка из <a href="https://www.st.com/content/ccc/resource/technical/document/programming_manual/10/98/e8/d4/2b/51/4b/f5/CD00283419.pdf/files/CD00283419.pdf/jcr:content/translations/en.CD00283419.pdf" rel="nofollow">Programming manual</a> стр. 21…<br/>
+                <br/>
+                <img src="images/27.jpg" class="img-lab"/><br/>
+                <em>У low-density используется только WRP0 и защищает весь флеш, а у medium-density можно делать это выборочно. Зачем нужны остальные биты (WRP4 и т.д.) я так и не понял, может они зарезервированы.</em><br/>
+                <br/>
+                Такой способ выборочной защиты очень удобен тем, что можно заблокировать область где находится программа, а остальное использовать для хранения каких-то данных и не боятся затереть программу, ну или наоборот, защитить какие-то данные, которые вы положили например в конец флеша. <br/>
+                <br/>
+                <br/>
+                <br/>
+                <strong>CCM SRAM</strong> — у некоторых микроконтроллеров есть дополнительная оперативная память под названием <strong>C</strong>ore <strong>C</strong>oupled <strong>M</strong>emory. Эта память подключена непосредственно к ядру, благодаря чему скорость доступа и исполнение кода будет быстрее чем в обычной SRAM. Соответственно в CCM выгодно размещать всякие статистические переменные/массивы, а при желании можно перенести туда стек/кучу/.data/.bss. <br/>
+                <br/>
+                Cледует помнить, что доступ к CCM имеет только процессор, а значит DMA не сможет к ней обратиться. <em>CCM бывают разные для разных микроконтроллеров, поэтому прежде чем начинать использование следует изучить <a href="https://www.st.com/content/ccc/resource/technical/document/application_note/bb/09/ca/83/14/e9/44/c5/DM00083249.pdf/files/DM00083249.pdf/jcr:content/translations/en.DM00083249.pdf" rel="nofollow">документацию</a>. Ещё <a href="http://sigalrm.blogspot.com/2013/12/using-ccm-memory-on-stm32.html" rel="nofollow">инфа</a>, и ещё <a href="https://www.openstm32.org/Using+CCM+Memory?structure=Documentation" rel="nofollow">инфа</a>.</em><br/>
+                <br/>
+                В качестве примера я перенёс пару массивов в ССМ <em>(среда TrueStudio, камень F303)</em>…<br/>
+                <br/>
+                Объявляем массивы глобально:<br/>
+                <br/>
+                <pre class="prettyprint"><code>//char array[] = &quot;istarik.ru&quot;;
+                //char array2[100] = {0,};
+
+                char array[] __attribute__((section (&quot;.ccmram&quot;))) = &quot;istarik.ru&quot;;
+                char array2[100] __attribute__((section (&quot;.ccmram&quot;))) = {0,};</code></pre><br/>
+                <grei><em>Чтоб компилятор не «оптимизировал» эти массивы, сделайте что-нибудь с ними, например выведите на печать.</em></grei><br/>
+                <br/>
+                Вуаля, они лежат где надо…<br/>
+                <br/>
+                <img src="images/28.jpg" class="img-lab"/><br/>
+                <br/>
+                <br/>
+                <br/>
+                Прежде чем говорить о переносе стека/кучи/.data/.bss в ССМ, я очень кратко и обобщённо поясню что означают эти термины:<br/>
+                <br/>
+                <br/>
+                <strong>Стек</strong> — область памяти в ОЗУ, куда сохраняется адреса программы в момент возникновения прерывания или перехода в другую функцию. <br/>
+                <br/>
+                <div><b class="spoiler-title" title="Там что-то есть...">чуть подробнее</b><div class="spoiler-body">Пошагово выглядит это так:<br/>
+                <br/>
+                <em>Наша программа работает-работает (указатель «бежит» последовательно по адресам).<br/>
+                <br/>
+                Происходит прерывание — указатель перепрыгивает в обработчик этого прерывания.<br/>
+                <br/>
+                Адрес, где находилась программа в момент возникновения прерывания, записывается в стек (чтоб запомнить куда возвращаться).<br/>
+                <br/>
+                После того как обработка прерывания закончится, из стека вытаскивается адрес на который нужно вернуться.</em><br/>
+                <br/>
+                То же самое происходит при переходе из одной функции в другую, например из <img src="images/29.jpg"/> в <img src="images/bla.jpg"/><br/>
+                <br/>
+                <br/>
+                Технически, стек можно представить в виде стопки книг где нельзя взять вторую сверху книгу не сняв предварительно первую. То есть стек работает по принципу LIFO буфера <em>(Last In First Out)</em> — «последним пришёл, первым вышел». Такая организация очень хорошо себя оправдывает. Представьте себе такую ситуацию: <br/>
+                <br/>
+                <em>Указатель перепрыгнул из функции <blak>main()</blak> в <blak>bla_bla()</blak>.<br/>
+                <br/>
+                В стек записался адрес того места откуда выпрыгнул указатель.<br/>
+                <br/>
+                Идёт обработка функции <blak>bla_bla()</blak> и в этот момент происходит прерывание.<br/>
+                <br/>
+                В стек записывается (ложится поверх предыдущего) ещё один адрес, и указатель переходит в обработчик прерывания.<br/>
+                <br/>
+                В результате на стеке лежат два адреса — адрес, на котором была приостановлена функция <blak>main()</blak>, а поверх него адрес на котором приостановлена функция <blak>bla_bla()</blak>.</em><br/>
+                <br/>
+                По окончании обработки прерывания система лезет в стек, «снимает со стопки» самый последний адрес, переходит по нему и заканчивает выполнение функции <blak>bla_bla()</blak> с того места где она была прервана. Больше этот адрес не нужен и он выкидывается в помойку, на стеке остаётся адрес приостановки функции <blak>main()</blak>.<br/>
+                <br/>
+                Как только функция <blak>bla_bla()</blak> завершается, система опять лезет в стек и «снимает» адрес приостановки функции <blak>main()</blak>. Адрес опять же летит в помойку, а функция <blak>main()</blak> продолжает выполняться. Таким образом, снимая «книжку за книжкой» система не сможет вернуться куда-то не туда и нарушить целостность программы.<br/>
+                </div></div><br/>
+                Помимо адресов, в стек сохраняются локальные переменные функций и параметры передающиеся в функции. То есть в момент вызова функции, вместе с адресом для возврата, на стек кладутся ещё и локальные переменные, которые есть в этой функции. Как только функция отработает, эти переменные будут сняты со стека и уничтожены. <br/>
+                <br/>
+                <strong>Куча</strong> — эта область ОЗУ, которая используется для динамического выделения памяти в процессе работы программы. То есть, когда вы делаете malloc/calloc/realloc, то память выделяется на куче.<br/>
+                <br/>
+                <strong>bss</strong> — область ОЗУ, сюда помещаются <blak>не</blak>инициализированные глобальные переменные <em>(uint8_t var;)</em>.<br/>
+                <br/>
+                <strong>data</strong> — область ОЗУ, сюда помещаются инициализированные глобальные переменные <em>(uint8_t var = 0;)</em>.<br/>
+                <br/>
+                <strong>text</strong> — Flash, здесь лежит сама программа.<br/>
+                <br/>
+                <br/>
+                Выглядит всё это хозяйство следующим образом…<br/>
+                <br/>
+                <img src="images/30.jpg" class="img-lab"/><br/>
+                <em>Стек начинается от самого большого адреса и при увеличении размера ползёт вниз <em>(записывая данные в меньшие адреса)</em>, а куча наоборот, при увеличении размера ползёт вверх, поэтому при выделении памяти на куче нужно следить чтоб эти области не налезли друг на друга.</em><br/>
+                <br/>
+                <div><b class="spoiler-title" title="Там что-то есть...">пояснение</b><div class="spoiler-body">Чтоб лучше понять иллюстрацию выше, откройте файл <blak>STM32F103C8_FLASH.ld</blak> и найдите там такие строки…<br/>
+                <br/>
+                <img src="images/31.jpg" class="img-lab"/><br/>
+                <br/>
+                Нас интересует переменная <blak>_estack</blak>, которая указывает на конец оперативной памяти. У микроконтроллера stm32F103c8 оперативная память располагаться в области от <blak>0x20000000</blak> до <blak>0x20005000</blak>, что равно 20480 байтам <em>(20Кб)</em>. Визуально это выглядит так…<br/>
+                <br/>
+                <img src="images/32.jpg" class="img-lab"/><br/>
+                Вся наша оперативка находится внутри узенькой полоски, а всё что выше не существует. То есть стек, куча, bss и data находится внутри этой полоски, а text в жёлтой области.<br/>
+                </div></div><br/>
+                <br/>
+                <br/>
+                Посмотреть сколько места занимают некоторые данные можно в среде разработки. Вот картинка из TrueStudio…<br/>
+                <br/>
+                <img src="images/33.jpg" class="img-lab"/><br/>
+                <em><blak>dec</blak> и <blak>hex</blak> это общий размер первых трёх значений.</em><br/>
+                <br/>
+                <br/>
+                Чтоб перенести какую-то из этих областей в ССМ, нужно подкорректировать файл компоновщика <em>(или линковщика, называйте как вам удобнее)</em> с расширением <blak>.ld</blak>… <br/>
+                <br/>
+                <img src="images/34.jpg" class="img-lab"/><br/>
+                <br/>
+                <br/>
+                Находим там интересующие нас блоки…<br/>
+                <br/>
+                <pre class="prettyprint"><code>
+                .data : 
+                {
+                    . = ALIGN(4);
+                    _sdata = .;        /* create a global symbol at data start */
+                    *(.data)           /* .data sections */
+                    *(.data*)          /* .data* sections */
+
+                    . = ALIGN(4);
+                    _edata = .;        /* define a global symbol at data end */
+                } &gt;RAM AT&gt; FLASH
+
+                ...
+
+                .bss :
+                {
+                    /* This is used by the startup in order to initialize the .bss secion */
+                    _sbss = .;         /* define a global symbol at bss start */
+                    __bss_start__ = _sbss;
+                    *(.bss)
+                    *(.bss*)
+                    *(COMMON)
+
+                    . = ALIGN(4);
+                    _ebss = .;         /* define a global symbol at bss end */
+                    __bss_end__ = _ebss;
+                } &gt;RAM
+
+                ...
+
+                ._user_heap_stack :
+                {
+                    . = ALIGN(4);
+                    PROVIDE ( end = . );
+                    PROVIDE ( _end = . );
+                    . = . + _Min_Heap_Size;
+                    . = . + _Min_Stack_Size;
+                    . = ALIGN(4);
+                } &gt;RAM</code></pre> <br/>
+                <br/>
+                Меняем у каких-нибудь блоков, или у всех сразу, слово <blak>RAM</blak> на <blak>CCMRAM</blak>…<br/>
+                <br/>
+                <pre class="prettyprint"><code>
+                } &gt;CCMRAM AT&gt; FLASH
+
+                ...
+
+                } &gt;CCMRAM
+
+                ...
+
+                } &gt;CCMRAM</code></pre> <br/>
+                <br/>
+                В результате получаем — до:<br/>
+                <br/>
+                <img src="images/35.jpg" class="img-lab"/><br/>
+                <br/>
+                После:<br/>
+                <br/>
+                <img src="images/36.jpg" class="img-lab"/><br/>
+                <br/>
+                <em>Инфа взята <a href="https://www.openstm32.org/Using+CCM+Memory?structure=Documentation" rel="nofollow">тут</a>.</em><br/>
+                <br/>
+                <br/>
+                <br/>
+                <strong>Запись данных во флеш</strong><br/>
+                <br/>
+                У большинства микроконтроллеров stm32 <em>(кроме серии L0)</em> нету EEPROM, поэтому сохранять пользовательские данные приходится во флеш-памяти. <em>Количество циклов записи 10000.</em><br/>
+                <br/>
+                Чтобы записать во флеш какие-то данные нужно вначале её очистить <em>(во время очистки все биты заполняются единицами — 0xFF)</em>. Очистка происходит постранично/посекторно. <br/>
+                <br/>
+                Очистка одной страницы на F103…<br/>
+                <br/>
+                <pre class="prettyprint"><code>#define MYADDR ADDR_FLASH_PAGE_127
+
+                static FLASH_EraseInitTypeDef EraseInitStruct; // структура для очистки флеша
+
+                EraseInitStruct.TypeErase = FLASH_TYPEERASE_PAGES; // постраничная очистка, FLASH_TYPEERASE_MASSERASE - очистка всего флеша
+                EraseInitStruct.PageAddress = MYADDR; // адрес 127-ой страницы
+                EraseInitStruct.NbPages = 1;                       // кол-во страниц для стирания
+                //EraseInitStruct.Banks = FLASH_BANK_1; // FLASH_BANK_2 - банк №2, FLASH_BANK_BOTH - оба банка
+
+                uint32_t page_error = 0; // переменная, в которую запишется адрес страницы при неудачном стирании
+
+                char str[64] = {0,};
+
+                ////////////////////////////// ОЧИСТКА ///////////////////////////////////
+                HAL_FLASH_Unlock(); // разблокировать флеш
+
+                if(HAL_FLASHEx_Erase(&EraseInitStruct, &page_error) != HAL_OK)
+                {
+                    uint32_t er = HAL_FLASH_GetError();
+                    snprintf(str, 64, &quot;ER %lu\n&quot;, er);
+                    HAL_UART_Transmit(&huart1, (uint8_t*)str, strlen(str), 100);
+                    while(1){}
+                }
+
+                HAL_UART_Transmit(&huart1, (uint8_t*)&quot;Erase OK\n&quot;, 9, 100);
+
+                HAL_FLASH_Lock(); // заблокировать флеш</code></pre><br/>
+                <br/>
+                Объявляем структуру в которую заносятся параметры очистки:<br/>
+                <br/>
+                <blak>TypeErase</blak> — что хотим очистить, какую-то конкретную страницу <em>(или несколько)</em>, или всю флеш полностью.<br/>
+                <br/>
+                <blak>PageAddress</blak> — начальный адрес страницы, которую хотим очистить. Адреса можно посмотреть в мануале <em>(правда там не все видны)</em>, либо посчитать самостоятельно, либо в примерах Куба — <a href="https://www.st.com/en/embedded-software/stm32cube-mcu-mpu-packages.html#products" rel="nofollow">STM32CubeFx</a> в файле main.h <em>(для F103 — /STM32Cube_FW_F1_V1.8.0/Projects/STM32F103RB-Nucleo/Examples/FLASH/FLASH_EraseProgram/Inc/main.h)</em>. <em>В конце есть ссылка на гитхаб с этим примером, там есть хедер (addr_pages.h) с задефайнеными адресами для BluePill.</em><br/>
+                <br/>
+                <blak>NbPages</blak> — кол-во страниц для очистки. Если указать несколько, то они будут очищены начиная с адреса указанного выше.<br/>
+                <br/>
+                <blak>Banks</blak> — у «жирных» камней память делиться на банки, поэтому нужно указать в каком именно банке находятся страницы.<br/>
+                <br/>
+                <br/>
+                <blak>HAL_FLASH_Unlock()</blak> — снимаем блокировку стирания/записи во флеш <em>(для чтения этого делать не нужно)</em>. <em>Это не относится к битам WRPx, если они установлены для текущей страницы, то стереть/записать страницу не получится.</em> <br/>
+                <br/>
+                Ну, а дальше стираем страницу/страницы, и возвращаем блокировку. Если что-то пойдёт не так, то программа выведет ошибку и зациклится.<br/>
+                <br/>
+                После этой операции вся страница готова для записи. Необязательно записывать всю страницу за один раз, можно добавлять записи по мере необходимости, при условии что новые данные не будут записываться поверх старых.<br/>
+                <br/>
+                <div><b class="spoiler-title" title="Там что-то есть...">почему 0xFF</b><div class="spoiler-body">Почему нужно очищать <em>(заполнять значениями 0xFF)</em> память? <br/>
+                <br/>
+                Дело в том, что когда происходит запись байта в ячейку, то биты в этой ячейки не просто так берут и перезаписываются, а совершается операция логического «И» над тем что есть в ячейке и новым значением. <br/>
+                <br/>
+                Наглядно это выглядит так. Ячейка у нас очищена <em>(биты заполнены единицами)</em> и мы записываем в неё число 7 <em>(0х07)</em>…<br/>
+                <br/>
+                <img src="images/37.jpg" class="img-lab"/><br/>
+                <em>Выполняется логическое «И», и в ячейку записывается нужное нам число 7.</em><br/>
+                <br/>
+                А теперь допустим что мы хотим записать в эту же ячейку число 13 <em>(0x0d)</em> поверх старого значения…<br/>
+                <br/>
+                <br/>
+                <img src="images/38.jpg" class="img-lab"/><br/>
+                <em>Выполняется логическое «И» между старым значением 0х07 и новым 0x0d. В результате вместо желаемого числа 13, в ячейку записывается число 5.</em><br/>
+                </div></div><br/>
+                <br/>
+                <br/>
+                <strong>Запись</strong><br/>
+                <br/>
+                У разных МК можно записывать разную длину «слова», например у F103 можно записать «слова» размером 16, 32 и 64 бита. Подсмотреть это можно в файле <blak>stm32f1xx_hal_flash.h</blak>…<br/>
+                <br/>
+                <img src="images/39.jpg" class="img-lab"/><br/>
+
+                <br/>
+                Запишем два 16-ти <em>(FLASH_TYPEPROGRAM_HALFWORD)</em> битных числа в начало только что очищенной страницы…<br/>
+                <br/>
+                <pre class="prettyprint"><code>HAL_FLASH_Unlock(); // разблокировать флеш
+
+                uint32_t address = MYADDR; // запись в начало страницы 127
+                uint16_t idata[] = {0x1941, 0x1945};    // массив из двух чисел для записи
+
+                for(uint8_t i = 0; i &lt; 2; i++)
+                {
+                    if(HAL_FLASH_Program(FLASH_TYPEPROGRAM_HALFWORD, address, idata[i]) != HAL_OK)
+                    {
+                        uint32_t er = HAL_FLASH_GetError();
+                        snprintf(str, 64, &quot;ER %lu\n&quot;, er);
+                        HAL_UART_Transmit(&huart1, (uint8_t*)str, strlen(str), 100);
+                        while(1){}
+                    }
+
+                    address = address + 2;
+                }
+
+                HAL_UART_Transmit(&huart1, (uint8_t*)&quot;Write 16 bits OK\n&quot;, strlen(&quot;Write 16 bits OK\n&quot;), 100);
+
+                HAL_FLASH_Lock(); // заблокировать флеш</code></pre><br/>
+                <br/>
+                Разблокируем флеш, указываем адрес начала страницы <em>(не обязательно начало, можно в любое место)</em>, записываем во флеш массив из двух чисел, а в цикле увеличиваем адрес на два. После этого блокируем память. <br/>
+                <br/>
+                Если записывать 32-х <em>(FLASH_TYPEPROGRAM_WORD)</em> битное число, то увеличим адрес на четыре, а если 64-х <em>(FLASH_TYPEPROGRAM_DOUBLEWORD)</em> битное, то на 8. <em>Если в дальнейшем захотите добавить в эту страницу ещё что-то, то нужно запомнить адрес.</em><br/>
+                <br/>
+                Идём в STM32CubeProgrammer, вписываем адрес 127-ой страницы и смотрим чего понаписали…<br/>
+                <br/>
+                <img src="images/40.jpg" class="img-lab"/><br/>
+                <em>Всё окей. Не забывайте нажимать Disconnect <img src="images/41.jpg"/></em><br/>
+                <br/>
+                <br/>
+                Прочитаем то, что записали…<br/>
+                <br/>
+                <pre class="prettyprint"><code>address = MYADDR;
+
+                for(uint16_t i = 0; i &lt; 2; i++)
+                {
+                    uint16_t dig16 = *(uint16_t*)address; // читаем число по адресу
+
+                    snprintf(str, 64, &quot;READ_%d Dec: %d Hex: 0x%04X\n&quot;, i, dig16, dig16);
+                    HAL_UART_Transmit(&huart1, (uint8_t*)str, strlen(str), 100);
+
+                    address = address + 2;
+                }</code></pre><br/>
+                <br/>
+                Разблокировать не надо, а адрес опять же увеличиваем на два. Получаем ожидаемое…<br/>
+                <br/>
+                <img src="images/42.png" class="img-lab"/><br/>
+                <br/>
+                <br/>
+                Чтоб записать 8-ми битное значение <em>(не смотря на то, что производитель не предоставил такой возможности)</em>, надо просто записывать по два байта в одно 16-ти битное «слово» со сдвигом. Всё происходит почти так же как и с 16-ти битным числом…<br/>
+                <br/>
+                <pre class="prettyprint"><code>HAL_FLASH_Unlock(); // разблокировать флеш
+
+                address = MYADDR + 4; // смещаем адрес на 4 байта
+
+                uint8_t data[] = &quot; istarik.ru &quot;;
+                uint16_t data16 = 0, index0 = 0, index1 = 1;
+                uint16_t len = strlen((char*)data);
+
+                if(len % 2 != 0) // проверка кол-ва символов в массиве на чётность
+                {
+                    snprintf(str, 64, &quot;ER uneven buff %d\n&quot;, len);
+                    HAL_UART_Transmit(&huart1, (uint8_t*)str, strlen(str), 100);
+                    while(1){}
+                }
+
+                for(uint16_t i = 0; i &lt; len / 2; i++)
+                {
+                    data16 = ((uint16_t)data[index1] &lt;&lt; 8) | data[index0];
+                    index0 = index0 + 2;
+                    index1 = index1 + 2;
+
+                    if(HAL_FLASH_Program(FLASH_TYPEPROGRAM_HALFWORD, address, data16) != HAL_OK)
+                    {
+                        uint32_t er = HAL_FLASH_GetError();
+                        snprintf(str, 64, &quot;ER %lu\n&quot;, er);
+                        HAL_UART_Transmit(&huart1, (uint8_t*)str, strlen(str), 100);
+                        while(1){}
+                    }
+
+                    address = address + 2;
+                }
+
+                HAL_FLASH_Lock(); // заблокировать флеш
+
+                HAL_UART_Transmit(&huart1, (uint8_t*)&quot;Write 8 bits OK\n&quot;, strlen(&quot;Write 8 bits OK\n&quot;), 100);</code></pre><br/>
+                <br/>
+                Увеличиваем адрес на 4 <em>(чтоб добавить данные вслед за предыдущими)</em>, записывать будем массив, размер которого должен быть кратен двум <em>(для этого сделана проверка)</em>, а в цикле запихиваем два символа в одно 16-ти битное «слово» и отправляем по адресу.<br/>
+                <br/>
+                Проверяем…<br/>
+                <br/>
+                <img src="images/43.jpg" class="img-lab"/><br/>
+                <br/>
+                <br/>
+                Читаем…<br/>
+                <br/>
+                <pre class="prettyprint"><code>
+                address = MYADDR + 4;
+
+                char buf[64] = {0,};
+
+                for(uint16_t i = 0; i &lt; len; i++)
+                {
+                    buf[i] = *(uint32_t*)address++;
+                }
+
+                snprintf(str, 64, &quot;Str: %s\n&quot;, buf);
+                HAL_UART_Transmit(&huart1, (uint8_t*)str, strlen(str), 100);
+                </code></pre><br/>
+                Читать можно по одному 8-ми битному символу.<br/>
+                <br/>
+                <br/>
+                <img src="images/44.png" class="img-lab"/><br/>
+                <br/>
+                
+                </div> 
+
+
+                <p class="mt-4"><a href="#" class="btn btn-primary">В начало страницы</a></p>
+            </div>
+        </div>
+      </div>
+
+
+   
+
+    
+  <!---->
+    <div class="site-section" id="teachers-section">
+      <div class="container">
+
+        <div class="row mb-5 justify-content-center">
+          <div class="col-lg-7 mb-5 text-center"  data-aos="fade-up" data-aos-delay="">
+            <h2 class="section-title">Наши преподаватели</h2>
+            <p class="mb-5">Спасибо за проявленный интерес к ракетостроению и добро пожаловать к нам на курс.</p>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="teacher text-center">
+              <img src="../../images/splinter.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 1</h3>
+                <p class="position">Исследователь, научный сотрудник</p>
+                <p>Специальзируется на теме 1</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="teacher text-center">
+              <img src="../../images/yoda.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 2</h3>
+                <p class="position">Инженер программист</p>
+                <p>Специальзируется на теме 2</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="teacher text-center">
+              <img src="../../images/oogway.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 3</h3>
+                <p class="position">Инженер электронщик</p>
+                <p>Специальзируется на теме 3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--contact us-->
+<div class="site-section bg-light" id="contact-section">
+  <div class=".container-hluid">
+    <div class="row justify-content-center">
+      <div class="col-md-7">
+
+        <div class="container">
+          <div class="social-icons">
+              <a href="https://t.me/burockets" target="_blank" class="social-icon">
+                  <i class="fab fa-telegram-plane"></i>
+              </a>
+              <a href="https://vk.com/egobun" target="_blank" class="social-icon">
+                  <i class="fab fa-vk"></i>
+              </a>
+              <a href="https://www.youtube.com/@egorbunakov" target="_blank" class="social-icon">
+                  <i class="fab fa-youtube"></i>
+              </a>
+              
+          </div>
+      </div>
+      
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+
+
+
+  
+    
+  </div> <!-- .site-wrap -->
+
+  <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/popper.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/owl.carousel.min.js"></script>
+    <script src="../../js/jquery.stellar.min.js"></script>
+    <script src="../../js/jquery.countdown.min.js"></script>
+    <script src="../../js/bootstrap-datepicker.min.js"></script>
+    <script src="../../js/jquery.easing.1.3.js"></script>
+    <script src="../../js/aos.js"></script>
+    <script src="../../js/jquery.fancybox.min.js"></script>
+    <script src="../../js/jquery.sticky.js"></script>
+
+  
+  <script src="../../js/main.js"></script>
+    
+  </btn.btn-black:hover>
+</html>

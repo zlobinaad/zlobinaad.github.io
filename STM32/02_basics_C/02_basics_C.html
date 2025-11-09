@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BuRockets</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="../../fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/jquery-ui.css">
+    <link rel="stylesheet" href="../../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="../../css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="../../css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="../../fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="../../css/aos.css">
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Установка Git</title>
+    <style>
+      * {
+            box-sizing: border-box;
+        }
+
+        h1, h2, h3, h4, h5,
+      .h1, .h2, .h3, .h4, .h5 {
+          margin-top: 40px;
+          text-align: left;
+        color: #054597ff;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+        p, ul {
+            width: 100%; /* Ширина 100% относительно контейнера */
+            margin: 10px 0; /* Отступы между элементами */
+            text-align: left;
+        }
+
+        html, body {
+            overflow-x: hidden; /* Скрыть горизонтальную прокрутку */
+        }
+
+        img {
+           
+            height: auto; /* Сохраняем пропорции изображений */
+        }
+
+        .container {
+            max-width: 2000px; /* Максимальная ширина контейнера */
+            margin: 0 auto; /* Центрирование контейнера */
+            padding-left: 15px; /* Убедитесь, что отступы не создают переполнение */
+            padding-right: 15px;
+        }
+        .heading{
+          margin-left: 20%;
+          width: 70%;    
+        }
+        .btn-primary span {
+            color: white; /* Устанавливаем белый цвет текста */
+        }
+
+        .social-icons {
+          display: flex;
+          justify-content: center;
+          margin-top: 50px;
+        }
+        .social-icon {
+            font-size: 40px;
+            margin: 0 20px;
+            transition: transform 0.3s, color 0.3s;
+        }
+        .social-icon:hover {
+            transform: scale(1.2);
+            color: #007bff; /* Цвет при наведении */
+        }
+        .social-icon:hover img {
+          transform: scale(1.2);
+      }
+        
+
+        /* Примените медиа-запросы для мобильных устройств */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+        }
+  </style>
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="500">
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+    
+    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+      
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <div class="site-logo mr-auto w-25"><a href="../../index.html" >
+            <img src="../../images/logo.png" alt="MDN logo" width="20%"/>
+          </a></div>
+
+          <div class="mx-auto text-center">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mx-auto d-none d-lg-block  m-0 p-0">
+                <li><a href="#home-section" class="nav-link">Главная</a></li>
+                <li><a href="#02_basics_c-section" class="nav-link">02_Basics_C</a></li>
+                <!--<li><a href="#programs-section" class="nav-link">Programs</a></li>-->
+                <li><a href="#teachers-section" class="nav-link">Преподаватели</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="ml-auto w-25">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block m-0 p-0">
+              <li class="cta"><a href="#contact-section" class="nav-link"><span>Контакты</span></a></li>
+              </ul>
+            </nav>
+            <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
+          </div>
+        </div>
+      </div>
+      
+    </header>
+
+
+
+    
+    <div class="intro-section" id="home-section">
+      
+      <div class="slide-1" style="background-image: url('../../images/STM32.jpg');" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <div class="row align-items-center">
+                <div class="col-lg-6 mb-4">
+                  <h1  data-aos="fade-up" data-aos-delay="100" ><a href="../STM32_course.html">
+                    <img src="../images/return_to_stm32.png" alt="MDN logo" width="50%"/>
+                  </a></h1>
+                  <h1  data-aos="fade-up" data-aos-delay="100" class = "heading">BuRockets</h1>
+                  <h1  data-aos="fade-up" data-aos-delay="100" class = "heading">Лабораторная работа 02_Basics_C</h1>
+                  <p  data-aos="fade-up" data-aos-delay="200" class = "heading">В этой лабораторной работе ты изучишь основы языка Си</p> 
+                  <p data-aos="fade-up" data-aos-delay="300" class = "heading"><a href="#02_basics_c-section" class="btn btn-primary py-3 px-5 btn-pill">02_Basics_C</a></p>
+
+                </div>
+
+
+                <div class="col-lg-4 ml-auto" data-aos="fade-up" data-aos-delay="500">
+                  
+                    <div class="site-logo mr-auto w-25"><a href="02_basics_C.html">
+                      <img src="images/C_logo.png" alt="MDN logo" width="200%"/>
+                    </a></div>
+                  
+                </div>
+
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="02_basics_c-section"></div>
+        <div class="container">
+            <div class="row mb-10 justify-content-center">
+                <div class="col-lg-7" data-aos="fade-up" data-aos-delay="">
+                    <h2 class="section-title" >02_Basics_C</h2>
+            
+                    <h2>Основы языка С</h2>
+                    <h2>Теория</h2>
+                    <p>
+                        Мы все привыкли работать с десятичными числами. Однако, в цифровых системах, построенных на единицах и нулях, использование двоичных или шестнадцатеричных 
+                        чисел зачастую более удобно.
+                    </p>
+                    
+
+                    <h1 id="-">Основы языка С</h1>
+                    <h1 id="-">Теория</h1>
+                    <h2 id="-">Системы исчисления</h2>
+                    <p>Мы все привыкли работать с десятичными числами. Однако, в цифровых системах, построенных на единицах и нулях, использование двоичных или шестнадцатеричных 
+                    чисел зачастую более удобно.</p>
+                    <h3 id="-">Десятичная система счисления</h3>
+                    <p>Еще в начальной школе нас всех научили считать и выполнять различные арифметические операции в десятичной (decimal) системе счисления. Такая система использует десять арабских цифр: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 – столько же, сколько у нас пальцев на руках. Числа больше 9 записываются в виде строки цифр. Причем, цифра, находящаяся в каждой последующей позиции такой строки, начиная с крайней правой цифры, имеет «вес», в десять раз превышающий «вес» цифры, находящейся в предыдущей позиции. Именно поэтому десятичную систему счисления называют системой по основанию (base) 10.Справа налево «вес» каждой позиции увеличивается следующим образом: 1, 10, 100, 1000 и т. д.Позицию, которую цифра занимает в строке десятичного числа, называют разрядом или декадой.</p>
+                    <p>Чтобы избежать недоразумений при одновременной работе с более чем одной системой счисления, основание системы обычно указывается путем добавления цифры позади и чуть ниже основного числа: 974210. Рисунок ниже показывает, для примера, как десятичное число 974210 может быть записано в виде суммы цифр, составляющих это число, умноженных на «вес» разряда, соответствующего каждой конкретной цифре.</p>
+                    <p><img src="./images/decimal.png" class="img-lab" width="450" height="189"></p>
+                    <p>N-разрядное десятичное число может представлять одну из 10N цифровых комбинаций: 0, 1, 2, 3, … 10N – 1. Это называется диапазоном N-разрядного числа. Десятичное число, состоящее из трех цифр (разрядов), например, представляет одну из 1000 возможных цифровых комбинаций в диапазоне от 0 до 999.</p>
+                    <h3 id="-">Двоичная система счисления</h3>
+                    <p>Одиночный бит может принимать одно из двух значений, 0 или 1. Несколько битов, соединенных в одной строке, образуют двоичное (binary) число. Каждая последующая позиция в двоичной строке имеет вдвое больший «вес», чем предыдущая позиция, так что двоичная система счисления – это система по основанию 2. В двоичном числе «вес» каждой позиции увеличивается (так же, как и в десятичном – справа налево) следующим образом: 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536 и т.д. Работая с двоичными числами, очень полезно для сохранения времени запомнить значения степеней двойки до 216.</p>
+                    <p>Произвольное N-разрядное двоичное число может представлять одну из 2N цифровых комбинаций: 0, 1, 2, 3, … 2N – 1. В Табл. 1.1 собраны 1-битные, 2-битные, 3-битные и 4-битные двоичные числа и их десятичные эквиваленты.</p>
+                    <hr>
+                    <p><strong>ПРИМЕР 1.1</strong>  ПРЕОБРАЗОВАНИЕ ЧИСЕЛ ИЗ ДВОИЧНОЙ СИСТЕМЫ 
+                    СЧИСЛЕНИЯ В ДЕСЯТИЧНУЮ</p>
+                    <p>Преобразовать двоичное число 101102 в десятичное.</p>
+                    <p><img src="./images/bin_to_dec.png" class="img-lab" width="450" height="170"></p>
+                    <hr>
+                    <p>Таблица двоичных чисел и их десятичный эквивалент</p>
+                    <p><img src="./images/bin_to_dec_table.png" class="img-lab" width="450" height="300"></p>
+                    <hr>
+                    <p><strong>ПРИМЕР 1.2</strong> ПРЕОБРАЗОВАНИЕ ЧИСЕЛ ИЗ ДЕСЯТИЧНОЙ СИСТЕМЫ 
+                    СЧИСЛЕНИЯ В ДВОИЧНУЮ</p>
+                    <p>Преобразовать десятичное число 8410 в двоичное.</p>
+                    <p>Решение:</p>
+                    <p>Определите, что должно стоять в каждой позиции двоичного результата: 1 или 0. Вы можете делать это, начиная с левой или правой позиции. Если начать слева, найдите наибольшую степень 2, меньше или равную заданному числу (в примере такая степень – это 64). 84 &gt; 64, поэтому ставим 1 в позиции, соответствующей 64. Остается 84 – 64 = 20, 20 &lt; 32, так что в позиции 32 надо поставить 0, 20 &gt; 16, поэтому в позиции 16 ставим 1. Остается 20 – 16 = 4. 4 &lt; 8, поэтому 0 в позиции 8. 4 ≥ 4 – ставим 1 в позицию 4. 4 – 4 = 0, поэтому будут 0 в позициях 2 и 1. Собрав все вместе, получаем 8410 = 10101002. Если начать справа, будем последовательно делить исходное число на 2. Остаток идет в очередную позицию. 84/2 = 42, поэтому 0 в самой правой позиции. 42/2 = 21, 0 во вторую позицию. 21/2 = 10, остаток 1 идет в позицию, соответствующую 4. 10/2 = 5, поэтому 0 в позицию, соответствующую 8. 5/2 = 2, остаток 1 в позицию 16. 2/2 = 1, 0 в 32 позицию. Наконец, 1/2 = 0 с остатком 1, который идет в позицию 64. Снова, 8410 = 10101002</p>
+                    <hr>
+                    <h3 id="-">Шестнадцатеричная система счисления</h3>
+                    <p>Использование длинных двоичных чисел для записи и выполнения математических расчетов на бумаге утомительно и чревато ошибками. Однако длинное двоичное число можно разбить на группы по четыре бита, каждая из которых представляет одну из 24 = 16 цифровых комбинаций. 
+                    Именно поэтому зачастую бывает удобнее использовать для работы систему счисления по основанию 16, называемую шестнадцатеричной (hexadecimal). Для записи шестнадцатеричных чисел используются цифры от 0 до 9 и буквы от A до F, как показано в таблице ниже В шестнадцатеричном числе «вес» каждой позиции меняется следующим 
+                    образом: 1, 16, 162 (или 256), 163 (или 4096) и т. д.</p>
+                    <p><img src="./images/hex_to_dec_table.png" class="img-lab" width="450" height="300"></p>
+                    <p><strong>ПРИМЕР 1.3</strong> ПРЕОБРАЗОВАНИЕ ШЕСТНАДЦАТЕРИЧНОГО ЧИСЛА 
+                    В ДВОИЧНОЕ И ДЕСЯТИЧНОЕ</p>
+                    <p>Преобразовать шестнадцатеричное число 2ЕD16 в двоичное и десятичное.</p>
+                    <p>Решение: Преобразование шестнадцатеричного числа в двоичное и обратно – очень простое, так как каждая шестнадцатеричная цифра прямо соответствует 4-разрядному двоичному числу. 216 = 00102, Е16 = 11102 и D16 = 11012, так 
+                    что 2ED16 = 0010111011012 Преобразование в десятичную систему счисления 
+                    требует арифметики, показанной на Рис. 1.6.</p>
+                    <p><img src="./images/hex_to_dec.png" class="img-lab" width="450" height="280"></p>
+                    <p><strong>ПРИМЕР 1.4.</strong> ПРЕОБРАЗОВАНИЕ ДВОИЧНОГО ЧИСЛА 
+                    В ШЕСТНАДЦАТЕРИЧНОЕ </p>
+                    <p>Преобразовать двоичное число 11110102 в шестнадцатеричное.</p>
+                    <p>Решение: Повторим еще раз, это просто. Начинаем справа. 4 наименее значимых бита 10102 = А16. Следующие биты 1112 = 716. Отсюда 11110102 = 7А16.</p>
+                    <p><strong>ПРИМЕР 1.5.</strong> ПРЕОБРАЗОВАНИЕ ДЕСЯТИЧНОГО ЧИСЛА 
+                    В ШЕСТАНДЦАТЕРИЧНОЕ И ДВОИЧНОЕ </p>
+                    <p>Преобразовать десятичное число 33310 в шестнадцатеричное и двоичное.</p>
+                    <p>Решение: Как и в случае преобразования десятичного числа в двоичное, можно начать как слева, так и справа. 
+                    Если начать слева, найдите наибольшую степень шестнадцати, меньшую или равную заданному числу (в нашем случае это 162  = 256). Число 256 содержится в числе 333 только один раз, поэтому в позицию с «весом» 256 мы записываем единицу. Остается число 333 – 256 = 77. Число 16 содержится в числе 77 четыре раза, поэтому в позицию с «весом» 16 записываем четверку. Остается 
+                    77 – 16 × 4 = 13. 1310 = D16, поэтому в позицию с «весом» 1 записываем цифру D. Итак, 33310 = 14D16, это число легко преобразовать в двоичное, как мы показали в примере 1.3: 14D16 = 1010011012. Если начинать справа, будем повторять деление на 16. Каждый раз остаток идет в очередную колонку. 333/16 = 20 с остатком 1310 = D16, который идет в самую правую позицию. 20/16 = 1 с остатком 4, который идет в позицию с «весом» 16. 1/16 = 0 с остатком 1, который идет в позицию с «весом» 256. В результате опять получаем 14D16.</p>
+                    <h2 id="-">Типы данных</h2>
+                    <p>В языке программирования C есть несколько основных типов данных. Вот некоторые из них:</p>
+                    <p><strong>Целочисленные типы данных</strong>:</p>
+                    <ul>
+                    <li><strong>int</strong>: Целые числа. Обычно 4 байта.
+                    Пример: int x = 10;</li>
+                    <li><strong>short</strong>: Короткие целые числа. Обычно 2 байта.
+                    Пример: short y = 5;</li>
+                    <li><strong>long</strong>: Длинные целые числа. Размер зависит от компилятора.
+                    Пример: long z = 100000L;</li>
+                    <li><strong>char</strong>: Одиночный символ или маленькое целое число.
+                    Пример: char ch = &#39;A&#39;;</li>
+                    </ul>
+                    <p><strong>Вещественные типы данных</strong>:</p>
+                    <ul>
+                    <li><strong>float</strong>: Числа с плавающей запятой одинарной точности.
+                    Пример: float a = 3.14f;</li>
+                    <li><strong>double</strong>: Числа с плавающей запятой двойной точности.
+                    Пример: double b = 2.71828;</li>
+                    </ul>
+                    <p><strong>Символьные типы данных</strong>:</p>
+                    <ul>
+                    <li><strong>char</strong>: Одиночный символ или маленькое целое число.
+                    Пример: char ch = &#39;X&#39;;</li>
+                    </ul>
+                    <p><strong>Логический тип данных</strong>:</p>
+                    <ul>
+                    <li><strong>_Bool</strong>: Логический тип, может принимать значения 0 (ложь) или 1 (истина).
+                    Пример: _Bool flag = 1;</li>
+                    </ul>
+                    <p><strong>Перечислимый тип данных</strong>:</p>
+                    <ul>
+                    <li><p><strong>enum</strong>: Позволяет создавать новый тип данных с конечным набором значений.
+                    Пример:</p>
+                    <p>enum Weekday {Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday};
+                    enum Weekday today = Wednesday;</p>
+                    </li>
+                    </ul>
+                    <p><strong>Составные типы данных</strong>:</p>
+                    <ul>
+                    <li><p><strong>struct</strong>: Позволяет объединять различные типы данных в одну структуру.
+                    Пример:</p>
+                    <p>struct Person {</p>
+                    <pre><code><span class="hljs-built_in">char</span> <span class="hljs-keyword">name</span>[<span class="hljs-number">50</span>];
+                    <span class="hljs-built_in">int</span> age;
+                    </code></pre><p>};
+                    struct Person p1 = {&quot;Alice&quot;, 25};</p>
+                    </li>
+                    </ul>
+                    <p><strong>Указатели</strong>:</p>
+                    <ul>
+                    <li><strong>Указатель на тип данных</strong>: Хранит адрес памяти переменной другого типа.
+                    Пример: int *ptr = &x;</li>
+                    </ul>
+                    <h2 id="-">Операторы</h2>
+                    <h3 id="-">Оператор присваивания (=)</h3>
+                    <p>Оператор присваивания используется для присвоения значения переменной. Например:</p>
+                    <pre><code><span class="hljs-attribute">int x</span> = 5;
+                    </code></pre><h3 id="-">Арифметические операторы:</h3>
+                    <ul>
+                    <li>Сложение (+):  <code>int sum = a + b;</code></li>
+                    <li>Вычитание (-): <code>int difference = a - b;</code></li>
+                    <li>Умножение (<em>): ```int product = a </em> b;```</li>
+                    <li>Деление (/): <code>int quotient = a / b;</code></li>
+                    <li>Остаток от деления (%): <code>int remainder = a % b;</code></li>
+                    </ul>
+                    <h3 id="-">Операторы отношения</h3>
+                    <ul>
+                    <li>Больше чем (&gt;): <code>if (a &gt; b) { /* делать что-то */ }</code></li>
+                    <li>Меньше чем (&lt;): <code>if (a &lt; b) { /* делать что-то */ }</code></li>
+                    <li>Больше или равно (&gt;=): <code>if (a &gt;= b) { /* делать что-то */ }</code></li>
+                    <li>Меньше или равно (&lt;=): <code>if (a &lt;= b) { /* делать что-то */ }</code></li>
+                    <li>Равно (==): <code>if (a == b) { /* делать что-то */ }</code></li>
+                    <li>Не равно (!=): <code>if (a != b) { /* делать что-то */ }</code></li>
+                    </ul>
+                    <h3 id="-">Логические операторы</h3>
+                    <ul>
+                    <li>Логическое И (&amp;&amp;): <code>if (a &gt; 0 &amp;&amp; b &lt; 10) { /* делать что-то */ }</code></li>
+                    <li>Логическое ИЛИ (||): <code>if (a == 0 || b == 0) { /* делать что-то */ }</code></li>
+                    <li>Логическое НЕ (!): <code>if (!(a == 0)) { /* делать что-то */ }</code></li>
+                    </ul>
+                    <h3 id="-">Операторы инкремента и декремента</h3>
+                    <ul>
+                    <li>Инкремент (++): <code>a++;</code></li>
+                    <li>Декремент (--): <code>b--;</code></li>
+                    </ul>
+                    <h3 id="-">Операторы условия (тернарный оператор)</h3>
+                    <pre><code><span class="hljs-comment">//если a &gt; b, то присвоить max значение a, иначе присвоить max значение b</span>
+
+                    <span class="hljs-keyword">int</span> <span class="hljs-built_in">max</span> = (a &gt; b) ? a : b;
+                    </code></pre><h3 id="-">Операторы цикла</h3>
+                    <h3 id="for-">for:</h3>
+                    <pre><code><span class="hljs-keyword">for</span> (int <span class="hljs-built_in">i</span> = <span class="hljs-number">0</span>; <span class="hljs-built_in">i</span> &lt; <span class="hljs-number">10</span>; <span class="hljs-built_in">i</span>++) {
+                            // выполнить действие
+                        }
+                    </code></pre><p>Перед каждой итерацией цикла проверяется условие <code>i &gt; 10</code>, если условие верно, то выполняется тело цикла и переменная i увеличивает свое значение на единицу <code>i++</code>. Тело цикла выполняется снова и снова, пока условие не становится ложным, в этот момент программа выходит из цикла.</p>
+                    <p>Также for можно использовать для создания замкнутых циклов:</p>
+                    <pre><code><span class="hljs-keyword">for</span> (;;);   <span class="hljs-comment">// крутимся в цикле вечно</span>
+                    </code></pre><h3 id="while-">while:</h3>
+                    <pre><code><span class="hljs-keyword">while</span> <span class="hljs-comment">(condition)</span> {
+                            <span class="hljs-comment">// выполнить действие</span>
+                        }
+                    </code></pre><p>Пока <code>condition == true</code> тело цикла выполняется </p>
+                    <h3 id="-">Операторы ветвления</h3>
+                    <h3 id="if-else">if-else</h3>
+                    <pre><code><span class="hljs-comment">// при выполнения одного действия {} необязательны</span>
+                    <span class="hljs-keyword">if</span> (a &gt; b) <span class="hljs-built_in">c</span> = <span class="hljs-number">10</span>;  <span class="hljs-comment">// если a больше b, то c = 10</span>
+                    <span class="hljs-keyword">else</span> <span class="hljs-built_in">c</span> = <span class="hljs-number">20</span>;        <span class="hljs-comment">// если нет, то с = 20</span>
+
+                    <span class="hljs-comment">// вместо сравнения можно использовать лог. переменную</span>
+
+                    bool myFlag, myFlag2;
+                    <span class="hljs-keyword">if</span> (myFlag) <span class="hljs-built_in">c</span> = <span class="hljs-number">10</span>;
+
+                    <span class="hljs-comment">// сложные условия</span>
+                    <span class="hljs-keyword">if</span> (myflag &amp;&amp; myFlag2) <span class="hljs-built_in">c</span> = <span class="hljs-number">10</span>;    <span class="hljs-comment">// если оба флага true</span>
+
+                    <span class="hljs-comment">// при выполнении двух и более {} обязательны</span>
+                    <span class="hljs-keyword">if</span> (myFlag) {
+                    с = <span class="hljs-number">10</span>;
+                    b = <span class="hljs-built_in">c</span>;
+                    } <span class="hljs-keyword">else</span> {
+                    с = <span class="hljs-number">20</span>;
+                    b = a;
+                    }
+                    </code></pre><h3 id="switch">switch</h3>
+                    <pre><code>switch (<span class="hljs-keyword">val</span>) {
+                    case <span class="hljs-number">1</span>:
+                        <span class="hljs-comment">// выполнить, если val == 1</span>
+                        <span class="hljs-keyword">break</span>;
+                    case <span class="hljs-number">2</span>:
+                        <span class="hljs-comment">// выполнить, если val == 2</span>
+                        <span class="hljs-keyword">break</span>;
+                    <span class="hljs-keyword">default</span>:
+                        <span class="hljs-comment">// выполнить, если val ни 1 ни 2</span>
+                        <span class="hljs-comment">// default опционален</span>
+                        <span class="hljs-keyword">break</span>;
+                    }
+                    </code></pre><p>Оператор break очень важен, позволяет выйти из switch.</p>
+                    <h3 id="-">Операторы ввода/вывода</h3>
+                    <ul>
+                    <li><p>printf(): </p>
+                    <pre><code>  <span class="hljs-keyword">printf</span>(<span class="hljs-string">"Значение переменной x: %d"</span>, <span class="hljs-keyword">x</span>);
+                    </code></pre></li>
+                    <li><p>scanf():</p>
+                    <pre><code>  <span class="hljs-keyword">int</span> <span class="hljs-keyword">input</span><span class="hljs-comment">;</span>
+                    scanf(<span class="hljs-string">"%d"</span>, &amp;<span class="hljs-keyword">input</span>)<span class="hljs-comment">;</span>
+                    </code></pre></li>
+                    </ul>
+                    <h2 id="-">Функции</h2>
+                    <p>Функции в языке программирования C представляют собой блоки кода, которые могут выполнять определенную задачу. Они позволяют разделить программу на более мелкие и управляемые части, что делает код более организованным и легким для понимания.</p>
+                    <p>Вот пример простой функции в языке C:</p>
+                    <pre><code><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+
+                    <span class="hljs-comment">// Объявление функции</span>
+                    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">greet</span><span class="hljs-params">()</span> </span>{
+                        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Hello, World!\n"</span>);
+                    }
+
+                    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+                        <span class="hljs-comment">// Вызов функции</span>
+                        greet();
+
+                        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+                    }
+                    </code></pre><p>На этом примере:</p>
+                    <ul>
+                    <li>greet() - это функция, которая выводит &quot;Hello, World!&quot; в стандартный вывод.</li>
+                    <li>void - это тип возвращаемого значения функции. void означает, что функция не возвращает никакого значения.</li>
+                    <li>Функция main() является точкой входа в программу.</li>
+                    </ul>
+                    <h2 id="c-">Cтандартная библиотека функций</h2>
+                    <p>В языке программирования C существует стандартная библиотека функций, называемая стандартной библиотекой языка C (C Standard Library). Она включает различные заголовочные файлы, содержащие объявления функций, макросы и типы данных, которые можно использовать в своих программах. Некоторые из основных библиотек в языке C включают:</p>
+                    <ol>
+                    <li><p><strong>stdio.h</strong>:</p>
+                    <ul>
+                    <li><strong>Функция printf():</strong> Эта функция используется для вывода форматированной информации на стандартный вывод (консоль).</li>
+                    <li><strong>Функция scanf():</strong> Используется для считывания ввода с клавиатуры в соответствии с заданным форматом.</li>
+                    </ul>
+                    </li>
+                    <li><p><strong>stdlib.h</strong>:</p>
+                    <ul>
+                    <li><strong>Функция malloc():</strong> Выделяет блок памяти заданного размера и возвращает указатель на начало этого блока.</li>
+                    <li><strong>Функция free():</strong> Освобождает память, ранее выделенную с помощью malloc().</li>
+                    </ul>
+                    </li>
+                    <li><p><strong>string.h</strong>:</p>
+                    <ul>
+                    <li><strong>Функция strlen():</strong> Возвращает длину строки (количество символов) без учета завершающего нулевого символа.</li>
+                    <li><strong>Функция strcpy():</strong> Копирует содержимое одной строки в другую.</li>
+                    <li><strong>Функция strcmp():</strong> Сравнивает две строки и возвращает результат сравнения.</li>
+                    </ul>
+                    </li>
+                    <li><p><strong>math.h</strong>:</p>
+                    <ul>
+                    <li><strong>Функция sqrt():</strong> Возвращает квадратный корень числа.</li>
+                    <li><strong>Функция sin(), cos(), tan():</strong> Вычисляют синус, косинус и тангенс угла соответственно.</li>
+                    </ul>
+                    </li>
+                    <li><p><strong>time.h</strong>:</p>
+                    <ul>
+                    <li><strong>Функция time():</strong> Возвращает текущее время в секундах с начала эпохи (1 января 1970 года).</li>
+                    <li><strong>Функция ctime():</strong> Преобразует время, представленное в виде числа секунд, в строку времени.</li>
+                    </ul>
+                    </li>
+                    </ol>
+                    <p>Библиотеки C предоставляют различные функции для работы с файлами, строками, памятью, математическими операциями и другими задачами. Они упрощают написание программ и делают код более эффективным и переносимым. Каждая библиотека имеет свои функции, которые решают определенные задачи.</p>
+                    <h2 id="-">Массивы и матрицы</h2>
+                    <p>В языке программирования C массивы и матрицы описываются с использованием обычных переменных и указателей. Вот подробное объяснение с примерами кода:</p>
+                    <h3 id="-c-">Описание массивов в C:</h3>
+                    <ul>
+                    <li><strong>Определение массива:</strong> Массив в C - это набор элементов одного типа, расположенных в памяти последовательно.</li>
+                    <li><strong>Синтаксис объявления массива:</strong> тип<em>данных имя</em>массива[размер];</li>
+                    </ul>
+                    <p>Пример объявления и инициализации массива:</p>
+                    <pre><code><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+
+                    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+                        <span class="hljs-keyword">int</span> numbers[<span class="hljs-number">5</span>] = {<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>}; <span class="hljs-comment">// Объявление и инициализация массива чисел</span>
+                        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) {
+                            <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d "</span>, numbers[i]); <span class="hljs-comment">// Вывод элементов массива</span>
+                        }
+                        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+                    }
+                    </code></pre><h3 id="-c-">Описание матриц в C:</h3>
+                    <ul>
+                    <li>**Матрица в C - это двумерный массив, представляющий собой таблицу элементов.</li>
+                    <li><strong>Синтаксис объявления матрицы:</strong> тип<em>данных имя</em>матрицы[строки][столбцы];</li>
+                    </ul>
+                    <p>Пример объявления и инициализации матрицы:</p>
+                    <pre><code>#include &lt;stdio.h&gt;
+
+                    int main() {
+                        int matrix[<span class="hljs-number">3</span>][<span class="hljs-number">3</span>] = {
+                            {<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>},
+                            {<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>},
+                            {<span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>}
+                        }; <span class="hljs-comment">// Объявление и инициализация матрицы 3x3</span>
+                        for (int i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">3</span>; i++) {
+                            for (int j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">3</span>; j++) {
+                                printf(<span class="hljs-string">"%d "</span>, matrix[i][j]); <span class="hljs-comment">// Вывод элементов матрицы</span>
+                            }
+                            printf(<span class="hljs-string">"<span class="hljs-subst">\n</span>"</span>); <span class="hljs-comment">// Переход на новую строку после каждой строки матрицы</span>
+                        }
+                        return <span class="hljs-number">0</span>;
+                    }
+                    </code></pre><h3 id="-">Доступ к элементам массивов и матриц:</h3>
+                    <ul>
+                    <li>Для доступа к элементам массивов и матриц используются индексы (начиная с 0).</li>
+                    <li>Для массивов: имя_массива[индекс]</li>
+                    <li>Для матриц: имя_матрицы[строка][столбец]</li>
+                    </ul>
+                    <h1 id="-">Самостоятельная работа</h1>
+                    <p>Для самостоятельной работы вам предлагается закрепить основы языка Си на практике, сделать вы это можете в <a href="https://code.visualstudio.com">VS Code</a>. Установите VS Code и настройте его на работу с Си, как это сделать подробно описано в  <a href="https://code.visualstudio.com/docs/cpp/config-mingw">официальной документации по настройке vs code</a>.</p>
+                    <ul>
+                    <li>Попробуйте запустить примеры кода, приведенные как примеры в теоретической части.</li>
+                    <li>Напишите программу, которая будет производить все арифметические операции с двумя заданными вами числами и выводить результат.</li>
+                    <li>Напишите программу, которая будет производить все логические операции с двумя заданными вами цифрами и выводить результат.</li>
+                    <li>Напишите программу, в которой будут использоваться операторы: <strong>if</strong>, <strong>else</strong>, <strong>switch</strong>.  </li>
+                    <li>Задача со звездочкой<em>:
+                    Реализуйте сортировку массива методом &quot;**</em>пузырек<em>*</em>&quot;</li>
+                    </ul>
+
+
+                    <p class="mt-4"><a href="#" class="btn btn-primary">В начало страницы</a></p>
+                </div>
+            </div>
+        </div>
+      </div>
+   
+    </div>
+
+   
+
+    
+  <!---->
+
+
+    <div class="site-section" id="teachers-section">
+      <div class="container">
+
+        <div class="row mb-5 justify-content-center">
+          <div class="col-lg-7 mb-5 text-center"  data-aos="fade-up" data-aos-delay="">
+            <h2 class="section-title">Наши преподаватели</h2>
+            <p class="mb-5">Спасибо за проявленный интерес к ракетостроению и добро пожаловать к нам на курс.</p>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="teacher text-center">
+              <img src="../../images/splinter.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 1</h3>
+                <p class="position">Исследователь, научный сотрудник</p>
+                <p>Специальзируется на теме 1</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="teacher text-center">
+              <img src="../../images/yoda.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 2</h3>
+                <p class="position">Инженер программист</p>
+                <p>Специальзируется на теме 2</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="teacher text-center">
+              <img src="../../images/oogway.jpg" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+              <div class="py-2">
+                <h3 class="text-black">Преподаватель 3</h3>
+                <p class="position">Инженер электронщик</p>
+                <p>Специальзируется на теме 3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--contact us-->
+<div class="site-section bg-light" id="contact-section">
+  <div class=".container-hluid">
+    <div class="row justify-content-center">
+      <div class="col-md-7">
+
+        <div class="container">
+          <div class="social-icons">
+              <a href="https://t.me/burockets" target="_blank" class="social-icon">
+                  <i class="fab fa-telegram-plane"></i>
+              </a>
+              <a href="https://vk.com/egobun" target="_blank" class="social-icon">
+                  <i class="fab fa-vk"></i>
+              </a>
+              <a href="https://www.youtube.com/@egorbunakov" target="_blank" class="social-icon">
+                  <i class="fab fa-youtube"></i>
+              </a>
+              
+          </div>
+      </div>
+      
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+
+  
+    
+  </div> <!-- .site-wrap -->
+
+  <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/popper.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/owl.carousel.min.js"></script>
+    <script src="../../js/jquery.stellar.min.js"></script>
+    <script src="../../js/jquery.countdown.min.js"></script>
+    <script src="../../js/bootstrap-datepicker.min.js"></script>
+    <script src="../../js/jquery.easing.1.3.js"></script>
+    <script src="../../js/aos.js"></script>
+    <script src="../../js/jquery.fancybox.min.js"></script>
+    <script src="../../js/jquery.sticky.js"></script>
+
+  
+  <script src="../../js/main.js"></script>
+    
+  </btn.btn-black:hover>
+</html>
